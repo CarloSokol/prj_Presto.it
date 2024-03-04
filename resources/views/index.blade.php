@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
-        Ciao, questa e' la paggina di walcome
-    </h1>
+    
 </body>
 </html>
