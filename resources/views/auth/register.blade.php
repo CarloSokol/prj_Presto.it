@@ -1,4 +1,4 @@
-<x-leyout :title="config('app.name')">
+<x-layout :title="config('app.name')">
 
 <x-slot:title>
 Registrati
@@ -38,6 +38,7 @@ Registrati
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary">Registrati</button>
+                                    <p class="small mt-2">Già registrato? <a href="{{ route('login') }}">Clicca qui</a></p>
                                 </div>
                             </div>
                         </form>
@@ -48,4 +49,4 @@ Registrati
     </div>
 
 
-</x-leyout>
+</x-layout>
