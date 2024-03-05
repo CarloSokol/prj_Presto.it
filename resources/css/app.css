@@ -1,5 +1,14 @@
 @import "bootstrap";
 
 .bg-custom {
-    background-color: #afb0cd !important; /* Modifica il colore di sfondo della navbar */
-  }
+  background-color: #afb0cd !important;
+  /* Modifica il colore di sfondo della navbar */
+}
+
+.btn-cta:hover,
+.btn-cta:active,
+.btn-cta:focus {
+  background-color: #ac7852 !important;
+  border-color: #f0a774;
+  color: #ffffff !important;
+}
