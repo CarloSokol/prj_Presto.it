@@ -1,1 +1,5 @@
 @import "bootstrap";
+
+.bg-custom {
+    background-color: #afb0cd !important; /* Modifica il colore di sfondo della navbar */
+  }
