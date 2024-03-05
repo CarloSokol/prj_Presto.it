@@ -9,11 +9,12 @@
             <a class="nav-link" href="#">1. Annunci</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">2. Registrati</a>
+            <a class="nav-link" href="{{ route('register') }}">2. Registrati</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">3. Login</a>
+            <a class="nav-link" href="{{ route('login') }}">3. Login</a>
           </li>
+
           @auth
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -29,6 +30,7 @@
           </ul>
           </li>
           @endauth
+
         </ul>
       </div>
     </div>
