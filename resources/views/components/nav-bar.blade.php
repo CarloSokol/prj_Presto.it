@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-lg">
     <div class="container">
 
-      <a class="navbar-brand" href="#">Nome del Sito</a>
+      <a class="navbar-brand" href="#">Presto.it</a>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
