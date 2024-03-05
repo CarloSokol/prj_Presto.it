@@ -11,7 +11,7 @@
         <h4 class="mb-4">Trova prodotti di qualità a prezzi convenienti solo su Presto.it</h4>
 
         <div class="row">
-           {{-- @foreach($ultimi_annunci as $annuncio)
+            {{-- @foreach($ultimi_annunci as $annuncio)
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="{{ $annuncio['immagine'] }}" class="card-img-top" alt="{{ $annuncio['titolo'] }}">
