@@ -1,4 +1,4 @@
-<x-leyout :title="config('app.name')">
+<x-layout :title="config('app.name')">
 
 <x-slot:title>
 Registrati
@@ -48,4 +48,4 @@ Registrati
     </div>
 
 
-</x-leyout>
+</x-layout>

@@ -1,4 +1,4 @@
-<x-leyout :title="config('app.name')">
+<x-layout :title="config('app.name')">
 
 <x-slot:title>
 Accedi
@@ -40,4 +40,4 @@ Accedi
 
     
 
-</x-leyout>
+</x-layout>
