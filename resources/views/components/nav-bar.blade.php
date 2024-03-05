@@ -1,11 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
     <div class="container">
-      <a class="navbar-brand" href="#">Presto.it</a>
-  
+
+      <a class="navbar-brand" href="#">Nome del Sito</a>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">1. Annunci</a>
           </li>
