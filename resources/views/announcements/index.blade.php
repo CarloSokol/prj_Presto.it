@@ -1,4 +1,5 @@
 <x-layout>
+<<<<<<< HEAD
 
     <x-nav-bar/>
 
@@ -28,4 +29,14 @@
     </div>
 
 
+=======
+    <x-nav-bar/>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Adesso sono stanco, domani facciamo vedere gli annunci</h1>
+            </div>
+        </div>
+    </div>
+>>>>>>> 58a66433507a87b33e2ea7b1661191e49de8f638
 </x-layout>
