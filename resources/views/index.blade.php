@@ -34,7 +34,7 @@
 
                             $timeElapsed = ($diffInHours <1) ? 'Meno di un ora fa' : $diffInHours.' '.$hourString
                         @endphp
-                        <div class="card-footer text-muted">Data di creazionee: {{ $timeElapsed }}</div>
+                        <div class="card-footer text-muted">Data di creazione: {{ $timeElapsed }}</div>
                     </div>
                 </div>
             @endforeach
