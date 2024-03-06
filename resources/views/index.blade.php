@@ -18,14 +18,14 @@
 
         <div class="row">
             @foreach ($announcements as $annuncio)
-                <div class="col-md-4 mb-4">
-                    <div class="card">
+                <div class="col-md-4 mb-4 ">
+                    <div class="card ">
                         {{-- <img src="" class="card-img-top" alt="{{ $annuncio->title}}"> --}}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $annuncio->title }}</h5>
+                        <div class="card-body border border-dark  border-2 bg-body-secondary ">
+                            <h5 class="card-title text-center fs-3  ">{{ $annuncio->title }}</h5>
                             <p class="card-text">{{ $annuncio->body }}</p>
                             <p class="card-text">{{ $annuncio->category->name }}</p>
-                            <p class="card-text">Prezzo: {{ $annuncio->price }}</p>
+                            <p class="card-text "> Prezzo: <strong>{{ $annuncio->price }} €</strong> </p>
                         </div>
                         @php
                             $diffInHours = now()->diffInHours($annuncio->created_at);
@@ -33,8 +33,8 @@
                             $hourString = ($diffInHours > 1) ? 'ore' : 'ora';
 
                             $timeElapsed = ($diffInHours <1) ? 'Meno di un ora fa' : $diffInHours.' '.$hourString
-                        @endphp
-                        <div class="card-footer text-muted">Data di creazione: {{ $timeElapsed }}</div>
+                        @endphp 
+                        <div class="card-footer text-muted border border-dark border-2 bg-body-tertiary  ">Data di creazione: {{ $timeElapsed }}</div>
                     </div>
                 </div>
             @endforeach
