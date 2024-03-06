@@ -2,19 +2,22 @@
 
 namespace App\Livewire;
 
-use App\Models\Announcement;
 use Livewire\Component;
+use App\Models\Category;
+use App\Models\Announcement;
 
 class CreateAnnouncement extends Component
 {
     public $title;
     public $body;
     public $price;
+    public $category;
 
     protected array $rules = [
         'title' => 'required|min:4',
-        'body'  => 'required|min:4',
-        'price' => 'required|numeric'
+        'body' => 'required|min:4',
+        'category' => 'required',
+        'price' => 'required|numeric',
     ];
 
     protected array $messages = [
@@ -27,17 +30,17 @@ class CreateAnnouncement extends Component
     {
         $validatedData = $this->validate();
 
-
-        Announcement::create([
+        $category = Category::find($this->category);
+        $announcement = $category->announcements()->create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
         ]);
+        Auth::user()->announcements()->save($announcement);
 
         session()->flash('success', 'Annuncio creato correttamente!');
         $this->cleanForm();
     }
-
 
     public function updated($propertyName)
     {
@@ -49,6 +52,7 @@ class CreateAnnouncement extends Component
         $this->title = null;
         $this->body = null;
         $this->price = null;
+        $this->category = null;
     }
 
     public function render()

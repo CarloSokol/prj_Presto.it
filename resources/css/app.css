@@ -12,3 +12,81 @@
   border-color: #f0a774;
   color: #ffffff !important;
 }
+
+
+
+/* styles.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-section-title {
+  font-size: 20px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-links a {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+  color: #ccc;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #555;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Style the contact information */
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Add hover effect for footer links */
+.footer-links a:hover {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+/* Style the social links */
+.social-links a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
