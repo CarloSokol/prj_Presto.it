@@ -21,7 +21,7 @@ return new class extends Migration
         $categories = ['Motori', 'Informatica', 'Elettrodomestici','Libri', 'Giochi', 'Sport', 'Immobili', 'Telefoni', 'Arredamento', 'Manga'];
 
         foreach ($categories as $category) {
-            Category::create(['name'=>$category]);
+            Category::create(['name'=>$category]);  
         }
 
 
