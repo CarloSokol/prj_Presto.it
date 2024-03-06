@@ -24,7 +24,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $annuncio->title }}</h5>
                             <p class="card-text">{{ $annuncio->body }}</p>
-                            <p class="card-text">{{ $annuncio->category }}</p>
+                            <p class="card-text">{{ $annuncio->category->name }}</p>
                             <p class="card-text">Prezzo: {{ $annuncio->price }}</p>
                         </div>
                         @php
