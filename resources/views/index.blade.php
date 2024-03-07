@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-nav-bar />
+    <x-nav-bar /> 
 
     <div class="container-fluid p-0 shadow" style="position:relative;">
         <img src="{{ asset('img/cover.jpg') }}" alt="Hero Presto"
