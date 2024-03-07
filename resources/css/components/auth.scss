@@ -1,0 +1,15 @@
+div#loginSection,
+div#registerSection {
+    min-height: 400px;
+    height: calc(100% - 506px);
+
+    div.card {
+        border-color: $primaryColor;
+    }
+
+}
+
+div#registerSection {
+    min-height: 600px;
+    height: calc(100% - 410px);
+}

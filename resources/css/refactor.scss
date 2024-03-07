@@ -1,0 +1,45 @@
+@import "bootstrap";
+
+@import "_variables.scss";
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif !important;
+    height: 100vh;
+
+    .btn-cta {
+        background: $primaryColor;
+        border: 1px solid transparent;
+        color: $secondaryColor;
+        padding: 10px 20px;
+
+        &:hover {
+            border-color: $primaryColor;
+            background-color: #ffffff;
+            color: $primaryColor;
+        }
+    }
+
+    header#navbar {
+        @import 'components/navbar.scss';
+    }
+
+    &#index {
+        @import 'components/index.scss';
+    }
+
+    &#announcementsList {
+        @import 'components/announcementsList.scss';
+    }
+
+    &#login,
+    &#register {
+        @import 'components/auth.scss';
+    }
+
+    footer {
+        @import 'components/footer.scss';
+    }
+
+}

@@ -1,5 +1,5 @@
-<footer class="footer">
-    <div class="container">
+<footer class="footer fixed-bottom">
+    <div class="container py-5">
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-section">
@@ -13,7 +13,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-section">
-                    <h3 class="footer-section-title">Link Utili</h3>
+                    <h3 class="footer-section-title text-center">Link Utili</h3>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Chi Siamo</a></li>
@@ -24,8 +24,8 @@
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="footer-section">
-                    <h3 class="footer-section-title">Seguici</h3>
-                    <ul class="social-links">
+                    <h3 class="footer-section-title text-end">Seguici</h3>
+                    <ul class="social-links text-end">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>

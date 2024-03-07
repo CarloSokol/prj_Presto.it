@@ -1,8 +1,6 @@
-<x-layout>
+<x-layout id="announcementsList">
 
-    <x-nav-bar/>
-
-    <div class="container mt-4">
+    <div class="container mt-4" id="announcementsSection">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             @foreach ($announcements as $annuncio)
             <div class="col mb-4">

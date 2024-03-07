@@ -1,5 +1,4 @@
 <x-layout>
-    <x-nav-bar />
 
     <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
         <div class="row">
@@ -48,5 +47,4 @@
         </div>
     </div>
 
-    <x-footer />
 </x-layout>

@@ -1,17 +1,12 @@
-:root{
+:root {
   --primary-color: #009c99;
 }
 
-
-
+$primaryColor: var('--primary-color');
 
 
 
 body {
-  // background-image: linear-gradient(45deg, #8656ff9d 0%, #89fcbba9 90%);
-  background-color: var(--primary-color);
-
   height: 100vh;
-  
   font-family: 'Montserrat', sans-serif;
 }

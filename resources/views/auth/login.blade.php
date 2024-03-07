@@ -1,102 +1,42 @@
-<x-layout :title="config('app.name')">
+<x-layout :title="config('app.name')" id='login'>
 
-<x-slot:title>
-Accedi
-</x-slot>
+    <x-slot:title>
+        Accedi
+    </x-slot>
 
-<x-nav-bar/>
-
-    {{-- <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 mx-auto">
-                <div class="card">
-                    <div class="card-header">
+    <div class="container mt-5 mb-5 d-flex justify-content-center align-items-center" id="loginSection">
+        <div class="card rounded-5">
+            <div class="card-body">
+                <form action="/login" method="POST" class="p-5">
+                    <div class="card-header border-0 text-center text-primary h3 mb-2">
                         Accedi
                     </div>
-                    <div class="card-body">
-                        <form action="/login" method="POST">
-                            @csrf
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control">
-                                    @error('email') <span class="text-danger small">{{ $message }}</span> @enderror
-                                </div>
-                                <div class="col-12">
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control">
-                                    @error('password') <span class="text-danger small">{{ $message }}</span> @enderror
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Accedi</button>
-                                    <p class="small mt-2">Non sei registrato? <a href="{{ route('register') }}">Clicca qui</a></p>
-
-                                </div>
-                            </div>
-                        </form>
+                    @csrf
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-6 offset-lg-3">
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="Email">
+                            @error('email')
+                                <span class="text-danger small">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div class="col-12 col-lg-6 offset-lg-3">
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="Password">
+                            @error('password')
+                                <span class="text-danger small">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div class="col-12  text-center">
+                            <button type="submit" class="btn btn-cta">Accedi</button>
+                            <p class="small mt-2 text-black ">Non sei registrato? <a href="{{ route('register') }}"
+                                    class="small mt-2 text-dark  ">Clicca qui</a>
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-    <div class="container mt-5 mb-5 ">
-        <div class="row">
-            <div class="col-md-4 mx-auto">
-                <div class="">
-                    <div class="card-body">
-                        <form action="/login" method="POST" class="p-5">
-                            <div class="card-header text-muted  h3 mb-3 text-decoration-underline">
-                                Accedi
-                            </div>
-                            @csrf
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email">
-                                    @error('email') <span class="text-danger small">{{ $message }}</span> @enderror
-                                </div>
-                                <div class="col-12">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-                                    @error('password') <span class="text-danger small">{{ $message }}</span> @enderror
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-outline-light  ">Accedi</button>
-                                    <p class="small mt-2 text-black ">Non sei registrato? <a href="{{ route('register') }}" class="small mt-2 text-dark  ">Clicca qui</a></p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-
-
-    
-    {{-- <div class="container-form">
-        <form action="/login" method="POST">
-            @csrf
-            <div class="row g-3">
-                <div class="card-header text-light h3">
-                    Accedi
-                </div>
-                <div class="col-12">
-                    <input type="email" name="email" id="email" class="" placeholder="Email">
-                    @error('email') <span class="text-danger small bg-gradient">{{ $message }}</span> @enderror
-                </div>
-                <div class="col-12">
-                    <input type="password" name="password" id="password" class="" placeholder="Password">
-                    @error('password') <span class="text-danger small bg-gradient">{{ $message }}</span> @enderror
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-outline-light">Accedi</button>
-                    <p class="small mt-2">Non sei registrato? <a href="{{ route('register') }}">Clicca qui</a></p>
-                </div>
-            </div>
-        </form>
-        
-    </div> --}}
-
-    <x-footer/>
 
 </x-layout>
