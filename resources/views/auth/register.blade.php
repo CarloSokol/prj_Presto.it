@@ -3,7 +3,6 @@
 <x-slot:title>
 Registrati
 </x-slot>
-
 <x-nav-bar/>
 
 <div class="container mt-5">
@@ -12,7 +11,7 @@ Registrati
                 <div class="">
                     
                     <div class="card-body">
-                        <form action="/register" method="POST">
+                        <form action="/register" method="POST" class="p-5">
                             <div class="card-header text-muted h3 mb-3 text-decoration-underline">
                                 Registrati
                             </div>
@@ -46,4 +45,5 @@ Registrati
     </div>
 
 
+    <x-footer/>
 </x-layout>

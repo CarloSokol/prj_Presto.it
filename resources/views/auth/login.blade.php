@@ -45,7 +45,7 @@ Accedi
             <div class="col-md-4 mx-auto">
                 <div class="">
                     <div class="card-body">
-                        <form action="/login" method="POST">
+                        <form action="/login" method="POST" class="p-5">
                             <div class="card-header text-muted  h3 mb-3 text-decoration-underline">
                                 Accedi
                             </div>

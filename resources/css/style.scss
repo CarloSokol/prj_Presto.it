@@ -15,9 +15,11 @@ body {
   width: auto;
 }
 
+
+
 form {
   background: $white;
-  padding: 3em;
+  // padding: 3em;
   width: auto;
   border-radius: 20px;
   border-left: 1px solid $white;
@@ -51,6 +53,14 @@ form {
       text-shadow: none;
     }
   }
+
+  .bg-colore-tranparet{
+    background-color: transparent !important;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    border-radius: 50px !important;
+  }
   
   input {
     background: transparent;
@@ -60,7 +70,7 @@ form {
     border: none !important;
     border-left: 1px solid $white !important;
     border-top: 1px solid $white !important;
-    border-radius: 5000px !important;
+    border-radius: 50px !important;
     background-color: transparent !important;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0,0,0,0.2);

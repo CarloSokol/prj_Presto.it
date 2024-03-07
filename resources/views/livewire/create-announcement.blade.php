@@ -3,7 +3,7 @@
 
     @include('components.success')
 
-    <form wire:submit.prevent="store">
+    <form wire:submit.prevent="store" class="p-5">
         @csrf
         <div class="mb-3">
             <label for="title">Titolo Annuncio</label>
@@ -15,7 +15,7 @@
 
         <div class="mb-3">
             <label for="body">Descrizione</label>
-            <textarea wire:model="body" class="form-control @error('body') is-invalid @enderror"></textarea>
+            <textarea wire:model="body" class="form-control bg-colore-tranparet @error('body') is-invalid @enderror"></textarea>
             @error('body')
                 {{ $message }}
             @enderror
@@ -23,7 +23,7 @@
 
         <div class="mb-3">
             <label for="price">Prezzo</label>
-            <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
+            <input wire:model="price" type="number" class="form-control  @error('price') is-invalid @enderror">
             @error('price')
                 {{ $message }}
             @enderror
@@ -31,7 +31,7 @@
 
         <div class="mb-3">
             <label for="category">Categoria</label>
-            <select wire:model.defer="category" id="category" class="form-control">
+            <select wire:model.defer="category" id="category" class="form-control bg-colore-tranparet">
                 <option value="">Scegli la categoria</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
