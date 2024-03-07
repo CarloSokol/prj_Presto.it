@@ -6,7 +6,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('announcements.index')}}">1. Annunci</a>
+                    <a class="nav-link" aria-current="page" href="{{route('announcements.index')}}"> Annunci</a>
                 </li>
 
                 @auth
