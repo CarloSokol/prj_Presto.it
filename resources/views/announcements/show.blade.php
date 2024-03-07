@@ -3,8 +3,8 @@
 
     <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
         <div class="row">
-            <div class="col-12 text-light p-5">
-                <h1 class="display-2">Annuncio {{ $announcement->title }}</h1>
+            <div class="col-12 text-black p-5">
+                <h1 class="display-3 text-center "> {{ $announcement->title }}</h1>
             </div>
         </div>
     </div>
@@ -15,13 +15,13 @@
                 <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://picsum.photos/id/27/1200/200" class="img-fluid p-3 rounded" alt="...">
+                            <img src="https://picsum.photos/id/27/1400/550" class="img-fluid p-3 rounded" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/id/27/1200/201" class="img-fluid p-3 rounded" alt="...">
+                            <img src="https://picsum.photos/id/28/1400/550" class="img-fluid p-3 rounded" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/id/27/1200/202" class="img-fluid p-3 rounded" alt="...">
+                            <img src="https://picsum.photos/id/29/1400/550" class="img-fluid p-3 rounded" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
@@ -36,13 +36,13 @@
                     </button>
                 </div>
 
-                <h5 class="card-title mt-3">Titolo: {{$announcement->title}}</h5>
-                <p class="card-text">Descrizione: {{$announcement->body}}</p>
-                <p class="card-text">Prezzo: {{$announcement->price}}</p>
+                <h4 class="card-title mt-3">Title: {{$announcement->title}}</h4>
+                <p class="card-text fst-italic fw-medium">Description: {{$announcement->body}}</p>
+                <p class="card-text fw-bolder">Price: {{$announcement->price}} €</p>
                 <a href="{{route('categoryShow', ['category'=>$announcement->category]) }}"
                     class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
                     {{$announcement->category->name}}</a>
-                <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore:
+                <p class="card-footer fw-lighter">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore:
                     {{$announcement->user->name ?? ''}}</p>
             </div>
         </div>
