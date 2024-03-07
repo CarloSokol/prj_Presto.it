@@ -33,20 +33,20 @@
                             Benvenuto {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <form action="{{ route('logout') }}" id="logout-form" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn nav-link">Logout</button>
+                                    <button type="submit" class="btn nav-link ms-4 ps-4 alert-dark "> <strong>Logout</strong> </button>
                                 </form>
                             </li>
                         </ul>
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">2. Registrati</a>
+                        <a class="nav-link" href="{{ route('register') }}">Registrati</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">3. Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
 
                 @endauth
