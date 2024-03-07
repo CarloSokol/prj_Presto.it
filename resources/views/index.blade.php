@@ -42,7 +42,7 @@
                             <div class="text-muted border-2">
                                 Data di creazione: {{ $timeElapsed }}
                             </div>
-                            <a href="https://nicepage.review" class="btn btn-outline-primary">Per saperne di più</a>
+                            <a href="" class="btn btn-outline-primary">Per saperne di più</a>
                         </div>
                     </div>
                 </div>
