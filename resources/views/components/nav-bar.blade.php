@@ -1,23 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-lg">
     <div class="container">
 
-        <a class="navbar-brand" href="/">Presto.it</a>
+        <a class="navbar-brand courgette-regular-title" href="/">Presto.it</a>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('announcements.index')}}"> Annunci</a>
+                    <a class="nav-link courgette-regular" aria-current="page" href="{{route('announcements.index')}}"> Annunci</a>
                 </li>
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                        <a class="nav-link dropdown-toggle courgette-regular" href="#" id="categoriesDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Categorie
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                             @foreach ($categories as $category)
-                                <li><a class="dropdown-item"
+                                <li><a class="dropdown-item courgette-regular"
                                         href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
                                 </li>
                                 <li>
@@ -28,7 +28,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle courgette-regular" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Benvenuto {{ Auth::user()->name }}
                         </a>
@@ -36,7 +36,7 @@
                             <li class="nav-item ">
                                 <form action="{{ route('logout') }}" id="logout-form" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn nav-link ms-4 ps-4 alert-dark "> <strong>Logout</strong> </button>
+                                    <button type="submit" class="btn nav-link ms-4 ps-4 alert-dark courgette-regular"> <strong>Logout</strong> </button>
                                 </form>
                             </li>
                         </ul>
