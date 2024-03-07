@@ -19,7 +19,7 @@
                         <div class="card-body mx-card">
                             <h5 class="card-title fs-4 font-monospace mb-3">{{ $announcement->title }}</h5>
                             <p class="card-text fst-italic fw-medium mb-3 announcement-body"
-                                style="max-height: 30px; overflow: hidden;">{{ $announcement->body }}</p>
+                                style="height: auto; overflow: hidden; text-overflow: ellipsis;">{{ $announcement->body }}</p>
                             <p class="card-text fw-bolder mb-3">{{ $announcement->price }} €</p>
                             <span class="d-flex justify-content-between">
                                 <a href="{{ route('announcements.show', compact('announcement')) }}"

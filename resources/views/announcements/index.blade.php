@@ -10,7 +10,7 @@
                     <img src="https://picsum.photos/200" class="card-img-top rounded-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center fs-4">{{ $annuncio->title }}</h5>
-                        <p class="card-text">{{ $annuncio->body }}</p>
+                        <p class="card-text ">{{ $annuncio->body }}</p>
                         <p class="card-text">{{ $annuncio->category->name }}</p>
                         <p class="card-text">Prezzo: <strong>{{ $annuncio->price }} €</strong></p>
                     </div>
