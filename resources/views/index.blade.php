@@ -17,11 +17,26 @@
     <div class="container mt-4">
         <h1 class="mb-4">Le nostre forniture</h1>
         <h4 class="mb-4">Trova prodotti di qualità a prezzi convenienti solo su Presto.it</h4>
+    </div>
+
+    <section style="background-color: #ffffff; height: 400px;">
+        <div class="container">
+        </div>
+    </section>
+
+    <div class="container">
+
+        {{-- <section style="background-color: #ffffff;  height: 200px; width: 100%; z-index: -100;">
+                <div class="container">
+                </div>
+            </section> --}}
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
             @foreach ($announcements as $annuncio)
                 <div class="col mb-4">
                     <div class="card text-center border rounded-5 equal-height-card">
+                        
                         <div class="card-body">
                             <h5 class="card-title text-center fs-3">{{ $annuncio->title }}</h5>
                             <img src="https://picsum.photos/id/27/300/200" class="img-fluid p-1  rounded-5"
@@ -47,6 +62,10 @@
                     </div>
                 </div>
             @endforeach
+
+            <div class="container" style="background-color: #ffffff; height: 200px; width: 100%;">
+            </div>
+            
         </div>
     </div>
 
