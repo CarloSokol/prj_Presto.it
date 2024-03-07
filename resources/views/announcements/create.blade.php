@@ -1,5 +1,7 @@
-<x-layout>
-    <div class="container">
+<x-layout id="announcementsCreate">
+
+    <div class="container py-5" id="announcementSection">
         <livewire:create-announcement />
     </div>
+
 </x-layout>

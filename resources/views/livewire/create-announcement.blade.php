@@ -1,5 +1,5 @@
 <div>
-    <h1 class="title">Crea il tuo annuncio!</h1>
+    <h1 class="title text-primary text-center">Crea il tuo annuncio!</h1>
 
     @include('components.success')
 
@@ -39,7 +39,9 @@
                     {{ $message }}
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary shadow px-4 py-2 d-inline ">Crea</button>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-cta shadow d-inline w-auto px-5">Crea</button>
+            </div>
         </div>
     </form>
 

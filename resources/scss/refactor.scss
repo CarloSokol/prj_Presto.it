@@ -30,7 +30,11 @@ body {
     }
 
     &#announcementsList {
-        @import 'components/announcementsList.scss';
+        @import 'components/announcements/list.scss';
+    }
+
+    &#announcementsCreate {
+        @import 'components/announcements/create.scss'
     }
 
     &#login,

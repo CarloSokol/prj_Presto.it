@@ -11,11 +11,5 @@
         @include('components.index.forniture')
 
     </section>
-
-    <section id="announcements">
-
-        @include('components.index.announcements')
-
-    </section>
     
 </x-layout>
