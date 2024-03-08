@@ -13,17 +13,17 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             @forelse ($category->announcements as $announcement)
                 <div class="col mb-4">
-                    <div class="card text-center border rounded-5 equal-height-card">
+                    <div class="card text-center border rounded-5 h-100 ">
 
                         <div class="card-body">
                             <h5 class="card-title text-center fs-3">{{ $announcement->title }}</h5>
                             <img src="https://picsum.photos/200" class="img-fluid p-1  rounded-5" alt="...">
 
                             <p class="card-text fst-italic fw-medium mb-3 announcement-body"
-                                style="height: auto; overflow: hidden; text-overflow: ellipsis;">{{ $announcement->body }}</p>
+                                style="height: 145px; overflow: hidden; text-overflow: ellipsis;">{{ $announcement->body }}</p>
                             <p class="card-text fw-bolder mb-3"> {{ $announcement->price }} €</p>
                             {{--  --}}
-                            <p class="card-footer fw-lighter  mt-3">Pubblicato il :
+                            <p class="card-footer fw-lighter  mt-3 ciao ">Pubblicato il :
                                 {{ $announcement->created_at->format('d/m/Y') }} - Autore :
                                 {{ $announcement->user->name ?? '' }}</p>
                         </div>
