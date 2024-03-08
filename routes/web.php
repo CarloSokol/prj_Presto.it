@@ -25,3 +25,13 @@ Route::get('/annuncio/nuovo', [AnnouncementController::class, 'createAnnouncemen
 Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
 
 Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+
+
+// Index revisore
+Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+
+// Accetta annuncio
+Route::get('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
+
+// Rifiuta annuncio
+Route::get('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
