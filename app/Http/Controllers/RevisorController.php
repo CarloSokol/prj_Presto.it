@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
@@ -28,7 +31,7 @@ class RevisorController extends Controller
     }
     public function becomeRevisor(){
         return view('work-with-us.work-with-us');
-        Mail::to('admin@presto.it')->send(new becomeRevisor(Auth::user()));
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->back()->with('message', 'Complimenti! Hai richiesto di diventare revisore');
     }
     public function MakeRevisor(User $user) {

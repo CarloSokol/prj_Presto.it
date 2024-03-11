@@ -2,6 +2,7 @@
     <form>
         <div class="container p-3   ">
 
+            <x-message/>
             <div class="row p-2 g-3  ">
 
                 <div class="col-12 col-md-6  ">
@@ -17,6 +18,7 @@
 
                     <textarea class="m-3 " type="textarea" placeholder="inserisci una tua breve presentazione"></textarea>
                     <button class="bg-primary text-white m-3 " type="submit">Diventa Revisore </button>
+                    
 
 
 
