@@ -6,15 +6,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link courgette-regular" aria-current="page" href="{{route('announcements.index')}}"> Annunci</a>
+                    <a class="nav-link courgette-regular" aria-current="page" href="{{ route('announcements.index') }}">
+                        Annunci</a>
                 </li>
 
-                @if (Auth::user() && Auth::user() ->is_revisor)
+                @if (Auth::user() && Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-turrent="page" href="{{ route('revisor.index') }}">
+                        <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-turrent="page"
+                            href="{{ route('revisor.index') }}">
                             Zona revisore
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                {{App\Models\Announcement::toBeRevisionedCount()}}
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {{ App\Models\Announcement::toBeRevisionedCount() }}
                                 <span class="visually-hidden">messaggi non letti</span>
                             </span>
                         </a>
@@ -22,9 +25,12 @@
                 @endif
 
                 @auth
+
+
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle courgette-regular" href="#" id="categoriesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle courgette-regular" href="#" id="categoriesDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorie
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
@@ -40,15 +46,16 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle courgette-regular" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle courgette-regular" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Benvenuto {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item ">
                                 <form action="{{ route('logout') }}" id="logout-form" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn text-center w-100 "> <strong>Logout</strong> </button>
+                                    <button type="submit" class="btn text-center w-100 "> <strong>Logout</strong>
+                                    </button>
                                 </form>
                             </li>
                         </ul>

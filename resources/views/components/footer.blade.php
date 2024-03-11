@@ -19,6 +19,10 @@
                         <li><a href="#">Chi Siamo</a></li>
                         <li><a href="#">Prodotti</a></li>
                         <li><a href="#">Contatti</a></li>
+                        <li class="nav-item">
+                            <a class="footer-links" aria-current="page" href="{{ route('become.revisor') }}">
+                                Lavora con noi</a>
+                        </li>
                     </ul>
                 </div>
             </div>

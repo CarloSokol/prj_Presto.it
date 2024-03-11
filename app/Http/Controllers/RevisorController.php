@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
@@ -23,5 +25,16 @@ class RevisorController extends Controller
     {
         $announcement->setAccepted(false);
         return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
+    }
+    public function becomeRevisor(){
+        return view('work-with-us.work-with-us');
+        Mail::to('admin@presto.it')->send(new becomeRevisor(Auth::user()));
+        return redirect()->back()->with('message', 'Complimenti! Hai richiesto di diventare revisore');
+    }
+    public function MakeRevisor(User $user) {
+        
+        Artisan::call('presto:makeUserRevisor', ["email" =>$user->email]);
+        return redirect('/')->with('message', 'Complimenti! L\'utente è diventato un revisore');
+        
     }
 }
