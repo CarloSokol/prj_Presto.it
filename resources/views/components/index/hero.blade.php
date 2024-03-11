@@ -1,4 +1,7 @@
 <div class="container-fluid p-0 shadow" style="position:relative;">
+
+    <x-error/>
+
     <img src="{{ asset('img/cover.jpg') }}" alt="Hero Presto"
         style="width:100%;height:auto;aspect-ratio:16/9;max-height:700px;">
     @auth
