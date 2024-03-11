@@ -3,7 +3,6 @@
     @foreach ($announcements as $annuncio)
         <div class="col mb-4 " style="grid-auto-rows: 1fr">
             <div class="card border border-primary rounded-3 h-100">
-
                 <div class="card-body">
                     <h5 class="card-title text-center text-primary fs-3">{{ $annuncio->title }}</h5>
                     <img src="https://picsum.photos/id/27/300/200" class="img-fluid p-1  rounded-5" alt="...">

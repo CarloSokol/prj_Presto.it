@@ -20,7 +20,7 @@
                         <li><a href="#">Prodotti</a></li>
                         <li><a href="#">Contatti</a></li>
                         <li class="nav-item">
-                            <a class="footer-links" aria-current="page" href="{{ route('become.revisor') }}">
+                            <a class="footer-links" aria-current="page" href="{{ route('revisor.become') }}">
                                 Lavora con noi</a>
                         </li>
                     </ul>

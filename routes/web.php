@@ -20,25 +20,34 @@ Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
 
-Route::get('/annuncio/nuovo', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
+Route::group(['prefix' => 'annunci'], function () {
+
+    Route::get('nuovo', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
+
+    Route::get('dettaglio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
+
+    Route::get('tutti', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+
+    // Accetta annuncio
+    Route::patch('accetta/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
+
+    // Rifiuta annuncio
+    Route::patch('rifiuta/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
+
+    Route::patch('removeAnnouncement/{announcement}', [RevisorController::class, 'removeAnnouncement'])->middleware('isRevisor')->name('announcement.remove');
+});
+
+Route::group(['prefix' => 'revisor'], function () {
+    // Index revisore
+    Route::get('index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 
-Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
+    //Richiedi di diventare revisore
+    Route::get('richiesta', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('revisor.become');
 
-Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+    //Invio della email per la richiesta di revisione
+    Route::post('sendRevisor', [RevisorController::class, 'sendRevisor'])->middleware('auth')->name('revisor.send');
 
-
-// Index revisore
-Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
-
-// Accetta annuncio
-Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
-
-// Rifiuta annuncio
-Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
-
-//Richiedi di diventare revisore
-Route::get('/richiesta/revisore', [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
-
-//Rendi utente revisore
-Route::get('/richiesta/revisore{user}', [RevisorController::class,'makeRevisor'])->name('make.revisor');
+    //Rendi utente revisore
+    Route::get('richiesta/{user}', [RevisorController::class, 'makeRevisor'])->name('revisor.make');
+});

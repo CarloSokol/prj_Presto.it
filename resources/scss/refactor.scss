@@ -34,13 +34,19 @@ body {
     }
 
     &#announcementsCreate {
-        @import 'components/announcements/create.scss'
+        @import 'components/announcements/create.scss';
     }
 
     &#login,
     &#register {
         @import 'components/auth.scss';
     }
+
+
+    &#workWithUs {
+        @import 'components/work-with-us/work-with-us.scss';
+    }
+
 
     footer {
         @import 'components/footer.scss';
