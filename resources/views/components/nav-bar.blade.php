@@ -9,6 +9,18 @@
                     <a class="nav-link courgette-regular" aria-current="page" href="{{route('announcements.index')}}"> Annunci</a>
                 </li>
 
+                @if (Auth::user() && Auth::user() ->is_revisor)
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-turrent="page" href="{{ route('revisor.index') }}">
+                            Zona revisore
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {{App\Models\Announcement::toBeRevisionedCount()}}
+                                <span class="visually-hidden">messaggi non letti</span>
+                            </span>
+                        </a>
+                    </li>
+                @endif
+
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle courgette-regular" href="#" id="categoriesDropdown" role="button"

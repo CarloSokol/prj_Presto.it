@@ -22,7 +22,13 @@ class AnnouncementController extends Controller
    }
 
    public function indexAnnouncement(){
-      $announcements = Announcement::paginate(4);
+
+      $announcements = Announcement::where('is_accepted', true)->paginate(6);
+
+      // $announcements = Announcement::paginate(4);
+
       return view('announcements.index', compact('announcements'));
    }
 }
+
+// 16:01
