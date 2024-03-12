@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
 // ricerca annuncio
-Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.searh');
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
 
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
 
