@@ -5,11 +5,30 @@ div#registerSection {
 
     div.card {
         border-color: $primaryColor;
+        
     }
+    
 
+    $white: rgba(255,255,255,0.3);
+
+    form {
+        background: $white;
+        border-radius: 50px;
+        border-left: 1px solid $white;
+        border-top: 1px solid $white;
+        backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+        text-align: center;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        
+      }
 }
+
+
 
 div#registerSection {
     min-height: 600px;
     height: calc(100% - 410px);
 }
+

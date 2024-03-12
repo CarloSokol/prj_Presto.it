@@ -5,9 +5,9 @@
     </x-slot>
 
     <div class="container mt-5 mb-5 d-flex justify-content-center align-items-center" id="loginSection">
-        <div class="card rounded-5">
-            <div class="card-body">
-                <form action="/login" method="POST" class="p-5">
+        <div class=" rounded-5 trasmparent">
+            <div class="card-body ">
+                <form action="/login" method="POST" class="p-5 ">
                     <div class="card-header border-0 text-center text-primary h3 mb-2">
                         Accedi
                     </div>
