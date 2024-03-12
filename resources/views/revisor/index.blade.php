@@ -16,13 +16,13 @@
                     <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/id/27/1200/400" class="img-fluid p-3 rounded" alt="...">
+                                <img src="https://picsum.photos/id/27/1400/550" class="img-fluid p-3 rounded" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/id/28/1200/400" class="img-fluid p-3 rounded" alt="...">
+                                <img src="https://picsum.photos/id/28/1400/550" class="img-fluid p-3 rounded" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/id/29/1200/400" class="img-fluid p-3 rounded" alt="...">
+                                <img src="https://picsum.photos/id/29/1400/550" class="img-fluid p-3 rounded" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mb-2">
                 <div class="col-12 col-md-6">
                     <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement_to_check])}}" method="POST">
                         @csrf
