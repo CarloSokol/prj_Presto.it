@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-center border-0">
-                    <a href="" class="btn btn-cta mb-3 mx-auto">Per saperne di più</a>
+                    <a href="{{ route('announcements.show', $annuncio) }}" class="btn btn-cta mb-3 mx-auto">Per saperne di più</a>
                 </div>
             </div>
         </div>

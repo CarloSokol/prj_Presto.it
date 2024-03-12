@@ -18,6 +18,8 @@ class AnnouncementController extends Controller
 
    public function showAnnouncement (Announcement $announcement)
    {
+      if (!auth()->check()) return response('Non sei autenticato', 403);
+      
       return view('announcements.show', compact('announcement' ) );
    }
 
