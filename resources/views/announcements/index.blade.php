@@ -10,7 +10,7 @@
                 @foreach ($announcements as $annuncio)
                     <div class="col mb-4">
                         <div class="card h-100 shadow">
-                            @if (auth()->user()->is_revisor)
+                            @if (auth()->user() && auth()->user()->is_revisor)
                                 <form action="{{ route('announcement.remove', ['announcement' => $annuncio]) }}"
                                     method="POST">
                                     @csrf
