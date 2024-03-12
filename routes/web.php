@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
+// ricerca annuncio
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.searh');
+
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
 
 Route::group(['prefix' => 'annunci'], function () {
@@ -51,3 +54,11 @@ Route::group(['prefix' => 'revisor'], function () {
     //Rendi utente revisore
     Route::get('richiesta/{user}', [RevisorController::class, 'makeRevisor'])->name('revisor.make');
 });
+
+
+
+
+
+
+
+

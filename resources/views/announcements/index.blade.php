@@ -2,7 +2,7 @@
 
     <div class="container mt-4" id="announcementsSection">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center ">
-            @foreach ($announcements as $annuncio)
+            @forelse ($announcements as $annuncio)
                 <div class="col mb-4">
                     <div class="card h-100 shadow">
                         @if (auth()->user()->is_revisor)
@@ -13,7 +13,7 @@
                                     <span><i class="fa-solid fa-trash-can"></i></span>
                                 </button>
                             </form>
-                        @endif
+                        @endforelse
                         <img src="https://picsum.photos/200" class="card-img-top rounded-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center fs-4">{{ $annuncio->title }}</h5>

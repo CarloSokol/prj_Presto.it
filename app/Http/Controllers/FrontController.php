@@ -22,4 +22,18 @@ class FrontController extends Controller
     {
         return view('categoryShow', compact('category'));
     }
+
+
+    public function searchAnnouncemets(Request $request)
+    {
+        $announcements = Announcement::searh($request->searched)->where('is_accepted, true')->paginate(10);
+
+        return view('announcements.index', compact('announcements'));
+    }
+
 }
+
+   
+
+
+
