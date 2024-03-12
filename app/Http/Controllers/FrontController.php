@@ -24,9 +24,9 @@ class FrontController extends Controller
     }
 
 
-    public function searchAnnouncemets(Request $request)
+    public function searchAnnouncements(Request $request)
     {
-        $announcements = Announcement::searh($request->searched)->where('is_accepted, true')->paginate(10);
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
 
         return view('announcements.index', compact('announcements'));
     }
