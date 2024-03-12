@@ -8,7 +8,7 @@
             </div>
         </div>
     </div>
-
+    
     @if ($announcement_to_check)
         <div class="container">
             <div class="row">
