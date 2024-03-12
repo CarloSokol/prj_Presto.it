@@ -12,7 +12,7 @@
 
                 @if (Auth::user() && Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-turrent="page"
+                        <a class="nav-link courgette-regular btn btn-outline-success btn-sm position-relative" aria-turrent="page"
                             href="{{ route('revisor.index') }}">
                             Zona revisore
                             <span
