@@ -31,7 +31,16 @@ class CreateAnnouncement extends Component
     {
         $validatedData = $this->validate();
 
-        $category = Category::find($this->category);
+        
+        if(gettype($this->category) == 'string')
+        {
+            $category = Category::find($this->category);
+        }
+        else
+        {
+            $category = $this->category;
+        }
+
         $announcement = $category->announcements()->create([
             'title' => $this->title,
             'body' => $this->body,

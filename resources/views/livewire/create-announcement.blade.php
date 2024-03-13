@@ -24,8 +24,8 @@
 
             <div class="mb-3 col-6">
                 <label for="category">Categoria</label>
-                <select wire:model.defer="category" id="category" class="form-control bg-colore-tranparet">
-
+                <select wire:model="category" id="category" class="form-control bg-colore-tranparet">
+{{-- .defer --}}
                     @if (isset($category))
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @else
