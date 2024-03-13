@@ -1,4 +1,11 @@
+.custom-input:focus {
+    outline: none !important;
+    border-color: initial !important;
+    box-shadow: none !important;
+}
+
 .navbar-nav {
+    
     li.nav-item {
 
         position: relative;
@@ -25,8 +32,6 @@
             transform-origin: left top;
             height: 1px;
             background-color: $primaryColor;
-
-
         }
     }
 }

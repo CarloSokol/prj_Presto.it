@@ -1,4 +1,4 @@
-<div>
+<div class="border border-primary p-4 rounded-5">
     <h1 class="title text-primary text-center">Crea il tuo annuncio!</h1>
 
     @include('components.success')

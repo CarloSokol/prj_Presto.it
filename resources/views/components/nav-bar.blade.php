@@ -3,7 +3,7 @@
 
         <a class="navbar-brand text-primary  courgette-regular-title" href="/">Presto.it</a>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbar-nav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link courgette-regular" aria-current="page" href="{{ route('announcements.index') }}">
@@ -78,11 +78,11 @@
 
 
             </ul>
-            <form action="{{ route('announcements.search') }}"method="GET" class="d-flex">
-                <input name="searched" class="form-controll me-2" type="search" placeholder="search"
-                    aria-label="Search">
-                <button class="btn btn-outline-success " type="submit">Search</button>
+            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex rounded-pill border border-primary overflow-hidden">
+                <input name="searched" class="form-control courgette-regular border-0 custom-input" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success courgette-regular rounded-pill" type="submit">Search</button>
             </form>
+            
 
         </div>
     </div>
