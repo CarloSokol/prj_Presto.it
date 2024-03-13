@@ -39,7 +39,7 @@
             @empty
                 <div class="col-12">
                     <p class="h1">Non sono presenti annunci per questa categoria !</p>
-                    <p class="h2">Pubblicane uno: <a href="{{ route('announcements.create') }}"
+                    <p class="h2">Pubblicane uno: <a href="{{ route('announcements.create', ['category'=>$category]) }}"
                             class="btn btn-success shadow">Nuovo Annuncio</a></p>
                 </div>
             @endforelse

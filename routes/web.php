@@ -25,7 +25,8 @@ Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->n
 
 Route::group(['prefix' => 'annunci'], function () {
 
-    Route::get('nuovo', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
+    //crea annuncio
+    Route::get('nuovo/{category?}', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
 
     Route::get('dettaglio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
 

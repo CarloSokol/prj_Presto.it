@@ -4,34 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Announcement;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 
 class AnnouncementController extends Controller
 {
-   public function createAnnouncement()
-   {
+    public function createAnnouncement(?Category $category = null)
+    {
+        if (!auth()->check()) {
+            return response('Non sei autenticato', 403);
+        }
 
-      if (!auth()->check()) return response('Non sei autenticato', 403);
+        return view('announcements.create', compact('category'));
+    }
 
-      return view('announcements.create');
-   }
+    public function showAnnouncement(Announcement $announcement)
+    {
+        if (!auth()->check()) {
+            return response('Non sei autenticato', 403);
+        }
 
-   public function showAnnouncement (Announcement $announcement)
-   {
-      if (!auth()->check()) return response('Non sei autenticato', 403);
-      
-      return view('announcements.show', compact('announcement' ) );
-   }
+        return view('announcements.show', compact('announcement'));
+    }
 
-   public function indexAnnouncement(){
+    public function indexAnnouncement()
+    {
+        $announcements = Announcement::where('is_accepted', true)->paginate(6);
 
-      $announcements = Announcement::where('is_accepted', true)->paginate(6);
+        // $announcements = Announcement::paginate(4);
 
-      // $announcements = Announcement::paginate(4);
-
-      return view('announcements.index', compact('announcements'));
-   }
-
+        return view('announcements.index', compact('announcements'));
+    }
 }
 
 // 16:01

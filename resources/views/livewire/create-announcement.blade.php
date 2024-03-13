@@ -25,10 +25,17 @@
             <div class="mb-3 col-6">
                 <label for="category">Categoria</label>
                 <select wire:model.defer="category" id="category" class="form-control bg-colore-tranparet">
-                    <option value="">Scegli la categoria</option>
-                    @foreach ($categories as $category)
+
+                    @if (isset($category))
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
+                    @else
+                        <option value="">Scegli la categoria</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+
+                    @endif
+
                 </select>
             </div>
 
