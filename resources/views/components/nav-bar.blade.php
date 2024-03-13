@@ -10,10 +10,11 @@
                         Annunci</a>
                 </li>
 
+
                 @if (Auth::user() && Auth::user()->is_revisor)
-                    <li class="nav-item">
-                        <a class="nav-link courgette-regular btn btn-outline-success btn-sm position-relative" aria-turrent="page"
-                            href="{{ route('revisor.index') }}">
+                    <li class="nav-item me-1 ">
+                        <a class="nav-link courgette-regular btn btn-outline-success btn-sm position-relative"
+                            aria-turrent="page" href="{{ route('revisor.index') }}">
                             Zona revisore
                             <span
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -26,7 +27,11 @@
 
                 @auth
 
-
+                    <li>
+                        <a class="nav-link courgette-regular" aria-current="page"
+                            href="{{ route('announcements.create') }}">Nuovo
+                            Annuncio</a>
+                    </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle courgette-regular" href="#" id="categoriesDropdown"
@@ -70,11 +75,14 @@
 
                 @endauth
 
+
+
             </ul>
-              <form action="{{route('announcements.search')}}"method="GET" class="d-flex">
-                    <input name="searched" class="form-controll me-2" type="search" placeholder="search" aria-label="Search">
-                    <button class="btn btn-outline-success " type="submit">Search</button>
-              </form>
+            <form action="{{ route('announcements.search') }}"method="GET" class="d-flex">
+                <input name="searched" class="form-controll me-2" type="search" placeholder="search"
+                    aria-label="Search">
+                <button class="btn btn-outline-success " type="submit">Search</button>
+            </form>
 
         </div>
     </div>
