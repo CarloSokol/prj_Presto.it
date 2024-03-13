@@ -12,6 +12,40 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+         \App\Models\Category::factory()->create(['name'=>'Informatica']);
+         \App\Models\Category::factory()->create(['name'=>'Telefoni']);
+         \App\Models\Category::factory()->create(['name'=>'Auto']);
+         \App\Models\Category::factory()->create(['name'=>'Arredamento']);
+         \App\Models\Category::factory()->create(['name'=>'Lavoro']);
+         \App\Models\Category::factory()->create(['name'=>'Immobili']);
+         \App\Models\Category::factory()->create(['name'=>'Elettrodomestici']);
+         \App\Models\Category::factory()->create(['name'=>'Musica']);
+         \App\Models\Category::factory()->create(['name'=>'Accessori']);
+         \App\Models\Category::factory()->create(['name'=>'Giochi']);
+         \App\Models\Category::factory()->create(['name'=>'Sport']);
+         \App\Models\Category::factory()->create(['name'=>'Manga']);
+
+
+        \App\Models\Announcement::factory()->create([
+            'title'=>'Pesi palestra',
+            'body'=>'Athlyt - Set di manubri rivestiti in neoprene',
+            'price'=>'40',
+            'category_id'=>11,
+        ]);
+
+
+
+        \App\Models\Announcement::factory()->create([
+            'title'=>'Orologio uomo',
+            'body'=>'Tommy Hilfiger Analogue Quartz Watch for Men, Stainless Steel',
+            'price'=>'170',
+            'category_id'=>9,
+        ]);
+
+
+
+
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
