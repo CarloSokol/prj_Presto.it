@@ -1,4 +1,5 @@
 <x-layout id="announcementsList">
+    <x-message/>
 
     <div class="container mt-4" id="announcementsSection">
         @if ($announcements->isEmpty())

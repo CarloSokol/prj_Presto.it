@@ -18,7 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
 
-    @vite(['resources/scss/refactor.scss', 'resources/js/app.js'])
+    @vite(['resources/scss/refactor.scss', 'resources/js/app.js', 'resources/js/tilt.js'])
 </head>
 
 <body id='{{ $attributes['id'] ?? '' }}'>
@@ -33,4 +33,9 @@
     @livewireScripts
 </body>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<!-- animation scrool -->
 </html>
