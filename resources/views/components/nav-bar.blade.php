@@ -12,8 +12,8 @@
 
 
                 @if (Auth::user() && Auth::user()->is_revisor)
-                    <li class="nav-item me-1 ">
-                        <a class="nav-link courgette-regular btn btn-outline-success btn-sm position-relative"
+                    <li class="nav-item me-1">
+                        <a class="nav-link courgette-regular position-relative"
                             aria-turrent="page" href="{{ route('revisor.index') }}">
                             Zona revisore
                             <span
@@ -27,7 +27,7 @@
 
                 @auth
 
-                    <li>
+                    <li class="nav-item dropdown">
                         <a class="nav-link courgette-regular" aria-current="page"
                             href="{{ route('announcements.create') }}">Nuovo
                             Annuncio</a>
