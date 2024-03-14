@@ -80,7 +80,7 @@
             </ul>
             <form action="{{ route('announcements.search') }}" method="GET" class="d-flex rounded-pill border border-primary overflow-hidden">
                 <input name="searched" class="form-control courgette-regular border-0 custom-input" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success courgette-regular rounded-pill" type="submit">Search</button>
+                <button class="btn-cta courgette-regular rounded-pill" type="submit">Search</button>
             </form>
             
 

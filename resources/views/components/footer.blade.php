@@ -5,8 +5,8 @@
                 <div class="footer-section">
                     <h3 class="footer-section-title">Contatti</h3>
 
-                    <p><i class="fas fa-map-marker-alt ms-2 "></i> <a href="" class="text-decoration-none text-light ms-2">Via Example 123, 00100 Città, Paese</a></p>
-                    <p><i class="fas fa-envelope ms-2"></i> <a href="" class="text-decoration-none text-light ms-2">info@example.com</a></p>
+                    <p><i class="fas fa-map-marker-alt ms-2 "></i> <a href="" class="text-decoration-none text-light ms-2">Via Example 123, 00100 Città, Italia </a></p>
+                    <p><i class="fas fa-envelope ms-2"></i> <a href="" class="text-decoration-none text-light ms-2">info@presto.com</a></p>
                     <p><i class="fas fa-phone ms-2"></i> <a href="" class="text-decoration-none text-light ms-2">+00 123 456789</a></p>
                     
                 </div>
@@ -15,7 +15,7 @@
                 <div class="footer-section">
                     <h3 class="footer-section-title text-center">Link Utili</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="{{route ('welcome')}}">Home</a></li>
                         <li><a href="#">Chi Siamo</a></li>
                         <li><a href="#">Prodotti</a></li>
                         <li><a href="#">Contatti</a></li>
