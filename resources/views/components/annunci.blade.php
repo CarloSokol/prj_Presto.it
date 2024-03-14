@@ -1,6 +1,6 @@
 @foreach ($announcements as $annuncio)
-    <div class="col mb-4 rounded-5 " style="grid-auto-rows: 1fr">
-        <div class="card border border-primary rounded-5 h-100">
+    <div class="col mb-4 rounded-5" style="grid-auto-rows: 1fr" data-tilt data-tilt-max="7" data-tilt-reset="true" data-tilt-speed="300">
+        <div class="card border border-primary rounded-5 h-100" >
             @if (auth()->user() && auth()->user()->is_revisor)
                 <form action="{{ route('announcement.remove', ['announcement' => $annuncio]) }}" method="POST">
                     @csrf
