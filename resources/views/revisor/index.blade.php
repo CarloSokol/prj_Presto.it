@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-gradient bg-success p-5 shadow mb-4">
+    <div class="container-fluid bg-gradient bg-success shadow mb-4">
         <div class="row">
-            <div class="col-12 text-light p-5">
+            <div class="col-12 text-light p-3">
                 <h1 class="display-2">
                     {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
                 </h1>
