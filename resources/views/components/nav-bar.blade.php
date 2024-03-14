@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg shadow-lg bg-secondary">
+<nav class="navbar navbar-expand-lg shadow-lg bg-secondary ">
     <div class="container">
 
         <a class="navbar-brand text-primary  courgette-regular-title" href="/">Presto.it</a>

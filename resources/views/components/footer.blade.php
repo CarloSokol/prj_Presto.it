@@ -1,26 +1,31 @@
-<footer class="footer fixed-bottom">
+<footer class="footer fixed-bottom ">
     <div class="container py-5">
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-section">
-                    <h3 class="footer-section-title">Contatti</h3>
+                    <h3 class="footer-section-title ps-2">Contatti</h3>
 
-                    <p><i class="fas fa-map-marker-alt ms-2 "></i> <a href="" class="text-decoration-none text-light ms-2">Via Example 123, 00100 Città, Italia </a></p>
-                    <p><i class="fas fa-envelope ms-2"></i> <a href="" class="text-decoration-none text-light ms-2">info@presto.com</a></p>
-                    <p><i class="fas fa-phone ms-2"></i> <a href="" class="text-decoration-none text-light ms-2">+00 123 456789</a></p>
-                    
+                    <p><i class="fas fa-map-marker-alt ms-2 "></i> <a href=""
+                            class="text-decoration-none text-light ms-2 courgette-regulare ">Via Example 123, 00100 Città,
+                            Italia </a></p>
+                    <p><i class="fas fa-envelope ms-2 "></i> <a href=""
+                            class="text-decoration-none text-light ms-2 courgette-regulare">info@presto.com</a></p>
+                    <p><i class="fas fa-phone ms-2"></i> <a href=""
+                            class="text-decoration-none text-light ms-2 courgette-regulare">+00 123 456789</a></p>
+
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-section">
-                    <h3 class="footer-section-title text-center">Link Utili</h3>
-                    <ul class="footer-links">
-                        <li><a href="{{route ('welcome')}}">Home</a></li>
-                        <li><a href="#">Chi Siamo</a></li>
-                        <li><a href="#">Prodotti</a></li>
-                        <li><a href="#">Contatti</a></li>
+                    <h3 class="footer-section-title text-center ">Link Utili</h3>
+                    <ul class="footer-links  ">
+
+                        <li><a class="courgette-regulare" href="{{ route('welcome') }}">Home</a></li>
+                        <li><a class="courgette-regulare" href="#">Chi Siamo</a></li>
+                        <li><a class="courgette-regulare" href="#">Prodotti</a></li>
+                        <li><a class="courgette-regulare" href="#">Contatti</a></li>
                         <li class="nav-item">
-                            <a class="footer-links" aria-current="page" href="{{ route('revisor.become') }}">
+                            <a class="footer-links courgette-regulare " aria-current="page" href="{{ route('revisor.become') }}">
                                 Lavora con noi</a>
                         </li>
                     </ul>
