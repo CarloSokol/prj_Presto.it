@@ -1,5 +1,5 @@
 <footer class="footer fixed-bottom ">
-    <div class="container py-5">
+    <div class="container p-3">
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-section">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
+    <div class="footer-bottom p-2 ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
