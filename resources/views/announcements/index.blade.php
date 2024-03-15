@@ -11,6 +11,7 @@
                 <x-annunci :announcements="$announcements" />
             </div>
         @endif
+        {{ $announcements->links() }}
     </div>
 
 </x-layout>
