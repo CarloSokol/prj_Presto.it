@@ -13,7 +13,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             @forelse ($category->announcements as $announcement)
                 <div class="col mb-4">
-                    <a href="{{ route('announcements.show', compact('announcement')) }}" class="text-decoration-none">
+                    <a href="{{ route('announcements.show', compact('announcement')) }}" class="text-decoration-none text-black ">
                         <div class="card text-center border rounded-5 h-100 ">
 
                             <div class="card-body">
