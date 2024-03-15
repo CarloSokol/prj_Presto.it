@@ -21,11 +21,12 @@
                     <ul class="footer-links  ">
 
                         <li><a class="courgette-regulare" href="{{ route('welcome') }}">Home</a></li>
-                        <li><a class="courgette-regulare" href="#">Chi Siamo</a></li>
+                        {{-- <li><a class="courgette-regulare" href="#">Chi Siamo</a></li>
                         <li><a class="courgette-regulare" href="#">Prodotti</a></li>
-                        <li><a class="courgette-regulare" href="#">Contatti</a></li>
-                        <li class="nav-item">
-                            <a class="footer-links courgette-regulare " aria-current="page" href="{{ route('revisor.become') }}">
+                        <li><a class="courgette-regulare" href="#">Contatti</a></li> --}}
+                        <li class="nav-item mt-4">
+                            <a class="footer-links courgette-regulare " aria-current="page" href="{{ route('revisor.become') }}"
+                            style="">
                                 Lavora con noi</a>
                         </li>
                     </ul>
