@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg shadow-lg bg-secondary">
     <div class="container">
 
-        <a class="navbar-brand text-primary courgette-regular-title" href="/">Presto.it</a>
+        <a class="navbar-brand w-50 " href="/">
+            <img src="/img/prestoit_logo.png" alt="Logo Presto.it" width="30%">
+        </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav"
             aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
