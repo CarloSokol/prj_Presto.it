@@ -1,5 +1,5 @@
 @foreach ($announcements as $annuncio)
-    <div class="col mb-4 rounded-5" style="grid-auto-rows: 1fr" data-tilt data-tilt-max="5" data-tilt-reset="true"
+    <div class="m-3 col mb-4 rounded-5" style="grid-auto-rows: 1fr" data-tilt data-tilt-max="5" data-tilt-reset="true"
         data-tilt-speed="300">
         <div class="card border border-primary rounded-5 h-100">
             @if (auth()->user() && auth()->user()->is_revisor)
