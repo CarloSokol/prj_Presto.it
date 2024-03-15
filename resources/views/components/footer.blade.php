@@ -5,12 +5,12 @@
                 <div class="footer-section">
                     <h3 class="footer-section-title ps-2">Contatti</h3>
 
-                    <p><i class="fas fa-map-marker-alt ms-2 "></i> <a href=""
+                    <p><i class="fas fa-map-marker-alt ms-2 "></i> <a 
                             class="text-decoration-none text-light ms-2 courgette-regulare ">Via Example 123, 00100 Città,
                             Italia </a></p>
-                    <p><i class="fas fa-envelope ms-2 "></i> <a href=""
+                    <p><i class="fas fa-envelope ms-2 "></i> <a
                             class="text-decoration-none text-light ms-2 courgette-regulare">info@presto.com</a></p>
-                    <p><i class="fas fa-phone ms-2"></i> <a href=""
+                    <p><i class="fas fa-phone ms-2"></i> <a 
                             class="text-decoration-none text-light ms-2 courgette-regulare">+00 123 456789</a></p>
 
                 </div>
