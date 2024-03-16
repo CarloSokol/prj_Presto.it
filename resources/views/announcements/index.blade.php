@@ -1,7 +1,8 @@
 <x-layout id="announcementsList">
-    <x-message/>
+    
+    @include('components.message')
 
-    <div class="container mt-4" id="announcementsSection">
+    <div class="container mt-4" id="announcementsSection" style="min-height: 80vh;">
         @if ($announcements->isEmpty())
             <div class="alert alert-warning py-3 shadow col-12">
                 <div class="lead">Non ci sono annunci per questa ricerca.</div>

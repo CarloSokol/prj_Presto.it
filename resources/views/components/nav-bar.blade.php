@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg shadow-lg bg-secondary">
+<nav class="navbar navbar-expand-lg shadow-lg bg-secondary" id="navbar">
     <div class="container">
 
-        <div class="navbar-brand" style="width:20%">
+        <div class="navbar-brand" style="width:14%">
             <a href="/"> <img src="/img/prestoit_logo.png" alt="Logo Presto.it" width="150px"></a>
         </div>
 
@@ -17,11 +17,19 @@
                         href="{{ route('announcements.index') }}">Annunci</a>
                 </li>
 
+                @auth
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link courgette-regular ps-1" aria-current="page"
+                            href="{{ route('announcements.create') }}"><i class="fa-solid fa-circle-plus fa-xl"
+                                style="color: #45b895;"></i></a>
+                    </li>
+                @endauth
+
                 @if (Auth::user() && Auth::user()->is_revisor)
                     <li class="nav-item me-1">
                         <a class="nav-link courgette-regular position-relative" aria-turrent="page"
                             href="{{ route('revisor.index') }}">
-                            Zona revisore
+                            Revisione
                             <span
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount() }}
@@ -33,11 +41,7 @@
 
                 @auth
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link courgette-regular" aria-current="page"
-                            href="{{ route('announcements.create') }}">Nuovo
-                            Annuncio</a>
-                    </li>
+
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle courgette-regular" href="#" id="categoriesDropdown"
@@ -83,10 +87,11 @@
 
             </ul>
             <form action="{{ route('announcements.search') }}" method="GET"
-                class="d-flex rounded-pill border border-primary overflow-hidden">
+                class="d-flex rounded-pill border border-primary overflow-hidden" id="Search">
                 <input name="searched" class="form-control courgette-regular border-0 custom-input" type="search"
                     placeholder="Search" aria-label="Search">
-                <button class="btn-cta courgette-regular rounded-pill" type="submit">Search</button>
+                <button class="btn-cta courgette-regular rounded-pill" type="submit"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
             </form>
 
 

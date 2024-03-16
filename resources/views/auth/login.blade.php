@@ -4,6 +4,7 @@
         Accedi
     </x-slot>
 
+<section style="min-height: 80vh;">
     <div class="container mt-5 mb-5 d-flex justify-content-center align-items-center " id="loginSection">
         <div class=" rounded-5 trasmparent">
             <div class="card-body ">
@@ -38,5 +39,7 @@
             </div>
         </div>
     </div>
+</section>
+    
 
 </x-layout>

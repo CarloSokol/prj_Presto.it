@@ -1,12 +1,10 @@
 <x-layout>
 
-    
-
-    <section>
-        <div class="container-fluid bg-gradient bg-primary shadow mb-4">
+    <section style="min-height: 75vh; height: auto;">
+        <div class="container-fluid bg-gradient bg-primary shadow mb-3">
             <div class="row">
-                <div class="col-12 text-light p-3">
-                    <h1 class="display-2">
+                <div class="col-12 text-light p-2">
+                    <h1 class=" text-center">
                         {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
                     </h1>
                 </div>
@@ -14,7 +12,7 @@
         </div>
 
         @if ($announcement_to_check)
-            <div class="container">
+            <div class="container h-auto " style="height: auto;">
                 <div class="row">
                     <div class="col-12">
                         <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">

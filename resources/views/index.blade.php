@@ -1,5 +1,6 @@
 <x-layout id='index'>
-    <x-message/>
+    
+        @include('components.message')
     
     <section id="hero">
         
