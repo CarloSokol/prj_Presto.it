@@ -1,10 +1,6 @@
 <x-layout>
 
-    <style>
-        section {
-            height: 95vh;
-        }
-    </style>
+    
 
     <section>
         <div class="container-fluid bg-gradient bg-primary shadow mb-4">

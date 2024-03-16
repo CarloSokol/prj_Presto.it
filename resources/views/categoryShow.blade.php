@@ -24,7 +24,7 @@
                                     style="height: 50px; overflow: hidden; text-overflow: ellipsis;">{{ $announcement->body }}</p>
                                 <p class="card-text fw-bolder"> {{ $announcement->price }} €</p>
                                 {{--  --}}
-                                <p class="card-footer fw-lighter  mt-3 ciao ">Pubblicato il :
+                                <p class="card-footer fw-lighter  mt-3  ">Pubblicato il :
                                     {{ $announcement->created_at->format('d/m/Y') }} - Autore :
                                     {{ $announcement->user->name ?? '' }}</p>
                             </div>
