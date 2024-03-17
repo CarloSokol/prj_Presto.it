@@ -22,6 +22,19 @@ body {
         }
     }
 
+    .btn-ctaa {
+        background: #6950ac;
+        border: 1px solid transparent;
+        color: $secondaryColor;
+        padding: 50px;
+
+        &:hover {
+            border-color: #6950ac;
+            background-color: #ffffff;
+            color: #6950ac;
+        }
+    }
+
     header#navbar {
         @import 'components/navbar.scss';
     }

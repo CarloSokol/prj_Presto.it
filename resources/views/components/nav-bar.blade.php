@@ -15,14 +15,14 @@
 
                 <!-- Annunci -->
                 <li class="nav-item">
-                    <a class="nav-link courgette-regular pe-1" aria-current="page"
+                    <a class="nav-link  pe-1" aria-current="page"
                         href="{{ route('announcements.index') }}">{{__('ui.Annunci')}}</a>
                 </li>
 
                 <!-- Pulsante Aggiungi Annuncio -->
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link courgette-regular pe-1" aria-current="page"
+                        <a class="nav-link  pe-1" aria-current="page"
                             href="{{ route('announcements.create') }}"><i class="fa-solid fa-circle-plus fa-xl"
                                 style="color: #45b895;"></i></a>
                     </li>
@@ -31,7 +31,7 @@
                 <!-- Conteggio Messaggi da Revisionare -->
                 @if (Auth::user() && Auth::user()->is_revisor)
                     <li class="nav-item me-1">
-                        <a class="nav-link courgette-regular position-relative" aria-turrent="page"
+                        <a class="nav-link  position-relative" aria-turrent="page"
                             href="{{ route('revisor.index') }}">
                             {{__('ui.Revisione')}}
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -45,13 +45,13 @@
                 <!-- Categorie -->
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle courgette-regular pe-1" href="#" id="categoriesDropdown"
+                        <a class="nav-link dropdown-toggle  pe-1" href="#" id="categoriesDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{__('ui.Categorie')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                             @foreach ($categories as $category)
-                                <li><a class="dropdown-item courgette-regular"
+                                <li><a class="dropdown-item "
                                         href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
                                 </li>
                                 <li>
@@ -63,7 +63,7 @@
 
                     <!-- Benvenuto e Logout -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle courgette-regular pe-1" href="#" role="button"
+                        <a class="nav-link dropdown-toggle  pe-1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{__('ui.Benvenuto')}} {{ Auth::user()->name }}
                         </a>
@@ -80,31 +80,42 @@
                 @else
                     <!-- Registrati e Accedi -->
                     <li class="nav-item">
-                        <a class="nav-link  courgette-regular" href="{{ route('register') }}">{{__('ui.Register')}}</a>
+                        <a class="nav-link  " href="{{ route('register') }}">{{__('ui.Register')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  courgette-regular" href="{{ route('login') }}">{{__('ui.Login')}}</a>
+                        <a class="nav-link  " href="{{ route('login') }}">{{__('ui.Login')}}</a>
                     </li>
                 @endauth
-
+                @php
+                $currentLocale = session('locale', 'it'); // Imposta la lingua corrente come italiano per impostazione predefinita
+                @endphp
+                
                 <!-- Lingue -->
-                <li class="nav-item">
-                    <x-_locale Lang="it" nation='it'/>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{{ asset('vendor/blade-flags/language-' . $currentLocale . '.svg') }}" width="25" height="25" />
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <x-_locale lang="it"/>
+                        </li>
+                        <li>
+                            <x-_locale lang="es"/>
+                        </li>
+                        <li>
+                            <x-_locale lang="en"/>
+                        </li>
+                        <!-- Aggiungi altre lingue se necessario -->
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <x-_locale Lang="es" nation='es'/>
-                </li>
-                <li class="nav-item pe-1">
-                    <x-_locale Lang="en" nation='gb'/>
-                </li>
-            </ul>
+                
 
             <!-- Ricerca -->
             <form action="{{ route('announcements.search') }}" method="GET"
                 class="d-flex rounded-pill border border-primary overflow-hidden" id="Search">
-                <input name="searched" class="form-control courgette-regular border-0 custom-input" type="search"
+                <input name="searched" class="form-control  border-0 custom-input" type="search"
                     placeholder="{{__('ui.Search')}}" aria-label="Search">
-                <button class="btn-cta courgette-regular rounded-pill" type="submit"><i
+                <button class="btn-cta  rounded-pill" type="submit"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>

@@ -65,3 +65,4 @@ Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('se
 
 
 
+
