@@ -1,8 +1,9 @@
 &.footer {
     position: static;
     bottom: 0;
-    background-color: $primaryColor !important;
-    color: #ffffff;
+    border-top: solid $primaryColor !important;
+    background-color: rgb(255, 255, 255);
+    color: black;
 
     .footer-links,
     .social-links {
@@ -11,6 +12,7 @@
 
         li {
             text-align: center;
+            
 
             a {
                 color: inherit;
