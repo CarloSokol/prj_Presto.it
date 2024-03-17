@@ -56,6 +56,8 @@ Route::group(['prefix' => 'revisor'], function () {
     Route::get('richiesta/{user}', [RevisorController::class, 'makeRevisor'])->name('revisor.make');
 });
 
+//* Cambio Lingua
+Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
 
 
 

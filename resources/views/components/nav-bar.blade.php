@@ -85,6 +85,21 @@
 
                 @endauth
 
+                <li class="nav-item">
+                    <x-_locale Lang="it" nation='it'/>
+                </li>
+                
+                <li class="nav-item">
+                    <x-_locale Lang="es" nation='es'/>
+                </li>
+
+                <li class="nav-item">
+                    <x-_locale Lang="en" nation='gb'/>
+                </li>
+                
+                
+                
+
             </ul>
             <form action="{{ route('announcements.search') }}" method="GET"
                 class="d-flex rounded-pill border border-primary overflow-hidden" id="Search">
