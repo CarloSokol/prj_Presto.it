@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Image;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
-
 
 class Announcement extends Model
 {
@@ -17,10 +17,10 @@ class Announcement extends Model
     {
         $category = $this->category;
         $array = [
-            'id'=> $this->id,
-            'title'=> $this->title,
-            'body'=> $this->body,
-            'category'=> $category,
+            'id' => $this->id,
+            'title' => $this->title,
+            'body' => $this->body,
+            'category' => $category,
         ];
         return $array;
     }
@@ -45,5 +45,10 @@ class Announcement extends Model
     public static function toBeRevisionedCount()
     {
         return Announcement::where('is_accepted', null)->count();
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 }
