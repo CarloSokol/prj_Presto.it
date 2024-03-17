@@ -3,12 +3,13 @@
 
     @include('components.success')
 
-    <form wire:submit.prevent="store" class="p-5">
+    <form wire:submit.prevent="store" class="p-4">
         <div class="row">
             @csrf
             <div class="mb-3 col-6">
                 <label for="title">Titolo Annuncio</label>
-                <input wire:model="title" type="text" class="form-control border border-primary p-2 rounded-5 @error('title') is-invalid @enderror">
+                <input wire:model="title" type="text"
+                    class="form-control border border-primary p-2 rounded-5 @error('title') is-invalid @enderror">
                 @error('title')
                     {{ $message }}
                 @enderror
@@ -16,7 +17,8 @@
 
             <div class="mb-3 col-6">
                 <label for="price">Prezzo</label>
-                <input wire:model="price" type="number" class="form-control border border-primary p-2 rounded-5  @error('price') is-invalid @enderror">
+                <input wire:model="price" type="number"
+                    class="form-control border border-primary p-2 rounded-5  @error('price') is-invalid @enderror">
                 @error('price')
                     {{ $message }}
                 @enderror
@@ -24,8 +26,9 @@
 
             <div class="mb-3 col-6">
                 <label for="category">Categoria</label>
-                <select wire:model="category" id="category" class="form-control border border-primary p-2 rounded-5 bg-colore-tranparet">
-{{-- .defer --}}
+                <select wire:model.defer="category" id="category"
+                    class="form-control border border-primary p-2 rounded-5 bg-colore-tranparet">
+                    {{--  --}}
                     @if (isset($category))
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @else
@@ -41,7 +44,8 @@
 
             <div class="mb-3 col-12">
                 <label for="body">Descrizione</label>
-                <textarea wire:model="body" class="form-control bg-colore-tranparet border border-primary p-2 rounded-5 @error('body') is-invalid @enderror"></textarea>
+                <textarea wire:model="body"
+                    class="form-control bg-colore-tranparet border border-primary p-2 rounded-5 @error('body') is-invalid @enderror"></textarea>
                 @error('body')
                     {{ $message }}
                 @enderror

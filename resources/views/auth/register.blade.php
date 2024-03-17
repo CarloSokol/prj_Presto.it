@@ -4,8 +4,8 @@
 Registrati
 </x-slot>
 
-
-<div class="container d-flex justify-content-center align-items-center" id="registerSection">
+<section style="min-height: 80vh;">
+    <div class="container d-flex justify-content-center align-items-center" id="registerSection">
     <div class=" rounded-5 col-6">
         <div class="card-body">
             <form action="/register" method="POST" class="p-5 border border-primary p-4 rounded-5">
@@ -38,5 +38,7 @@ Registrati
         </div>
     </div>
 </div>
+</section>
+
 
 </x-layout>
