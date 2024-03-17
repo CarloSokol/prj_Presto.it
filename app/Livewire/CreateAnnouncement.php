@@ -87,9 +87,9 @@ class CreateAnnouncement extends Component
         session()->flash('success', 'Annuncio creato correttamente!');
         $this->cleanForm();
 
-        $this->announcement->user()->associate(Auth::user());
+        // $this->announcement->user()->associate(Auth::user());
 
-        $this->announcement->save();
+        // $this->announcement->save();
     }
 
     public function updated($propertyName)

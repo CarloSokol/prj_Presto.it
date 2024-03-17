@@ -33,7 +33,7 @@ return [
     'Lavora' => 'Work',
     'ConNoi' => 'with us',
 
-    'GiaRev' => 'Are you already a reviewer',
+    'GiaRev' => 'You are already a reviewer',
     'Grazie' => 'Thank you for your contribution!',
     'InviaCandidatura' => 'Send your application to join the Presto team',
     'Presentazione' => 'Provide a brief introduction of yourself',

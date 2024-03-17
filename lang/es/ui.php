@@ -33,7 +33,7 @@ return [
     'Lavora' => 'Trabaja',
     'ConNoi' => 'con nosotros',
 
-    'GiaRev' => '¿Ya eres un revisor?',
+    'GiaRev' => 'Ya eres revisor',
     'Grazie' => '¡Gracias por tu contribución!',
     'InviaCandidatura' => 'Envía tu solicitud para unirte al equipo de Presto',
     'Presentazione' => 'Proporciona una breve presentación de ti mismo',
