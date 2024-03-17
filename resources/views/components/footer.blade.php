@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-section">
-                    <h3 class="footer-section-title ps-2">Contatti</h3>
+                    <h3 class="footer-section-title ps-2">{{__('ui.Contatti')}}</h3>
 
                     <p><i class="fas fa-map-marker-alt ms-2 "></i> <a href=""
                             class="text-decoration-none  ms-2 courgette-regulare ">Via Example 123, 00100 Città,
@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-section">
-                    <h3 class="footer-section-title text-center ">Link Utili</h3>
+                    <h3 class="footer-section-title text-center ">{{__('ui.Link Utili')}}</h3>
                     <ul class="footer-links  ">
 
                         <li><a class="courgette-regulare" href="{{ route('welcome') }}">Home</a></li>
@@ -27,14 +27,14 @@
                         <li class="nav-item mt-4">
                             <a class="footer-links courgette-regulare " aria-current="page" href="{{ route('revisor.become') }}"
                             style="">
-                                Lavora con noi</a>
+                                {{__('ui.LavoraConNoi')}}</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="footer-section text-black ">
-                    <h3 class="footer-section-title text-end">Seguici</h3>
+                    <h3 class="footer-section-title text-end">{{__('ui.Seguici')}}</h3>
                     <ul class="social-links text-end">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>

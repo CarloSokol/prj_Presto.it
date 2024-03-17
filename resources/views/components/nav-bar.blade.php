@@ -14,7 +14,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link courgette-regular" aria-current="page"
-                        href="{{ route('announcements.index') }}">Annunci</a>
+                        href="{{ route('announcements.index') }}">{{__('ui.Annunci')}}</a>
                 </li>
 
                 @auth
@@ -29,7 +29,7 @@
                     <li class="nav-item me-1">
                         <a class="nav-link courgette-regular position-relative" aria-turrent="page"
                             href="{{ route('revisor.index') }}">
-                            Revisione
+                            {{__('ui.Revisione')}}
                             <span
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount() }}
@@ -46,7 +46,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle courgette-regular" href="#" id="categoriesDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorie
+                            {{__('ui.Categorie')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                             @foreach ($categories as $category)
@@ -63,13 +63,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle courgette-regular" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Benvenuto {{ Auth::user()->name }}
+                            {{__('ui.Benvenuto')}} {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item ">
                                 <form action="{{ route('logout') }}" id="logout-form" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn text-center w-100 "> <strong>Logout</strong>
+                                    <button type="submit" class="btn text-center w-100 "> <strong>{{__('ui.Logout')}}</strong>
                                     </button>
                                 </form>
                             </li>
@@ -77,10 +77,10 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link  courgette-regular" href="{{ route('register') }}">Registrati</a>
+                        <a class="nav-link  courgette-regular" href="{{ route('register') }}">{{__('ui.Register')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  courgette-regular" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link  courgette-regular" href="{{ route('login') }}">{{__('ui.Login')}}</a>
                     </li>
 
                 @endauth
@@ -93,7 +93,7 @@
                     <x-_locale Lang="es" nation='es'/>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item pe-2 ">
                     <x-_locale Lang="en" nation='gb'/>
                 </li>
                 
@@ -104,7 +104,7 @@
             <form action="{{ route('announcements.search') }}" method="GET"
                 class="d-flex rounded-pill border border-primary overflow-hidden" id="Search">
                 <input name="searched" class="form-control courgette-regular border-0 custom-input" type="search"
-                    placeholder="Search" aria-label="Search">
+                    placeholder="{{__('ui.Search')}}" aria-label="Search">
                 <button class="btn-cta courgette-regular rounded-pill" type="submit"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
             </form>

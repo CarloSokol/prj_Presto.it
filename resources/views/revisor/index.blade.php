@@ -5,7 +5,13 @@
             <div class="row">
                 <div class="col-12 text-light p-2">
                     <h1 class=" text-center">
-                        {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+
+                        @if ($announcement_to_check)
+                        {{__('ui.RevTitleSi')}}
+                        @else
+                        {{__('ui.RevTitleNo')}}
+                        @endif
+
                     </h1>
                 </div>
             </div>
@@ -55,7 +61,7 @@
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">Accetta</button>
+                            <button type="submit" class="btn btn-success shadow">{{ __('ui.Accetta') }}</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-6 text-end">
@@ -64,7 +70,7 @@
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                            <button type="submit" class="btn btn-danger shadow">{{ __('ui.Rifiuta') }}</button>
                         </form>
                     </div>
                 </div>

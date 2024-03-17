@@ -4,7 +4,7 @@
     <div class="container-fluid bg-gradient bg-success shadow mb-2">
         <div class="row">
             <div class="col-12 text-light p-2">
-                <h1 class="text-center">Esplora la categoria: {{ $category->name }}</h1>
+                <h1 class="text-center">{{__('ui.ShowCategoryTitle')}} {{ $category->name }}</h1>
 
             </div>
         </div>
@@ -35,13 +35,13 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <h2 class="text-muted">Non sono presenti annunci per questa categoria!</h2>
+                    <h2 class="text-muted">{{__('ui.ShowCategoryMess')}}</h2>
                     
                 </div>
                 <div class="col-12">
                     <div class="mt-3">
-                        <p class="h5">Pubblicane uno:</p>
-                        <a href="{{ route('announcements.create', ['category' => $category]) }}" class="btn btn-success shadow">Nuovo Annuncio</a>
+                        <p class="h5">{{__('ui.Pubblicane')}}</p>
+                        <a href="{{ route('announcements.create', ['category' => $category]) }}" class="btn btn-success shadow">{{__('ui.NuovoAnnuncio')}}</a>
                     </div>
                 </div>
             @endforelse
