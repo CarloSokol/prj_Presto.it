@@ -29,7 +29,7 @@ class CreateAnnouncement extends Component
         'title' => 'required|min:4',
         'body' => 'required|min:4',
         'category' => 'required',
-        'price' => 'required|numeric',
+        'price' => 'required|numeric|max:9999',
 
         'images.*' => 'image|max:1024',
         'temporary_images.*' => 'image|max:1024',
@@ -69,13 +69,15 @@ class CreateAnnouncement extends Component
 
     public function store()
     {
-        $validatedData = $this->validate();
+        
 
         if (gettype($this->category) == 'string') {
             $category = Category::find($this->category);
         } else {
             $category = $this->category;
         }
+
+    $this->validate();
 
         $announcement = $category->announcements()->create([
             'title' => $this->title,
