@@ -42,6 +42,10 @@ body {
         color: #9175e0;
     }
 
+    .border-color{
+        border: solid 1px #6a50af !important;
+    }
+
     header#navbar {
         @import 'components/navbar.scss';
     }

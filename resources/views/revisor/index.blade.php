@@ -1,7 +1,7 @@
 <x-layout>
 
     <section style="min-height: 75vh; height: auto;">
-        <div class="container-fluid bg-gradient bg-primary shadow mb-3">
+        <div class="container-fluid bg-gradient  shadow mb-3">
             <div class="row">
                 <div class="col-12 text-light p-2">
                     <h1 class=" text-center">

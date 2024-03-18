@@ -1,5 +1,5 @@
-<div class="bg-secondary border border-primary p-4 rounded-5">
-    <h1 class="title text-primary text-center">Crea il tuo annuncio!</h1>
+<div class="bg-secondary border border-color p-4 rounded-5">
+    <h1 class="title text-pr-color-h1 text-center">Crea il tuo annuncio!</h1>
 
     @include('components.success')
 
@@ -9,7 +9,7 @@
             <div class="mb-3 col-6">
                 <label for="title">Titolo Annuncio</label>
                 <input wire:model="title" type="text"
-                    class="form-control border border-primary p-2 rounded-5 @error('title') is-invalid @enderror">
+                    class="form-control border border-color p-2 rounded-5 @error('title') is-invalid @enderror">
                 @error('title')
                     {{ $message }}
                 @enderror
@@ -18,7 +18,7 @@
             <div class="mb-3 col-6">
                 <label for="price">Prezzo</label>
                 <input wire:model="price" type="number"
-                    class="form-control border border-primary p-2 rounded-5  @error('price') is-invalid @enderror">
+                    class="form-control border border-color p-2 rounded-5  @error('price') is-invalid @enderror">
                 @error('price')
                     {{ $message }}
                 @enderror
@@ -27,7 +27,7 @@
             <div class="mb-3 col-6">
                 <label for="category">Categoria</label>
                 <select wire:model.defer="category" id="category"
-                    class="form-control border border-primary p-2 rounded-5 bg-colore-tranparet">
+                    class="form-control border border-color p-2 rounded-5 bg-colore-tranparet">
                     {{--  --}}
                     @if ($category && gettype($category) != 'string' )
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -72,7 +72,7 @@
             <div class="mb-3 col-12">
                 <label for="body">Descrizione</label>
                 <textarea wire:model="body"
-                    class="form-control bg-colore-tranparet border border-primary p-2 rounded-5 @error('body') is-invalid @enderror"></textarea>
+                    class="form-control bg-colore-tranparet border border-color p-2 rounded-5 @error('body') is-invalid @enderror"></textarea>
                 @error('body')
                     {{ $message }}
                 @enderror
