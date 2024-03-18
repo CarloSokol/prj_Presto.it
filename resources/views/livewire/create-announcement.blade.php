@@ -29,7 +29,7 @@
                 <select wire:model.defer="category" id="category"
                     class="form-control border border-primary p-2 rounded-5 bg-colore-tranparet">
                     {{--  --}}
-                    @if ($category && gettype($category) != 'string' )
+                    @if ($category && gettype($category) != 'string')
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @else
                         <option value="">Scegli la categoria</option>
@@ -58,7 +58,8 @@
                             @foreach ($images as $key => $image)
                                 <div class="col my-3">
                                     <div class="mx-auto shadow rounded"
-                                        style=" background-image: url({{ $image->temporaryUrl()}});"></div>
+                                        style="height:300px; background-image: url({{ $image->temporaryUrl() }});">
+                                    </div>
                                     <button type="button"
                                         class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
                                         wire:click="removeImage({{ $key }})">Cancella</button>
