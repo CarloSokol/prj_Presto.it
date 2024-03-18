@@ -69,21 +69,26 @@ class CreateAnnouncement extends Component
 
     public function store()
     {
-        
+        $category = $this->category;
 
-        if (gettype($this->category) == 'string') {
+        if (!$this->category instanceof Category) {
             $category = Category::find($this->category);
-        } else {
-            $category = $this->category;
         }
 
-    $this->validate();
+        $this->validate();
 
         $announcement = $category->announcements()->create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
         ]);
+
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                $announcement->images()->create(['path' => $image->store('images', 'public')]);
+            }
+        }
+
         Auth::user()->announcements()->save($announcement);
 
         session()->flash('success', 'Annuncio creato correttamente!');
@@ -105,6 +110,7 @@ class CreateAnnouncement extends Component
         $this->body = null;
         $this->price = null;
         $this->category = null;
+        $this->images = null;
     }
 
     public function render()
