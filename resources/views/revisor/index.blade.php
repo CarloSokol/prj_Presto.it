@@ -19,6 +19,7 @@
 
         @if ($announcement_to_check)
             <div class="container h-auto " style="height: auto;">
+                @foreach ($announcement_to_check as $announcement)
                 <div class="row">
                     <div class="col-12">
                         <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -82,7 +83,9 @@
                             <button type="submit" class="btn btn-danger shadow">{{ __('ui.Rifiuta') }}</button>
                         </form>
                     </div>
+
                 </div>
+                @endforeach
             </div>
         @endif
     </section>
