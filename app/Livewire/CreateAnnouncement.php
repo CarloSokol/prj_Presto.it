@@ -24,6 +24,10 @@ class CreateAnnouncement extends Component
     public $images = [];
     public $image;
     public $temporary_images;
+    public $form_id;
+    public $announcement;
+    public $message;
+    public $validated;
 
     protected array $rules = [
         'title' => 'required|min:4',
@@ -69,29 +73,39 @@ class CreateAnnouncement extends Component
 
     public function store()
     {
-        
 
-        if (gettype($this->category) == 'string') {
-            $category = Category::find($this->category);
-        } else {
-            $category = $this->category;
+
+        // if (gettype($this->category) == 'string') {
+        //     $category = Category::find($this->category);
+        // } else {
+        //     $category = $this->category;
+        // }
+
+        // $this->validate();
+
+        // $announcement = $category->announcements()->create([
+        //     'title' => $this->title,
+        //     'body' => $this->body,
+        //     'price' => $this->price,
+        // ]);
+        // Auth::user()->announcements()->save($announcement);
+
+        // session()->flash('success', 'Annuncio creato correttamente!');
+        // $this->cleanForm();
+
+        $this->validate();
+        $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
+            }
         }
-
-    $this->validate();
-
-        $announcement = $category->announcements()->create([
-            'title' => $this->title,
-            'body' => $this->body,
-            'price' => $this->price,
-        ]);
-        Auth::user()->announcements()->save($announcement);
-
         session()->flash('success', 'Annuncio creato correttamente!');
         $this->cleanForm();
 
-        // $this->announcement->user()->associate(Auth::user());
+        //  $this->announcement->user()->associate(Auth::user());
 
-        // $this->announcement->save();
+        //  $this->announcement->save();
     }
 
     public function updated($propertyName)
@@ -101,10 +115,12 @@ class CreateAnnouncement extends Component
 
     public function cleanForm()
     {
-        $this->title = null;
-        $this->body = null;
-        $this->price = null;
-        $this->category = null;
+        $this->title = '';
+        $this->body = '';
+        $this->category = '';
+        $this->images = [];
+        $this->temporary_images = [];
+        $this->form_id = rand();
     }
 
     public function render()
