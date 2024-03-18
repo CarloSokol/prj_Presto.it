@@ -15,12 +15,10 @@ use Illuminate\Http\Request;
 class RevisorController extends Controller
 {
     public function index()
-{
-    $announcements_to_check = Announcement::whereNull('is_accepted')->get();
-    return view('revisor.index', compact('announcements_to_check'));
-}
-
-
+    {
+        $announcement_to_check = Announcement::where('is_accepted', null)->first();
+        return view('revisor.index', compact('announcement_to_check'));
+    }
 
     public function acceptAnnouncement(Announcement $announcement)
     {
