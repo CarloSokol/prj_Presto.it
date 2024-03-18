@@ -34,6 +34,13 @@ body {
             color: #6950ac;
         }
     }
+    .text-pr-color-h1{
+        color: #6e51b7;
+    }
+
+    .text-pr-color-h3{
+        color: #9175e0;
+    }
 
     header#navbar {
         @import 'components/navbar.scss';
