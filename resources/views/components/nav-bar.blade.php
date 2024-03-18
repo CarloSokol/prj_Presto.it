@@ -24,7 +24,7 @@
                     <li class="nav-item">
                         <a class="nav-link  pe-1" aria-current="page"
                             href="{{ route('announcements.create') }}"><i class="fa-solid fa-circle-plus fa-xl"
-                                style="color: #45b895;"></i></a>
+                                style="color: #6a50af;"></i></a>
                     </li>
                 @endauth
 
@@ -112,7 +112,7 @@
 
             <!-- Ricerca -->
             <form action="{{ route('announcements.search') }}" method="GET"
-                class="d-flex rounded-pill border border-primary overflow-hidden" id="Search">
+                class="d-flex rounded-pill border border-color overflow-hidden" id="Search">
                 <input name="searched" class="form-control  border-0 custom-input" type="search"
                     placeholder="{{__('ui.Search')}}" aria-label="Search">
                 <button class="btn-cta  rounded-pill" type="submit"><i

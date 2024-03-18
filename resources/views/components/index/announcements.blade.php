@@ -1,6 +1,6 @@
 <style>
     div.card {
-        border-color: #009C99;
+        border-color: #6a50af !important;
         position: relative;
 
         #removeAnnouncement {
@@ -21,7 +21,7 @@
         
 
         .card-title {
-            color: #009C99;
+            color: #6a50af !important;
         }
     }
 </style>
