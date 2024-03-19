@@ -1,4 +1,4 @@
-<div class="container-fluid p-0 shadow" style="position:relative;">
+<div class="container-fluid p-0" style="position:relative;">
     <x-error />
     <div style="position: relative;">
         <img src="{{ asset('img/Banner.jpg') }}" alt="Hero Presto"
