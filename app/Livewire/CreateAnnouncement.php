@@ -86,12 +86,14 @@ class CreateAnnouncement extends Component
 
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                $announcement->images()->create(['path' => $image->store('images', 'public')]);
-                // $newFileName = "announcements/{$this->announcement->id}";
-                // $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public' )]);
+                // $announcement->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public' )]);
 
-                // dispatch(new ResizeImage($newImage->path, 400 , 300)); //dimensioni delle immagini che vogliamo usare
+                dispatch(new ResizeImage($newImage->path, 400 , 300)); //dimensioni delle immagini che vogliamo usare
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
         Auth::user()->announcements()->save($announcement);

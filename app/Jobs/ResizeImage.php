@@ -4,12 +4,13 @@ namespace App\Jobs;
 
 use Spatie\Image\Image;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Queue\SerializesModels;
-use Spatie\Image\Manipulations;
+
 
 
 
@@ -46,7 +47,7 @@ class ResizeImage implements ShouldQueue
         $h = $this->h;
 
         $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
-        $destPath = storage_path() . '/app/public' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
+        $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
 
         $croppedImage = Image::load($srcPath)
                         ->crop(Manipulations::CROP_CENTER , $w, $h) 
