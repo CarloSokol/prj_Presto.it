@@ -5,11 +5,11 @@ return [
 
     'Herotitle1' => 'Esplora.Scegli.Acquista.',
     'Herotitle2' => 'Il tuo stile, la tua scelta.',
-    
-    'Herotitle3' => 'Le nostre forniture',
-    'Herotitle4' => 'Le nostre forniture',
-    'Herotitle5' => 'Le nostre forniture',
-    'Herotitle6' => 'Le nostre forniture',
+
+    'Herotitle3' => "Trova l'affare perfetto! Esplora,",
+    'Herotitle4' => 'negozia, aggiudicati i tuoi tesori.',
+    'Herotitle5' => "Ogni clic è un'opportunità, ogni acquisto è un successo.",
+    'Herotitle6' => "Entra nel gioco dell'acquisto-vendita e vivi l'emozione dell'affare perfetto!",
 
     'FornitureTitle' => 'Le nostre forniture',
     'FornitureDescription' => 'Trova prodotti di qualità a prezzi convenienti solo su Presto.it',

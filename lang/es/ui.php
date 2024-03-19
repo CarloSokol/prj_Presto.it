@@ -1,5 +1,16 @@
 <?php
 return [
+
+    'Herotitle1' => 'Explora. Elige. Compra.',
+    'Herotitle2' => 'Tu estilo, tu elección.',
+    
+    'Herotitle3' => "¡Encuentra la oferta perfecta! Explora,",
+    'Herotitle4' => 'negocia, reclama tus tesoros.',
+    'Herotitle5' => "Cada clic es una oportunidad, cada compra es un éxito.",
+    'Herotitle6' => "¡Únete al juego de comprar y vender y experimenta la emoción de la oferta perfecta!",
+    
+
+
     'FornitureTitle' => 'Nuestros suministros',
     'FornitureDescription' => 'Encuentre productos de calidad a precios asequibles sólo en Presto.it',
     'NuovoAnnuncio' => 'Nuevo anuncio',
@@ -28,18 +39,20 @@ return [
     'ShowCategoryMess' => '¡No hay anuncios para esta categoría!',
     'Pubblicane' => 'Publica uno:',
 
-    'category_1' => '',
-    'category_2' => '',
-    'category_3' => '',
-    'category_4' => '',
-    'category_5' => '',
-    'category_6' => '',
-    'category_7' => '',
-    'category_8' => '',
-    'category_9' => '',
-    'category_10' => '',
-    'category_11' => '',
-    'category_12' => '',
+    'category_1' => 'Informática',
+    'category_2' => 'Teléfonos',
+    'category_3' => 'Coches',
+    'category_4' => 'Muebles',
+    'category_5' => 'Trabajos',
+    'category_6' => 'Bienes Raíces',
+    'category_7' => 'Electrodomésticos',
+    'category_8' => 'Música',
+    'category_9' => 'Accesorios',
+    'category_10' => 'Juegos',
+    'category_11' => 'Deportes',
+    'category_12' => 'Manga',
+
+
     
     // categorías
 

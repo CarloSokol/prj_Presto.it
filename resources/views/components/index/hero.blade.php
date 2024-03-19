@@ -6,14 +6,14 @@
         <div
             style="position: absolute; top: 15vw; left: 23vw; transform: translate(-50%, -50%); text-align: center; color: rgb(255, 0, 0); max-width: 90%;">
             <h1 style="margin-bottom: 1.5vw; font-size: 3vw; color:#5337a1;" class="madimi-one-regular">
-                Esplora.Scegli.Acquista.<br>
-                Il tuo stile, la tua scelta.
+                {{ __('ui.Herotitle1') }}<br>
+                {{ __('ui.Herotitle2') }}
             </h1>
             <p style="font-size: 1vw; color:#6a50af;" class="madimi-one-regular">
-                Trova l'affare perfetto! Esplora,
-                negozia, aggiudicati i tuoi tesori.<br>
-                Ogni clic è un'opportunità, ogni acquisto è un successo.<br>
-                Entra nel gioco dell'acquisto-vendita e vivi l'emozione dell'affare perfetto!
+                {{ __('ui.Herotitle3') }}
+                {{ __('ui.Herotitle4') }}<br>
+                {{ __('ui.Herotitle5') }}<br>
+                {{ __('ui.Herotitle6') }}
             </p>
         </div>
     </div>

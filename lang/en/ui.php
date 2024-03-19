@@ -1,5 +1,13 @@
 <?php
 return [
+    'Herotitle1' => 'Explore. Choose. Buy.',
+    'Herotitle2' => 'Your style, your choice.',
+
+    'Herotitle3' => 'Find the perfect deal! Explore,',
+    'Herotitle4' => 'negotiate, claim your treasures.',
+    'Herotitle5' => 'Every click is an opportunity, every purchase is a success.',
+    'Herotitle6' => 'Join the buying-selling game and experience the thrill of the perfect deal!',
+
     'FornitureTitle' => 'Our supplies',
     'FornitureDescription' => 'Find quality products at affordable prices only on Presto.it',
     'NuovoAnnuncio' => 'New Announcement',
@@ -28,19 +36,19 @@ return [
     'ShowCategoryMess' => 'There are no announcements for this category!',
     'Pubblicane' => 'Publish one:',
 
-    'category_1' => '1',
-    'category_2' => '3',
-    'category_3' => '4',
-    'category_4' => '',
-    'category_5' => '',
-    'category_6' => '',
-    'category_7' => '',
-    'category_8' => '',
-    'category_9' => '',
-    'category_10' => '',
-    'category_11' => '',
-    'category_12' => '',
-    
+    'category_1' => 'Computers',
+    'category_2' => 'Phones',
+    'category_3' => 'Cars',
+    'category_4' => 'Furniture',
+    'category_5' => 'Jobs',
+    'category_6' => 'Real Estate',
+    'category_7' => 'Appliances',
+    'category_8' => 'Music',
+    'category_9' => 'Accessories',
+    'category_10' => 'Games',
+    'category_11' => 'Sports',
+    'category_12' => 'Manga',
+
     // categories
 
     // work with us
@@ -56,7 +64,7 @@ return [
     // footer
     'Contatti' => 'Contact',
     'Link Utili' => 'Useful Links',
-    'Seguici' => 'Follow Us',    
+    'Seguici' => 'Follow Us',
 
     'LavoraConNoi' => 'Work with us',
 ];
