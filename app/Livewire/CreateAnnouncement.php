@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\ResizeImage;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Announcement;
@@ -85,7 +86,11 @@ class CreateAnnouncement extends Component
 
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                $announcement->images()->create(['path' => $image->store('images', 'public')]);
+               // $announcement->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public' )]);
+
+                dispatch(new ResizeImage($newImage->path, 400 , 300)); //dimensioni delle immagini che vogliamo usare
             }
         }
 
