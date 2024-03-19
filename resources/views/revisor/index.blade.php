@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         @empty
-                            <h3>Nulla da mostrare</h3>
+                            
                         @endforelse
                     </div>
                 </div>
