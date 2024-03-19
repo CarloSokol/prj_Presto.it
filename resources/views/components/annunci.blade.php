@@ -12,7 +12,8 @@
                 </form>
             @endif
             <div class="card-body ">
-                <img src="https://picsum.photos/id/27/300/200" class="img-fluid p-1  rounded-5" alt="...">
+                <img src="{{ !$annuncio->images()->get()->isEmpty() ? $annuncio->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200' }}"
+                    class="card-img-top p-3 rounded" alt=" ... ">
                 <h5 class="card-title text-center text-primary  fs-3">{{ $annuncio->title }}</h5>
                 <div class="border-2 mb-2 mt-2">
                     <p class="card-text mb-2 "><strong>Descrizione</strong>:<br> {{ Str::limit($annuncio->body, 50) }}

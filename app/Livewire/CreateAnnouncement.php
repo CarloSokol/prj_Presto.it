@@ -2,11 +2,12 @@
 
 namespace App\Livewire;
 
-use App\Jobs\ResizeImage;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class CreateAnnouncement extends Component
@@ -17,7 +18,7 @@ class CreateAnnouncement extends Component
     public $body;
     public $price;
     public $category;
-    // public $Announcement;
+     public $announcement;
     // public $validated;
     // public $message;
     // public $form_id;
@@ -78,7 +79,7 @@ class CreateAnnouncement extends Component
 
         $this->validate();
 
-        $announcement = $category->announcements()->create([
+        $this->announcement = $category->announcements()->create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
@@ -96,7 +97,7 @@ class CreateAnnouncement extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
-        Auth::user()->announcements()->save($announcement);
+        Auth::user()->announcements()->save($this->announcement);
 
         session()->flash('success', 'Annuncio creato correttamente!');
         $this->cleanForm();
