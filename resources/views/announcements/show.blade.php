@@ -11,17 +11,20 @@
         <div class="row ">
             <div class="col-12">
                 <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/id/27/1400/550" class="img-fluid p-3 rounded" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/id/28/1400/550" class="img-fluid p-3 rounded" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/id/29/1400/550" class="img-fluid p-3 rounded" alt="...">
-                        </div>
-                    </div>
+                    @forelse ($announcement->images as $image)
+                                                    <div
+                                                        class="carousel-item {{ $loop->iteration === 1 ? 'active' : '' }}">
+                                                        <img src="{{ Storage::url($image->path) }}" 
+                                                            style="max-height:200px"
+                                                            class="d-block w-100 object-fit-cover" alt="...">
+                                                    </div>
+                                                @empty
+                                                    <div class="carousel-item active">
+                                                        <img src="https://picsum.photos/1400/550"
+                                                            style="max-height:200px"
+                                                            class="w-100 d-block object-fit-cover" alt="...">
+                                                    </div>
+                                                @endforelse
                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
