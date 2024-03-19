@@ -97,13 +97,13 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                         <li>
-                            <x-_locale lang="it"/>
+                            <x-_locale lang="it"/><p>IT</p>
                         </li>
                         <li>
-                            <x-_locale lang="es"/>
+                            <x-_locale lang="es"/><p>ES</p>
                         </li>
                         <li>
-                            <x-_locale lang="en"/>
+                            <x-_locale lang="en"/><p>EN</p>
                         </li>
                         <!-- Aggiungi altre lingue se necessario -->
                     </ul>
