@@ -14,7 +14,7 @@
             <ul class="navbar-nav ms-auto">
 
                 <!-- Annunci -->
-                <li class="nav-item">
+                <li class="nav-item dropdown-line">
                     <a class="nav-link  pe-1" aria-current="page"
                         href="{{ route('announcements.index') }}">{{__('ui.Annunci')}}</a>
                 </li>
@@ -30,7 +30,7 @@
 
                 <!-- Conteggio Messaggi da Revisionare -->
                 @if (Auth::user() && Auth::user()->is_revisor)
-                    <li class="nav-item me-1">
+                    <li class="nav-item me-1 dropdown-line">
                         <a class="nav-link  position-relative" aria-turrent="page"
                             href="{{ route('revisor.index') }}">
                             {{__('ui.Revisione')}}
@@ -44,7 +44,7 @@
 
                 <!-- Categorie -->
                 @auth
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown dropdown-line">
                         <a class="nav-link dropdown-toggle  pe-1" href="#" id="categoriesDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{__('ui.Categorie')}}
@@ -62,7 +62,7 @@
                     </li>
 
                     <!-- Benvenuto e Logout -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown dropdown-line">
                         <a class="nav-link dropdown-toggle  pe-1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{__('ui.Benvenuto')}} {{ Auth::user()->name }}
@@ -79,10 +79,10 @@
                     </li>
                 @else
                     <!-- Registrati e Accedi -->
-                    <li class="nav-item">
+                    <li class="nav-item dropdown-line">
                         <a class="nav-link  " href="{{ route('register') }}">{{__('ui.Register')}}</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item dropdown-line">
                         <a class="nav-link  " href="{{ route('login') }}">{{__('ui.Login')}}</a>
                     </li>
                 @endauth

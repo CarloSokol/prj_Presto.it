@@ -1,6 +1,6 @@
 <style>
     div.card {
-        border-color: #6a50af !important;
+       
         position: relative;
 
         #removeAnnouncement {

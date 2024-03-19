@@ -7,10 +7,10 @@
 .navbar-nav {
     
     .border-color{
-        border: solid 1px #6a50af !important;
+        border: solid 1px $primaryColor !important;
     }
 
-    li.nav-item {
+    .dropdown-line{
 
         position: relative;
         transition: .3s linear 0s;
@@ -37,6 +37,7 @@
             height: 1px;
             background-color: $primaryColor;
         }
+
     }
 }
 

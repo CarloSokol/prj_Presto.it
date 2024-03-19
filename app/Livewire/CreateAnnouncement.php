@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\ResizeImage;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Announcement;
@@ -73,22 +74,22 @@ class CreateAnnouncement extends Component
 
     public function store()
     {
+        
 
+        if (gettype($this->category) == 'string') {
+            $category = Category::find($this->category);
+        } else {
+            $category = $this->category;
+        }
 
-        // if (gettype($this->category) == 'string') {
-        //     $category = Category::find($this->category);
-        // } else {
-        //     $category = $this->category;
-        // }
+    $this->validate();
 
-        // $this->validate();
-
-        // $announcement = $category->announcements()->create([
-        //     'title' => $this->title,
-        //     'body' => $this->body,
-        //     'price' => $this->price,
-        // ]);
-        // Auth::user()->announcements()->save($announcement);
+        $announcement = $category->announcements()->create([
+            'title' => $this->title,
+            'body' => $this->body,
+            'price' => $this->price,
+        ]);
+        Auth::user()->announcements()->save($announcement);
 
         // session()->flash('success', 'Annuncio creato correttamente!');
         // $this->cleanForm();
@@ -115,12 +116,10 @@ class CreateAnnouncement extends Component
 
     public function cleanForm()
     {
-        $this->title = '';
-        $this->body = '';
-        $this->category = '';
-        $this->images = [];
-        $this->temporary_images = [];
-        $this->form_id = rand();
+        $this->title = null;
+        $this->body = null;
+        $this->price = null;
+        $this->category = null;
     }
 
     public function render()

@@ -31,7 +31,7 @@
                     Data di creazione: {{ $timeElapsed }}
                 </div>
             </div>
-            <div class="card-footer text-center border-0 border-color"
+            <div class="card-footer text-center border-0 "
                 style=" 
                     border-bottom-left-radius: 32px;
                     border-bottom-right-radius: 32px;
