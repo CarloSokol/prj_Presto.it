@@ -15,6 +15,8 @@ class AnnouncementController extends Controller
             return response('Non sei autenticato', 403);
         }
 
+        if ($category)return view('announcements.create', ['category'=>$category->id]);
+
         return view('announcements.create', compact('category'));
     }
 

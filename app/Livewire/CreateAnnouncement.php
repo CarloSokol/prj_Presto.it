@@ -18,7 +18,7 @@ class CreateAnnouncement extends Component
     public $body;
     public $price;
     public $category;
-     public $announcement;
+    public $announcement;
     // public $validated;
     // public $message;
     // public $form_id;
@@ -71,11 +71,8 @@ class CreateAnnouncement extends Component
 
     public function store()
     {
-        $category = $this->category;
 
-        if (!$this->category instanceof Category) {
-            $category = Category::find($this->category);
-        }
+        $category = Category::find($this->category);
 
         $this->validate();
 
@@ -89,15 +86,17 @@ class CreateAnnouncement extends Component
             foreach ($this->images as $image) {
                 // $announcement->images()->create(['path' => $image->store('images', 'public')]);
                 $newFileName = "announcements/{$this->announcement->id}";
-                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public' )]);
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 400 , 300)); //dimensioni delle immagini che vogliamo usare
+                dispatch(new ResizeImage($newImage->path, 400, 300)); //dimensioni delle immagini che vogliamo usare
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
-        Auth::user()->announcements()->save($this->announcement);
+        Auth::user()
+            ->announcements()
+            ->save($this->announcement);
 
         session()->flash('success', 'Annuncio creato correttamente!');
         $this->cleanForm();

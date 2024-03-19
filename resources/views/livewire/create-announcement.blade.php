@@ -26,18 +26,12 @@
 
             <div class="mb-3 col-6">
                 <label for="category">Categoria</label>
-                <select wire:model.defer="category" id="category"
+                <select wire:model="category" id="category"
                     class="form-control border border-color p-2 rounded-5 bg-colore-tranparet">
-                    {{--  --}}
-                    @if ($category && gettype($category) != 'string')
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @else
-                        <option value="">Scegli la categoria</option>
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                        @endforeach
-
-                    @endif
+                    <option value="">Scegli la categoria</option>
+                    @foreach ($categories as $cat)
+                        <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                    @endforeach
 
                 </select>
             </div>
