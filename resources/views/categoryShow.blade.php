@@ -26,7 +26,7 @@
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p class="card-text fs-5 fw-bolder text-pr-color-h1">{{ $announcement->price }} €</p>
-                                    <p class="card-text fw-lighter text-pr-color-h3">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
+                                    <p class="card-text fw-lighter text-pr-color-h3">Pubblicato il : {{ $announcement->created_at->format('d/m/Y') }}</p>
                                 </div>
                                 <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn btn-sm btn-outline-success mt-3 w-100 border-color text-pr-color-h1">Categoria: {{ $announcement->category->name }}</a>
                             </div>
@@ -46,7 +46,7 @@
                 </div>
             @endforelse
         </div>
-        
+      
     </div>
 </section>
     
