@@ -3,6 +3,14 @@ return [
     // forniture
     // per rchiamare in una vista {{ __('ui.NomeElementoSinistra') }}
 
+    'Herotitle1' => 'Esplora.Scegli.Acquista.',
+    'Herotitle2' => 'Il tuo stile, la tua scelta.',
+    
+    'Herotitle3' => 'Le nostre forniture',
+    'Herotitle4' => 'Le nostre forniture',
+    'Herotitle5' => 'Le nostre forniture',
+    'Herotitle6' => 'Le nostre forniture',
+
     'FornitureTitle' => 'Le nostre forniture',
     'FornitureDescription' => 'Trova prodotti di qualità a prezzi convenienti solo su Presto.it',
     'NuovoAnnuncio' => 'Nuovo Annuncio',

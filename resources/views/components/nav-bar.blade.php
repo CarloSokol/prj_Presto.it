@@ -52,7 +52,15 @@
                         <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                             @foreach ($categories as $category)
                                 <li><a class="dropdown-item "
-                                        href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                                    @if (App::isLocale('it'))
+                                        
+                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+
+                                    @else
+
+                                    href="{{ route('categoryShow', compact('category')) }}">{{ __('ui.category_' . $category->id) }}</a>
+
+                                    @endif
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider">

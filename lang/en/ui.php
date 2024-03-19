@@ -27,6 +27,20 @@ return [
     'ShowCategoryTitle' => 'Explore the category: ',
     'ShowCategoryMess' => 'There are no announcements for this category!',
     'Pubblicane' => 'Publish one:',
+
+    'category_1' => '1',
+    'category_2' => '3',
+    'category_3' => '4',
+    'category_4' => '',
+    'category_5' => '',
+    'category_6' => '',
+    'category_7' => '',
+    'category_8' => '',
+    'category_9' => '',
+    'category_10' => '',
+    'category_11' => '',
+    'category_12' => '',
+    
     // categories
 
     // work with us
