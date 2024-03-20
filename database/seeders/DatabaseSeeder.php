@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Image::factory()->create([
-            'path' => '/factory/img/pc.jpg',
+            'path' => 'factory/img/pc.jpg',
             'announcement_id' => 1
         ]);
         
