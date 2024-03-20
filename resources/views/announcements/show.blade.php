@@ -6,7 +6,7 @@
             </div>
         </div>
     </div>
-
+        
     <div class="container">
         <div class="row ">
             <div class="col-12">
@@ -16,12 +16,12 @@
 
                         @forelse ($announcement->images as $image)
                             <div class="carousel-item {{ $loop->iteration === 1 ? 'active' : '' }}">
-                                <img src="{{ Storage::url($image->path) }}" style="max-height:300px"
+                                <img src="{{ Storage::url($image->path) }}" style="max-width: 20%"
                                     class="d-block w-100 object-fit-cover" alt="...">
                             </div>
                         @empty
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/1400/550" style="max-height:300px"
+                                <img src="https://picsum.photos/1400/550" style="max-width: 20%"
                                     class="w-100 d-block object-fit-cover" alt="...">
                             </div>
                         @endforelse

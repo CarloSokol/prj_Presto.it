@@ -18,7 +18,7 @@
                 <div class="col mb-4">
                     <a href="{{ route('announcements.show', compact('announcement')) }}" class="text-decoration-none">
                         <div class="card border rounded-3 shadow h-100 border-color">
-                            <img src="https://picsum.photos/200" class="card-img-top rounded-top" alt="...">
+                            <img src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200' }}" class="card-img-top rounded-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title fs-4 text-pr-color-h1">{{ $announcement->title }}</h5>
                                 <p class="card-text mb-3 announcement-body text-pr-color-h3" style="height: 70px; overflow: hidden; text-overflow: ellipsis;">
