@@ -12,25 +12,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\Category::factory()->create(['name'=>'Informatica']);
-        // \App\Models\Category::factory()->create(['name'=>'Telefoni']);
-        // \App\Models\Category::factory()->create(['name'=>'Auto']);
-        // \App\Models\Category::factory()->create(['name'=>'Arredamento']);
-        // \App\Models\Category::factory()->create(['name'=>'Lavoro']);
-        // \App\Models\Category::factory()->create(['name'=>'Immobili']);
-        // \App\Models\Category::factory()->create(['name'=>'Elettrodomestici']);
-        // \App\Models\Category::factory()->create(['name'=>'Musica']);
-        // \App\Models\Category::factory()->create(['name'=>'Accessori']);
-        // \App\Models\Category::factory()->create(['name'=>'Giochi']);
-        // \App\Models\Category::factory()->create(['name'=>'Sport']);
-        // \App\Models\Category::factory()->create(['name'=>'Manga']);
+        // \App\Models\Category::factory()->create(['name'=>'Informatica']); 1
+        // \App\Models\Category::factory()->create(['name'=>'Telefoni']); 2
+        // \App\Models\Category::factory()->create(['name'=>'Auto']); 3
+        // \App\Models\Category::factory()->create(['name'=>'Arredamento']); 4
+        // \App\Models\Category::factory()->create(['name'=>'Lavoro']); 5
+        // \App\Models\Category::factory()->create(['name'=>'Immobili']); 6
+        // \App\Models\Category::factory()->create(['name'=>'Elettrodomestici']); 7
+        // \App\Models\Category::factory()->create(['name'=>'Musica']); 8
+        // \App\Models\Category::factory()->create(['name'=>'Accessori']); 9
+        // \App\Models\Category::factory()->create(['name'=>'Giochi']); 10
+        // \App\Models\Category::factory()->create(['name'=>'Sport']); 11
+        // \App\Models\Category::factory()->create(['name'=>'Manga']); 12
 
         \App\Models\Announcement::factory()->create([
             'title'=>'PC Desktop Gaming',
             'body'=>'Potente PC desktop adatto per il gaming e la produttività',
             'price'=>'1200',
             'category_id'=>1, 
-            'image_url' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.barbarhouse.com%2Fpuglia%2Fprovincia-di-lecce%2Fcollepasso%2Fagriturismo-collepasso%2F&psig=AOvVaw1mBXeuLbIY43jMBA5zZm7X&ust=1711043261477000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjupoOzg4UDFQAAAAAdAAAAABAE',
+            
         ]);
         
         \App\Models\Announcement::factory()->create([
@@ -38,6 +38,13 @@ class DatabaseSeeder extends Seeder
             'body'=>"Potente, innovativo ad un prezzo competitivo.",
             'price'=>'1349',
             'category_id'=>2,
+        ]);
+
+        \App\Models\Announcement::factory()->create([
+            'title' => 'Fiat 500X Lounge',
+            'body' => 'Fiat 500X Lounge, un\'auto compatta e versatile perfetta per la città e i viaggi fuori porta. Dotata di tecnologia all\'avanguardia e design accattivante.',
+            'price' => '15000',
+            'category_id' => 3,
         ]);
 
         \App\Models\Announcement::factory()->create([
