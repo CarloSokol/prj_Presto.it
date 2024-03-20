@@ -48,10 +48,10 @@ class DatabaseSeeder extends Seeder
         //     'category_id'=>2,
         // ]);
 
-        \App\Models\Image::factory()->create([
-            'path' => '/factory/img/pc.jpg',
-            'announcement_id' => 2
-        ]);
+        // \App\Models\Image::factory()->create([
+        //     'path' => '/factory/img/pc.jpg',
+        //     'announcement_id' => 2
+        // ]);
 
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'Fiat 500X Lounge',
@@ -60,10 +60,10 @@ class DatabaseSeeder extends Seeder
         //     'category_id' => 3,
         // ]);
 
-        \App\Models\Image::factory()->create([
-            'path' => '/factory/img/pc.jpg',
-            'announcement_id' => 3
-        ]);
+        // \App\Models\Image::factory()->create([
+        //     'path' => '/factory/img/pc.jpg',
+        //     'announcement_id' => 3
+        // ]);
 
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'Divano Moderno a Tre Posti',
@@ -72,10 +72,10 @@ class DatabaseSeeder extends Seeder
         //     'category_id' => 4, 
         // ]);
 
-        \App\Models\Image::factory()->create([
-            'path' => '/factory/img/pc.jpg',
-            'announcement_id' => 4
-        ]);
+        // \App\Models\Image::factory()->create([
+        //     'path' => '/factory/img/pc.jpg',
+        //     'announcement_id' => 4
+        // ]);
 
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'Trapano a Percussione Bosch',
@@ -84,10 +84,10 @@ class DatabaseSeeder extends Seeder
         //     'category_id' => 5,
         // ]);
 
-        \App\Models\Image::factory()->create([
-            'path' => '/factory/img/pc.jpg',
-            'announcement_id' => 5
-        ]);
+        // \App\Models\Image::factory()->create([
+        //     'path' => '/factory/img/pc.jpg',
+        //     'announcement_id' => 5
+        // ]);
 
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'Appartamento Moderno con Vista Panoramica',
@@ -112,10 +112,10 @@ class DatabaseSeeder extends Seeder
         //     'category_id' => 8, 
         // ]);
 
-        \App\Models\Image::factory()->create([
-            'path' => '/factory/img/pc.jpg',
-            'announcement_id' => 8
-        ]);
+        // \App\Models\Image::factory()->create([
+        //     'path' => '/factory/img/pc.jpg',
+        //     'announcement_id' => 8
+        // ]);
 
         // \App\Models\Announcement::factory()->create([
         //     'title'=>'Orologio uomo',
