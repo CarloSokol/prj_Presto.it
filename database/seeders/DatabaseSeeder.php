@@ -25,6 +25,20 @@ class DatabaseSeeder extends Seeder
         // \App\Models\Category::factory()->create(['name'=>'Sport']);
         // \App\Models\Category::factory()->create(['name'=>'Manga']);
 
+        \App\Models\Announcement::factory()->create([
+            'title'=>'PC Desktop Gaming',
+            'body'=>'Potente PC desktop adatto per il gaming e la produttività',
+            'price'=>'1200',
+            'category_id'=>1, 
+            'image_url' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.barbarhouse.com%2Fpuglia%2Fprovincia-di-lecce%2Fcollepasso%2Fagriturismo-collepasso%2F&psig=AOvVaw1mBXeuLbIY43jMBA5zZm7X&ust=1711043261477000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjupoOzg4UDFQAAAAAdAAAAABAE',
+        ]);
+        
+        \App\Models\Announcement::factory()->create([
+            'title'=>'iphone 15 pro max',
+            'body'=>"Potente, innovativo ad un prezzo competitivo.",
+            'price'=>'1349',
+            'category_id'=>2,
+        ]);
 
         \App\Models\Announcement::factory()->create([
             'title'=>'Pesi palestra',
@@ -42,19 +56,8 @@ class DatabaseSeeder extends Seeder
             'category_id'=>9,
         ]);
 
-        \App\Models\Announcement::factory()->create([
-            'title'=>'iphone 15 pro max',
-            'body'=>"Potente, innovativo ad un prezzo competitivo.",
-            'price'=>'1349',
-            'category_id'=>2,
-        ]);
+        
 
-        \App\Models\Announcement::factory()->create([
-            'title' => 'Samsung Galaxy S22 Ultra',
-            'body' => "La potenza e l'eleganza del futuro.",
-            'price' => '1199',
-            'category_id' => 2,
-        ]);
 
 
 
