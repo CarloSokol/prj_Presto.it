@@ -46,6 +46,18 @@ body {
         border: solid 1px #6a50af !important;
     }
 
+    .card-m{
+        transition: box-shadow .3s;
+        border-radius:10px;
+        border: 1px solid #ccc;
+        background: #fff;
+        float: left;
+    }
+
+    .card-m:hover{
+        box-shadow: 0 0 11px rgba(0, 0, 0, 0.621); 
+    }
+
     header#navbar {
         @import 'components/navbar.scss';
     }
@@ -75,6 +87,14 @@ body {
 
     footer {
         @import 'components/footer.scss';
+    }
+
+
+
+    //SECTION DEAL OF THE WEAK
+
+    .bg-cta{
+        overflow-x: clip;
     }
 
 }
