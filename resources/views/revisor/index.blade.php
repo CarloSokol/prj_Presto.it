@@ -16,9 +16,9 @@
                             <!-- Schedule Item 1 -->
                             <div class="col-11 border-color rounded-2 list-item">
                                 <div class="row row-cols-4 align-items-center">
-                                    <div class="col-7  h-auto ">
+                                    <div class="col-12 col-md-7  h-auto ">
 
-                                        <div id="carousel{{ $announcement->id }}" class="carousel slide w-100 d-none">
+                                        <div id="carousel{{ $announcement->id }}" class="carousel slide w-100 d-none mt-3 ">
                                             <div class="carousel-inner">
                                                 @forelse ($announcement->images as $image)
                                                     <div
@@ -63,16 +63,17 @@
                                         </div>
 
 
-                                        
+
 
                                     </div>
 
-                                    <div class="col-5 p-3 w-auto h-auto ms-3 ">
+                                    <div class="col-12 col-md-4  p-3  h-auto ms-3 text-wrap">
                                         <p class="text-muted mb-2">
                                             <strong>{{ $announcement->created_at->format('d/m/Y') }}</strong>
                                         </p>
                                         <p class="mb-2"><strong>{{ $announcement->title }}</strong></p>
-                                        <p class="mb-2"><strong>Descrizione</strong>: {{ $announcement->body }}</p>
+                                        <p class="mb-2 text-wrap"><strong>Descrizione</strong>:
+                                            {{ $announcement->body }}</p>
                                         <div class="d-inline-block">
                                             <form
                                                 action="{{ route('revisor.accept_announcement', ['announcement' => $announcement]) }}"
@@ -110,7 +111,8 @@
                                     carousel.classList.toggle('d-none');
 
                                     // Modifica il testo del pulsante in base allo stato del carosello
-                                    const buttonText = carousel.classList.contains('d-none') ? '{{ __('ui.MostraCarosello') }}' :
+                                    const buttonText = carousel.classList.contains('d-none') ?
+                                        '{{ __('ui.MostraCarosello') }}' :
                                         '{{ __('ui.ChiudiCarosello') }}';
                                     this.textContent = buttonText;
                                 });
@@ -118,6 +120,39 @@
                         </script>
                     </div>
                 </div>
+            </div>
+
+            {{-- Annunci Rifiutati --}}
+
+            <div class="row justify-content-center gap-3 my-5">
+                <h2>Annunci Rifiutati</h2>
+                @forelse ($rejected_announcements as $rejected_announcement)
+                    <!-- Dettagli dell'annuncio rifiutato -->
+                    <div class="col-12 border-color rounded-2 list-item">
+                        <p><strong>Titolo: </strong>{{ $rejected_announcement->title }}</p>
+                        <p><strong>Data: </strong>{{ $rejected_announcement->created_at->format('d/m/Y') }}</p>
+                        <p><strong>Descrizione: </strong>{{ $rejected_announcement->body }}</p>
+
+
+                        @foreach ($rejected_announcement->images as $image)
+                            <img src="{{ Storage::url($image->path) }}" alt="Immagine dell'annuncio"
+                                style="max-height: 200px;">
+                        @endforeach
+
+                        <form
+                            action="{{ route('revisor.recheck_announcement', ['announcement' => $rejected_announcement]) }}"
+                            method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-warning">Riporta in revisione</button>
+                        </form>
+                    </div>
+                @empty
+                    <p>Nessun annuncio rifiutato al momento.</p>
+                @endforelse
+
+                {{ $rejected_announcements->links() }}
+
             </div>
         </div>
 
