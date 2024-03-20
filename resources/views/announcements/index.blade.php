@@ -9,7 +9,7 @@
             </div>
         @else
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
-                <x-annunci :announcements="$announcements" />
+                <x-Card_Annunci :announcements="$announcements" />
             </div>
         @endif
         {{ $announcements->links() }}
