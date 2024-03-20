@@ -32,6 +32,12 @@ return [
     'RevTitleSi' => "Ecco l'annuncio da revisionare",
     'Accetta' => 'Accetta',
     'Rifiuta' => 'Rifiuta',
+
+
+    'MostraCarosello' => 'Mostra Carosello',
+    'ChiudiCarosello' => 'Chiudi Carosello',
+
+
     // revisione
 
     // categorie

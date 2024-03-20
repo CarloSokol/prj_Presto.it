@@ -39,6 +39,9 @@ Route::group(['prefix' => 'annunci'], function () {
     Route::patch('rifiuta/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 
     Route::patch('removeAnnouncement/{announcement}', [RevisorController::class, 'removeAnnouncement'])->middleware('isRevisor')->name('announcement.remove');
+
+    // annunci rifiutati
+    Route::patch('/revisor/recheck/{announcement}', [RevisorController::class, 'recheckAnnouncement'])->middleware('isRevisor')->name('revisor.recheck_announcement');
 });
 
 Route::group(['prefix' => 'revisor'], function () {

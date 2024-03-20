@@ -31,6 +31,9 @@ return [
     'RevTitleSi' => 'Aquí está el anuncio para revisar',
     'Accetta' => 'Aceptar',
     'Rifiuta' => 'Rechazar',
+
+    'MostraCarosello' => 'Mostrar Carrusel',
+'ChiudiCarosello' => 'Cerrar Carrusel',
     // revisión
 
     // categorías

@@ -28,6 +28,9 @@ return [
     'RevTitleSi' => 'Here is the announcement to review',
     'Accetta' => 'Accept',
     'Rifiuta' => 'Reject',
+
+    'MostraCarosello' => 'Show Carousel',
+'ChiudiCarosello' => 'Close Carousel',
     // revision
 
     // categories
