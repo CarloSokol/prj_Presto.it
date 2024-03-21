@@ -1,4 +1,5 @@
 <div class="bg-secondary border border-color p-4 rounded-5">
+    
     <h1 class="title text-pr-color-h1 text-center">Crea il tuo annuncio!</h1>
 
     @include('components.success')
@@ -36,9 +37,9 @@
                 </select>
             </div>
 
-            <div class="mb-3 col-6">
-                <input wire:model="temporary_images" type="file" name="images" multiple
-                    class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" />
+            <div class="mt-4 col-6">
+                    <input wire:model="temporary_images" type="file" name="images" multiple
+                    class="form-control large shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" />
                 @error('temporary_images .* ')
                     <p class="text-danger mt-2">{{ $message }}</p>
                 @enderror
