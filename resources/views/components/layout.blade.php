@@ -21,7 +21,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- animate on scrool -->
 
-    @vite(['resources/scss/refactor.scss', 'resources/js/app.js', 'resources/js/tilt.js'])
+    @vite(['resources/scss/main.scss', 'resources/js/app.js', 'resources/js/tilt.js'])
 
     
 </head>

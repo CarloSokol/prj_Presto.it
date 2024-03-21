@@ -13,5 +13,11 @@
         @include('components.index.forniture')
 
     </section>
+
+    <section id="banner">
+        
+        @include('components.index.banner')
+
+    </section>
     
 </x-layout>
