@@ -19,5 +19,12 @@
         @include('components.index.banner')
 
     </section>
+
+    <section id="founders">
+        
+        @include('components.index.founders')
+
+    </section>
+
     
 </x-layout>
