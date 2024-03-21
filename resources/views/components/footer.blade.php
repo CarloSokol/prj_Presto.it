@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-md-6 links_footer">
                 <h3 class="footer-section-title">{{__('ui.Contatti')}}</h3>
-                <p><i class="fas fa-map-marker-alt"></i> <a href="" class="text-decoration-none">Via Example 123, 00100 Città, Italia</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="" class=" text-decoration-none">info@presto.com</a></p>
-                <p><i class="fas fa-phone"></i> <a href="" class="text-decoration-none">+00 123 456789</a></p>
+                <p><i class="fas fa-map-marker-alt icons "></i> <a href="" class="text-decoration-none">Via Example 123, 00100 Città, Italia</a></p>
+                <p><i class="fas fa-envelope icons"></i> <a href="" class=" text-decoration-none">info@presto.com</a></p>
+                <p><i class="fas fa-phone icons"></i> <a href="" class="text-decoration-none">+00 123 456789</a></p>
             </div>
             <div class="col-md-6">
                 <h3 class="footer-section-title">{{__('ui.Link Utili')}}</h3>
