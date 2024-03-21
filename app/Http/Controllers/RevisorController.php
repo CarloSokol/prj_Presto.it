@@ -16,8 +16,8 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $announcements_to_check = Announcement::where('is_accepted', null)->get();
-        $rejected_announcements = Announcement::where('is_accepted', false)->paginate(4);
+        $announcements_to_check = Announcement::where('is_accepted', null)->paginate(3);
+        $rejected_announcements = Announcement::where('is_accepted', false)->paginate(3);
         // impaginazione annunci rifiutati
         
         return view('revisor.index', compact('announcements_to_check', 'rejected_announcements'));
