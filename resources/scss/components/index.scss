@@ -58,9 +58,10 @@
                 width: 100%;
 
                 @media screen and (min-width:768px) {
-                    width: 130%;
+                    width: 110%;
                     position: absolute;
                     bottom: 0;
+                    
                 }
             }
 
@@ -74,4 +75,8 @@
 .bg-topbanner{
     background-color: white;
 
+}
+
+.m-topbanner{
+    margin-left: -49px ;
 }
