@@ -41,53 +41,53 @@ class DatabaseSeeder extends Seeder
             'announcement_id' => 1
         ]);
         
-        // \App\Models\Announcement::factory()->create([
-        //     'title'=>'iphone 15 pro max',
-        //     'body'=>"Potente, innovativo ad un prezzo competitivo.",
-        //     'price'=>'1349',
-        //     'category_id'=>2,
-        // ]);
+        \App\Models\Announcement::factory()->create([
+            'title'=>'iphone 15 pro max',
+            'body'=>"Potente, innovativo ad un prezzo competitivo.",
+            'price'=>'1349',
+            'category_id'=>2,
+        ]);
 
-        // \App\Models\Image::factory()->create([
-        //     'path' => '/factory/img/pc.jpg',
-        //     'announcement_id' => 2
-        // ]);
+        \App\Models\Image::factory()->create([
+            'path' => 'factory/img/iphone.jpeg',
+            'announcement_id' => 2
+        ]);
 
-        // \App\Models\Announcement::factory()->create([
-        //     'title' => 'Fiat 500X Lounge',
-        //     'body' => 'Fiat 500X Lounge, un\'auto compatta e versatile perfetta per la città e i viaggi fuori porta. Dotata di tecnologia all\'avanguardia e design accattivante.',
-        //     'price' => '15000',
-        //     'category_id' => 3,
-        // ]);
+        \App\Models\Announcement::factory()->create([
+            'title' => 'Fiat 500X Lounge',
+            'body' => 'Fiat 500X Lounge, un\'auto compatta e versatile perfetta per la città e i viaggi fuori porta. Dotata di tecnologia all\'avanguardia e design accattivante.',
+            'price' => '15000',
+            'category_id' => 3,
+        ]);
 
-        // \App\Models\Image::factory()->create([
-        //     'path' => '/factory/img/pc.jpg',
-        //     'announcement_id' => 3
-        // ]);
+        \App\Models\Image::factory()->create([
+            'path' => 'factory/img/Fiat500.jpg',
+            'announcement_id' => 3
+        ]);
 
-        // \App\Models\Announcement::factory()->create([
-        //     'title' => 'Divano Moderno a Tre Posti',
-        //     'body' => 'Divano moderno a tre posti, perfetto per arredare il soggiorno con stile e comfort. Realizzato con materiali di alta qualità e design contemporaneo.',
-        //     'price' => '1200',
-        //     'category_id' => 4, 
-        // ]);
+        \App\Models\Announcement::factory()->create([
+            'title' => 'Divano Moderno a Tre Posti',
+            'body' => 'Divano moderno a tre posti, perfetto per arredare il soggiorno con stile e comfort. Realizzato con materiali di alta qualità e design contemporaneo.',
+            'price' => '1200',
+            'category_id' => 4, 
+        ]);
 
-        // \App\Models\Image::factory()->create([
-        //     'path' => '/factory/img/pc.jpg',
-        //     'announcement_id' => 4
-        // ]);
+        \App\Models\Image::factory()->create([
+            'path' => 'factory/img/Divano.jpg',
+            'announcement_id' => 4
+        ]);
 
-        // \App\Models\Announcement::factory()->create([
-        //     'title' => 'Trapano a Percussione Bosch',
-        //     'body' => 'Trapano a percussione Bosch, potente e affidabile, perfetto per lavori di falegnameria e montaggio. Dotato di funzione di percussione per forare su materiali duri e di vari accessori.',
-        //     'price' => '150',
-        //     'category_id' => 5,
-        // ]);
+        \App\Models\Announcement::factory()->create([
+            'title' => 'Trapano a Percussione Bosch',
+            'body' => 'Trapano a percussione Bosch, potente e affidabile, perfetto per lavori di falegnameria e montaggio. Dotato di funzione di percussione per forare su materiali duri e di vari accessori.',
+            'price' => '150',
+            'category_id' => 5,
+        ]);
 
-        // \App\Models\Image::factory()->create([
-        //     'path' => '/factory/img/pc.jpg',
-        //     'announcement_id' => 5
-        // ]);
+        \App\Models\Image::factory()->create([
+            'path' => 'factory/img/Trapano.jpg',
+            'announcement_id' => 5
+        ]);
 
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'Appartamento Moderno con Vista Panoramica',
@@ -97,13 +97,20 @@ class DatabaseSeeder extends Seeder
         // ]);
 
     
-
+// errore
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'Lavatrice e Asciugatrice LG',
         //     'body' => "Lavatrice e asciugatrice LG, il duo perfetto per il lavaggio e l'asciugatura efficienti dei tuoi indumenti. Dotati di tecnologia avanzata per prestazioni ottimali e risparmio energetico.",
         //     'price' => '1200',
         //     'category_id' => 7,
         // ]);
+
+
+        // \App\Models\Image::factory()->create([
+        //     'path' => 'factory/img/Lavatrice.jpg',
+        //     'announcement_id' => 7
+        // ]);
+
 
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'Chitarra Acustica Martin',
@@ -113,9 +120,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // \App\Models\Image::factory()->create([
-        //     'path' => '/factory/img/pc.jpg',
+        //     'path' => 'factory/img/Chitarra.jpg',
         //     'announcement_id' => 8
         // ]);
+// errore 
 
         // \App\Models\Announcement::factory()->create([
         //     'title'=>'Orologio uomo',
