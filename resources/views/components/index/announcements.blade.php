@@ -26,7 +26,7 @@
     }
 </style>
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center ">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-lg-between  justify-content-center ">
  
     <x-card_annunci :announcements="$announcements" />
 
