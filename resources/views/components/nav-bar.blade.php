@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg shadow-lg bg-secondary" id="navbar" >
+<nav class="navbar navbar-expand-lg shadow-lg bg-nav" id="navbar" >
     <div class="container">
 
         <div class="navbar-brand" style="width:14%">
@@ -120,8 +120,8 @@
 
             <!-- Ricerca -->
             <form action="{{ route('announcements.search') }}" method="GET"
-                class="d-flex rounded-pill border border-color overflow-hidden" id="Search">
-                <input name="searched" class="form-control  border-0 custom-input" type="search"
+                class="d-flex rounded-pill border border-color bg-navv overflow-hidden" id="Search">
+                <input name="searched" class="form-control bg-nav border-0 custom-input" type="search"
                     placeholder="{{__('ui.Search')}}" aria-label="Search">
                 <button class="btn-cta  rounded-pill" type="submit"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
