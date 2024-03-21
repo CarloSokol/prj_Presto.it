@@ -36,9 +36,21 @@ return [
 
     'MostraCarosello' => 'Mostra Carosello',
     'ChiudiCarosello' => 'Chiudi Carosello',
+    
 
 
     // revisione
+
+
+// banner
+'bannerB' => 'Ottieni il 50% di sconto sul tuo ordine',
+'bannerTitle' => 'Offerta della settimana',
+
+'bannerdescription' => "Il vincitore indiscusso degli stili di sandali amichevoli con il denim deve essere sandali infradito piatti e semplici. Possono essere abbinati praticamente a ogni stile di jeans da donna immaginabile e, purché tu riesca a sopportare il cinturino del dito, tendono ad essere davvero confortevoli.",
+
+'Shopping' => 'Acquista ora',
+'Subscribe' => 'Iscriviti',
+// banner
 
     // categorie
     'Categorie' => 'Categorie',

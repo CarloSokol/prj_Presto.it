@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg shadow-lg bg-secondary" id="navbar">
+<nav class="navbar navbar-expand-lg shadow-lg bg-secondary" id="navbar" >
     <div class="container">
 
         <div class="navbar-brand" style="width:14%">

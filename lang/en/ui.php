@@ -33,6 +33,17 @@ return [
 'ChiudiCarosello' => 'Close Carousel',
     // revision
 
+
+// banner
+'bannerB' => 'Get 50% off your order',
+'bannerTitle' => 'Offer of the week',
+
+'bannerdescription' => "The undisputed winner of denim-friendly sandal styles has to be flat and simple thong sandals. They can be paired with virtually every style of women's jeans imaginable, and, as long as you can stand the toe strap, they tend to be really comfortable as well.",
+
+'Shopping' => 'Shop Now',
+'Subscribe' => 'Subscribe',
+// banner
+
     // categories
     'Categorie' => 'Categories',
     'ShowCategoryTitle' => 'Explore the category: ',
