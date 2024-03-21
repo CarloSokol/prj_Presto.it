@@ -4,14 +4,30 @@
     box-shadow: none !important;
 }
 
+.bg-nav {
+    background-color: #0b1729 !important;
+}
+
 
 .navbar-nav {
-    
-    .border-color{
+
+    a {
+        color: #758195;
+    }
+
+    .bg-nav {
+        background-color: rgba(146, 146, 146, 0.548) !important;
+    }
+
+    .bg-navv {
+        background-color: rgba(134, 134, 134, 0.981) !important;
+    }
+
+    .border-color {
         border: solid 1px $primaryColor !important;
     }
 
-    .dropdown-line{
+    .dropdown-line {
 
         position: relative;
         transition: .3s linear 0s;
@@ -42,7 +58,7 @@
     }
 }
 
-#Search{
+#Search {
     width: auto;
     max-width: 18vh;
 }
