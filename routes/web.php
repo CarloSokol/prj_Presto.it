@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\AnnouncementController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\RevisorController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,8 @@ Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('se
 
 
 
+
+Route::post('/comments/store', [CommentsController::class, 'store'])->name('comments.store');
 
 
 
