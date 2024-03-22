@@ -41,6 +41,15 @@
                     di
                     più</a>
             </div>
+
+            <div class="card-footer text-center border-0">
+                <form action="{{ route('comments.store') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="announcement_id" value="{{ $annuncio->id }}">
+                    <textarea name="comment" rows="3" class="form-control mb-2" placeholder="Inserisci il tuo commento"></textarea>
+                    <button type="submit" class="btn btn-primary">Aggiungi commento</button>
+                </form>
+            </div>
         </div>
     </div>
 @endforeach
