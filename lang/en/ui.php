@@ -33,6 +33,10 @@ return [
 'ChiudiCarosello' => 'Close Carousel',
     // revision
 
+
+    // fondatori
+'Sviluppatori' => 'Developers',
+
 // top-banner
 'Delivery' => "Fast & Secure Delivery",
 'Tellabout' => "Tell about your service.",

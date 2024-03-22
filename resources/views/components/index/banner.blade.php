@@ -32,7 +32,7 @@
             </div>
             <div class="col-lg-6 col-12 " >
                 <div class="box-image text-center text-lg-end">
-                    <img src="./img/cta.png" alt="buy" class="img-fluid" style="max-height: 350px">
+                    <img src="./img/cta.png" alt="buy" class="img-fluid" style="max-height: 400px">
                 </div>
             </div>
         </div>

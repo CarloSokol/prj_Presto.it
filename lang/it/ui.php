@@ -16,6 +16,11 @@ return [
     'NuovoAnnuncio' => 'Nuovo Annuncio',
     // forniture
 
+// fondatori
+'Sviluppatori' => 'Sviluppatori',
+// fondatori
+
+
     // auth
     'Login' => 'Accedi',
     'Register' => 'Registrati',

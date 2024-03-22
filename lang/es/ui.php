@@ -36,6 +36,10 @@ return [
 'ChiudiCarosello' => 'Cerrar Carrusel',
     // revisión
 
+    // fondatori
+'Sviluppatori' => 'Desarrolladores',
+
+
 
 // top-banner
 'Delivery' => "Entrega Rápida y Segura",
