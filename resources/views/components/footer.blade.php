@@ -27,7 +27,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="text-center">&copy; {{ date('Y') }} Nome Azienda. Tutti i diritti riservati.</p>
+                <p class="text-center">&copy; {{ date('Y') }} Aulab - The Avengers</p>
             </div>
         </div>
     </div>

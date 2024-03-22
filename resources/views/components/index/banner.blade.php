@@ -24,10 +24,10 @@
                             <span class="time-text" id="seconds">0</span>
                         </div>
                     </div>
-                    <div class="pt-4 d-grid gap-2 d-md-flex justify-content-md-start">
+                    {{-- <div class="pt-4 d-grid gap-2 d-md-flex justify-content-md-start">
                         <a href="#!" class="btn btn-primary btn-hover">{{ __('ui.Shopping') }}</a>
                         <a href="#!" class="btn btn-danger btn-hover">{{ __('ui.Subscribe') }}</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-6 col-12 " >

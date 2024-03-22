@@ -131,12 +131,19 @@ class DatabaseSeeder extends Seeder
         //     'price'=>'170',
         //     'category_id'=>9,
         // ]);
+
+
         
         // \App\Models\Announcement::factory()->create([
         //     'title' => 'PlayStation 5',
         //     'body' => "La nuova PlayStation 5, con grafica ad alta definizione e velocità di caricamento ultra rapida. Vivi un'esperienza di gioco coinvolgente e immersiva con i migliori titoli disponibili.",
         //     'price' => '500',
         //     'category_id' => 10,
+        // ]);
+
+        // \App\Models\Image::factory()->create([
+        //     'path' => 'factory/img/PlayStation5.jpg',
+        //     'announcement_id' => 10
         // ]);
         
 
