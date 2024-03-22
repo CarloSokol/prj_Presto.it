@@ -37,6 +37,22 @@ return [
     // revisión
 
 
+// top-banner
+'Delivery' => "Entrega Rápida y Segura",
+'Tellabout' => "Cuéntanos sobre tu servicio.",
+
+'ReturnPolicy' => "Política de Devolución de 2 Días",
+'Noquestion' => "Sin preguntas.",
+
+'MoneyBack' => "Garantía de Devolución de Dinero",
+'5days' => "Dentro de 5 días hábiles",
+
+'24X7' => "Servicio 24 Horas, 7 Días a la Semana",
+'OnlineService' => "Servicio en línea para el cliente",
+// top-banner
+
+
+
 // banner
 'bannerB' => 'Obtén un 50% de descuento en tu pedido',
 'bannerTitle' => 'Oferta de la semana',

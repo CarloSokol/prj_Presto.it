@@ -1,14 +1,14 @@
-<section class="section bg-topbanner mb-3">
-    <div class="container">
-        <div class="row gy-4 gy-lg-0">
+<section class="section bg-topbanner mb-4 py-1">
+    <div class="container ">
+        <div class="row gy-4 gy-lg-0 ">
             <div class="col-lg-3 col-sm-6">
                 <div class="d-flex align-items-center">
                     <div class="flex-shrink-0">
                         <img src="./img/fast-delivery.png" alt="" class="w-50" >
                     </div>
                     <div class="flex-grow-1 m-topbanner">
-                        <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
-                        <p class="text-muted mb-0">Tell about your service.</p>
+                        <h5 class="fs-15">{{ __('ui.Delivery') }}</h5>
+                        <p class="text-muted mb-0">{{ __('ui.Tellabout') }}</p>
                     </div>
                 </div>
             </div>
@@ -18,8 +18,8 @@
                         <img src="./img/returns.png" alt="" class="w-50">
                     </div>
                     <div class="flex-grow-1 m-topbanner">
-                        <h5 class="fs-15">2 Days Return Policy</h5>
-                        <p class="text-muted mb-0">No question ask.</p>
+                        <h5 class="fs-15">{{ __('ui.ReturnPolicy') }}</h5>
+                        <p class="text-muted mb-0">{{ __('ui.Noquestion') }}</p>
                     </div>
                 </div>
             </div>
@@ -29,8 +29,8 @@
                         <img src="./img/guarantee-certificate.png" alt="" class="w-50">
                     </div>
                     <div class="flex-grow-1 m-topbanner">
-                        <h5 class="fs-15">Money Back Guarantee</h5>
-                        <p class="text-muted mb-0">Within 5 business days</p>
+                        <h5 class="fs-15">{{ __('ui.MoneyBack') }}</h5>
+                        <p class="text-muted mb-0">{{ __('ui.5days') }}</p>
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                         <img src="./img/24-hours-support.png" alt="" class="w-50">
                     </div>
                     <div class="flex-grow-1 m-topbanner">
-                        <h5 class="fs-15">24 X 7 Service</h5>
-                        <p class="text-muted mb-0">Online service for customer</p>
+                        <h5 class="fs-15">{{ __('ui.24X7') }}</h5>
+                        <p class="text-muted mb-0">{{ __('ui.OnlineService') }}</p>
                     </div>
                 </div>
             </div>

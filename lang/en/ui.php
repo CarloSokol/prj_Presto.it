@@ -33,6 +33,21 @@ return [
 'ChiudiCarosello' => 'Close Carousel',
     // revision
 
+// top-banner
+'Delivery' => "Fast & Secure Delivery",
+'Tellabout' => "Tell about your service.",
+
+'ReturnPolicy' => "2 Days Return Policy",
+'Noquestion' => "No question ask.",
+
+'MoneyBack' => "Money Back Guarantee",
+'5days' => "Within 5 business days",
+
+'24X7' => "24 X 7 Service",
+'OnlineService' => "Online service for customer",
+// top-banner
+
+
 
 // banner
 'bannerB' => 'Get 50% off your order',
