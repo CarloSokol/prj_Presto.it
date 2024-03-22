@@ -3,8 +3,8 @@
     <div style="position: relative;">
         <div>
             <img src="{{ asset('img/Banner.jpg') }}" alt="Hero Presto"
-                style="width:100%;height:auto;aspect-ratio:16/9;max-height:auto">
-            <div id="animated-content" style="opacity: 0; transform: translate(-100%, -50%); transition: opacity 1s ease-in-out, transform 1s ease-in-out; position: absolute; top: 15vw; left: 23vw; text-align: center; color: rgb(255, 0, 0); max-width: 90%;">
+                style="width:100%;height:auto;aspect-ratio:16/8;max-height:auto;">
+            <div id="animated-content" style="opacity: 0; transform: translate(-100%, -50%); transition: opacity 1s ease-in-out, transform 1s ease-in-out; position: absolute; top: 12vw; left: 23vw; text-align: center; color: rgb(255, 0, 0); max-width: 90%;">
                 <h1 style="margin-bottom: 1.5vw; font-size: 3vw; color:#5337a1;" class="madimi-one-regular">
                     {{ __('ui.Herotitle1') }}<br>
                     {{ __('ui.Herotitle2') }}
