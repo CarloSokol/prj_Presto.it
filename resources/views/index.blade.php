@@ -32,5 +32,11 @@
 
     </section>
 
+    <section>
+
+        @include('components.index.aboutus')
+
+    </section>
+
 
 </x-layout>
