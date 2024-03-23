@@ -20,6 +20,8 @@ class GoogleVisionSafeSearch implements ShouldQueue
     private $announcement_image_id;
     /**
      * Create a new job instance.
+     * 
+     * @return void
      */
     public function __construct($announcement_image_id)
     {
@@ -28,6 +30,8 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
     /**
      * Execute the job.
+     * 
+     *@return void
      */
     public function handle()
     {

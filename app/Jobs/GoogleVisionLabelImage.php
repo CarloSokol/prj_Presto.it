@@ -21,6 +21,8 @@ class GoogleVisionLabelImage implements ShouldQueue
 
     /**
      * Create a new job instance.
+     * 
+     * @return void
      */
     public function __construct($announcement_image_id)
     {
@@ -32,7 +34,7 @@ class GoogleVisionLabelImage implements ShouldQueue
      * 
      * @return void
      */
-    public function handle(): void
+    public function handle()
     {
         $i = Image::find($this->announcement_image_id);
         if (!$i) {
