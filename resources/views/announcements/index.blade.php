@@ -14,5 +14,4 @@
         @endif
         {{ $announcements->links() }}
     </div>
-
 </x-layout>
