@@ -6,22 +6,21 @@
             </div>
         </div>
     </div>
-        
+
     <div class="container">
         <div class="row ">
-            <div class="col-12">
-                <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+            <div class="col-12 ">
+                <div id="showCarousel" class="carousel slide ms-auto me-auto  " data-bs-ride="carousel" style="max-width: 60%">
+                    <div class="carousel-inner" >
 
 
                         @forelse ($announcement->images as $image)
-                            <div class="carousel-item {{ $loop->iteration === 1 ? 'active' : '' }}">
-                                <img src="{{ Storage::url($image->path) }}" style="max-width: 20%"
-                                    class="d-block w-100 object-fit-cover" alt="...">
+                            <div class="carousel-item {{ $loop->iteration === 1 ? 'active' : '' }}" >
+                                <img src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200' }}" class="row card-img-top rounded-top " alt="..." >
                             </div>
                         @empty
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/1400/550" style="max-width: 20%"
+                                <img src="https://picsum.photos/1400/550" 
                                     class="w-100 d-block object-fit-cover" alt="...">
                             </div>
                         @endforelse

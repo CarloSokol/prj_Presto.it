@@ -33,7 +33,7 @@
             </div>
 
             <div class="mt-3 mt-3 col-md-6">
-                <input wire:model="temporary_images" type="file" name="images" multiple
+                <input wire:model="temporary_images" type="file" name="images" multiple 
                     class="form-control large shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" />
                 @error('temporary_images .* ')
                     <p class="text-danger mt-2">{{ $message }}</p>
