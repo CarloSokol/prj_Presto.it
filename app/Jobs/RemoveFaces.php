@@ -54,6 +54,8 @@ class RemoveFaces implements ShouldQueue
         $response = $imageAnnotator->faceDetection($image);
         $faces = $response->getFaceAnnotations();
 
+        $image = SpatieImage::load($srcPath);
+
         foreach ($faces as $face) {
             $vertices = $face->getBoundingPoly()->getVertices();
 
@@ -65,11 +67,9 @@ class RemoveFaces implements ShouldQueue
             $w = $bounds[2][0] - $bounds[0][0];
             $h = $bounds[2][1] - $bounds[0][1];
 
-            $image = SpatieImage::load($srcPath);
 
-
-
-            $image->watermark(base_path('resources/img/smile.png'))
+            $image
+                ->watermark(base_path('resources/img/smile.png'))
                 ->watermarkPosition('top-left')
                 ->watermarkPadding($bounds[0][0], $bounds[0][1])
                 ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
@@ -78,6 +78,12 @@ class RemoveFaces implements ShouldQueue
 
             $image->save($srcPath);
         }
+
+        $image
+            ->watermark(base_path('resources/img/watermark.png'))
+            ->watermarkPosition('top-left')
+            ->watermarkPadding(20, Manipulations::UNIT_PERCENT)
+            ->save($srcPath);
 
         $imageAnnotator->close();
     }
