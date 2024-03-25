@@ -6,11 +6,11 @@ use App\Models\Image;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
+use IlluminateContracts\QueueShouldQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
-use IlluminateContracts\QueueShouldQueue;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 
 class GoogleVisionLabelImage implements ShouldQueue
