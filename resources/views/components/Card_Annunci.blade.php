@@ -14,9 +14,9 @@
             <div class="card-body ">
                 <img src="{{ !$annuncio->images()->get()->isEmpty() ? $annuncio->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200' }}"
                     class="card-img-top p-3 rounded" alt=" ... ">
-                <h5 class="card-title text-center text-primary  fs-3">{{ $annuncio->title }}</h5>
+                <h5 class="card-title text-center text-primary  fs-3 text-break">{{ $annuncio->title }}</h5>
                 <div class="border-2 mb-2 mt-2">
-                    <p class="card-text mb-2 "><strong>Descrizione</strong>:<br> {{ Str::limit($annuncio->body, 50) }}
+                    <p class="card-text mb-2 text-break" style="height: 70px; overflow: hidden; text-overflow: ellipsis;"><strong>Descrizione</strong>:<br> {{ Str::limit($annuncio->body, 50) }}
                     </p>
                     <p class="card-text mb-2 "><strong>Categoria</strong>: {{ $annuncio->category->name }} </p>
                     <p class="card-text mb-2 "><strong>Prezzo</strong>: {{ $annuncio->price }} €</p>
@@ -40,15 +40,6 @@
                 <a href="{{ route('announcements.show', $annuncio) }}" class="btn btn-cta p-2  m-1 mx-auto">Per saperne
                     di
                     più</a>
-            </div>
-
-            <div class="card-footer text-center border-0">
-                <form action="{{ route('comments.store') }}" method="POST">
-                    @csrf
-                    <input type="hidden" name="announcement_id" value="{{ $annuncio->id }}">
-                    <textarea name="comment" rows="3" class="form-control mb-2" placeholder="Inserisci il tuo commento"></textarea>
-                    <button type="submit" class="btn btn-primary">Aggiungi commento</button>
-                </form>
             </div>
         </div>
     </div>
