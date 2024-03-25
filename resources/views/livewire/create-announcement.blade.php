@@ -33,16 +33,36 @@
             </div>
 
             <div class="mt-3 mt-3 col-md-6">
-                <input wire:model="temporary_images" type="file" name="images" multiple 
-                    class="form-control large shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" />
+                <input wire:model="temporary_images" type="file" name="images" multiple
+                    class="form-control large shadow @error('temporary_images.*') is-invalid @enderror"
+                    placeholder="Img" />
                 @error('temporary_images .* ')
                     <p class="text-danger mt-2">{{ $message }}</p>
                 @enderror
             </div>
-
+            
+            @if (!empty($images))
+                <div class="row">
+                    <div class="col-12">
+                        <p>Photo preview :</p>
+                        <div class="row border border-4 border-info rounded shadow py-4">
+                            @foreach ($images as $key => $image)
+                                <div class="col my-3 d-flex justify-content-center align-items-center flex-column ">
+                                    <img class="mx-auto shadow rounded" style="width:250px"
+                                        src="{{ $image->temporaryUrl() }}">
+                                    <button type="button"
+                                        class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
+                                        wire:click="removeImage({{ $key }})">Cancella</button>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            @endif
             <div class="mb-3 mt-3 col-12">
                 <textarea wire:model="body"
-                    class="form-control bg-colore-tranparet border border-color p-2 rounded-5 @error('body') is-invalid @enderror" placeholder="Descrizione"></textarea>
+                    class="form-control bg-colore-tranparet border border-color p-2 rounded-5 @error('body') is-invalid @enderror"
+                    placeholder="Descrizione"></textarea>
                 @error('body')
                     {{ $message }}
                 @enderror

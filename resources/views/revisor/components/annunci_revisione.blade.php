@@ -69,26 +69,29 @@
                 </form>
             </div>
         </div>
-
+        @if ($announcement->images->isNotEmpty() && $announcement->images->first()->labels)
         <div class="col-md-3 order-2 order-md-3 p-3 border-right">
             <h5 class="tc-accent mt-3">Tags</h5>
             <div class="p-2">
-                @if ($image->labels)
-                    @foreach ($image->labels as $label)
+           
+                    @foreach ($announcement->images->first()->labels as $label)
                         <p class="d-inline">{{$label}},</p>
                     @endforeach
-                @endif
+               
             </div>
 
             <!-- Revisione Immagini -->
             <div class="card-body mt-3">
                 <h5 class="tc-accent">Revisione Immagini</h5>
-                <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                <p>Adulti: <span class="{{$announcement->images->first()->adult}}"></span></p>
+                <p>Satira: <span class="{{$announcement->images->first()->spoof}}"></span></p>
+                <p>Medicina: <span class="{{$announcement->images->first()->medical}}"></span></p>
+                <p>Violenza: <span class="{{$announcement->images->first()->violence}}"></span></p>
+                <p>Contenuto Ammiccante: <span class="{{$announcement->images->first()->racy}}"></span></p>
             </div>
         </div>
+        @else
+        <p>Inserire UI</p>
+        @endif
     </div>
 </div>
