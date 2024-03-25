@@ -90,8 +90,8 @@
                 <p>Contenuto Ammiccante: <span class="{{$announcement->images->first()->racy}}"></span></p>
             </div>
         </div>
-        @else
-        <p>Inserire UI</p>
+        {{-- @else
+        <p>Inserire UI</p> --}}
         @endif
     </div>
 </div>
