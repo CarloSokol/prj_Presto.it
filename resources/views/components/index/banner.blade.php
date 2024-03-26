@@ -48,22 +48,22 @@
                         <p class="text-uppercase badge bg-danger-subtle text-danger fs-13 text-break">{{ __('ui.bannerB') }}</p>
                         <h1 class="lh-base fw-semibold mb-3 text-capitalize">{{ __('ui.bannerTitle') }}</h1>
                         <p class="fs-16 mt-2">{{ __('ui.bannerdescription') }}</p>
-                        <div class="time-blocks d-flex justify-content-center align-items-center  mt-4">
+                        <div class="time-blocks d-flex justify-content-center align-items-center mt-4 ">
                             <div class="block text-center">
-                                <span class="side-text">DAYS</span>
-                                <span class="time-text" id="days">0</span>
+                                <span class="side-text ">DAYS</span>
+                                <span class="time-text space" id="days">0</span>
                             </div>
                             <div class="block text-center">
                                 <span class="side-text">HOURS</span>
-                                <span class="time-text" id="hours">0</span>
+                                <span class="time-text space" id="hours">0</span>
                             </div>
                             <div class="block text-center">
                                 <span class="side-text">MINUTES</span>
-                                <span class="time-text" id="minutes">0</span>
+                                <span class="time-text space" id="minutes">0</span>
                             </div>
                             <div class="block text-center">
                                 <span class="side-text">SECONDS</span>
-                                <span class="time-text" id="seconds">0</span>
+                                <span class="time-text space" id="seconds">0</span>
                             </div>
                         </div>
                         {{-- <div class="pt-4 d-grid gap-2 d-md-flex justify-content-md-start">
