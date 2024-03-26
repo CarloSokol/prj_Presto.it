@@ -36,10 +36,10 @@
                     <div class="card-body">
                         <h4 class="card-title fst-italic fw-medium">{{ $announcement->title }}</h4>
                         <p class="card-text fst-italic fw-medium">{{ $announcement->body }}</p>
-                        <p class="card-text fw-bold">Price: {{ $announcement->price }} €</p>
-                        <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn bg-light shadow mb-3">Category: {{ $announcement->category->name }}</a>
+                        <p class="card-text fw-bold">{{ __('ui.Price') }} {{ $announcement->price }} €</p>
+                        <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn bg-light shadow mb-3">{{ __('ui.Category') }} {{ $announcement->category->name }}</a>
 
-                        <p class="mb-0 text-muted">Published on: {{ $announcement->created_at->format('d/m/Y') }} - Author: {{ $announcement->user->name ?? '' }}</p>
+                        <p class="mb-0 text-muted">{{ __('ui.Published') }} {{ $announcement->created_at->format('d/m/Y') }} - {{ __('ui.Author') }} {{ $announcement->user->name ?? '' }}</p>
 
                     </div>
 
@@ -48,8 +48,8 @@
                         <form action="{{ route('comments.store') }}" method="POST">
                             @csrf
                             <input type="hidden" name="announcement_id" value="{{ $announcement->id }}">
-                            <textarea name="comment" rows="3" class="form-control my-" placeholder="Enter your comment"></textarea>
-                            <button type="submit" class="btn bg-light shadow my-2">Add Comment</button>
+                            <textarea name="comment" rows="3" class="form-control my-" placeholder="{{ __('ui.Entercomment') }}"></textarea>
+                            <button type="submit" class="btn bg-light shadow my-2">{{ __('ui.AddComment') }}</button>
                         </form>
                     </div>
                 </div>

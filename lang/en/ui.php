@@ -76,6 +76,13 @@ another business. Customers are crucial because they generate revenue.",
 // card
 'dipiù' => 'Learn More',
 
+
+'Category' => 'Categoria:',
+'Price' => 'Prezzo:',
+'Published' => 'Pubblicato il:',
+'Author' => 'Autore:',
+'AddComment' => 'Aggiungi Commento',
+'Entercomment' => 'Inserisci il tuo commento',
 // card
 
     // categories

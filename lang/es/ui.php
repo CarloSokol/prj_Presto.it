@@ -79,6 +79,13 @@ otro negocio. Los clientes son cruciales porque generan ingresos.",
 // card
 'dipiù' => 'Más información',
 
+'Category' => 'Categoría:',
+'Price' => 'Precio:',
+'Published' => 'Publicado el:',
+'Author' => 'Autor:',
+'AddComment' => 'Agregar Comentario',
+'Entercomment' => 'Ingresa tu comentario',
+
 // card
 
 
