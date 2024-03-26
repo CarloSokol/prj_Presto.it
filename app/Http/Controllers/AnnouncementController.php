@@ -12,7 +12,7 @@ class AnnouncementController extends Controller
     public function createAnnouncement(?Category $category = null)
     {
         if (!auth()->check()) {
-            return response('Non sei autenticato', 403);
+            return redirect('/')->with('access.denied', 'Attenzione! Solo gli utenti loggati hanno accesso a questa page, Puoi creare un annuncio accedendo o registrandoti.');
         }
 
         if ($category)return view('announcements.create', ['category'=>$category->id]);
@@ -23,7 +23,7 @@ class AnnouncementController extends Controller
     public function showAnnouncement(Announcement $announcement)
     {
         if (!auth()->check()) {
-            return response('Non sei autenticato', 403);
+            return redirect('/')->with('access.denied', 'Attenzione! Solo gli utenti loggati hanno accesso a questa page, Puoi visualizzare gli annunci accedendo o registrandoti.');
         }
 
         return view('announcements.show', compact('announcement'));
