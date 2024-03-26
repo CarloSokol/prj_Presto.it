@@ -23,10 +23,10 @@
                                 <div class="w-100 d-flex justify-content-center align-items-center gap-5">
                                     <!-- Primo commento -->
                                     @foreach ($comments as $comment)
-                                        <blockquote class="speech-bubble ml-3 d-inline-block">
+                                        <blockquote class="speech-bubble ml-3 d-inline-block rounded-5 card-m">
                                             <h3>{{ $comment->announcement->title }}</h3>
-                                            <p>{{ $comment->body }}</p>
-                                            <cite>{{ $comment->user->name }}</cite>
+                                            <p class="p-bubble">{{ $comment->body }}</p>
+                                            <cite><b>{{ $comment->user->name }}</b></cite>
                                         </blockquote>
                                     @endforeach
                                 </div>
