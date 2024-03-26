@@ -16,18 +16,18 @@ class FrontController extends Controller
 
         $announcements = Announcement::where('is_accepted', true)->latest()->take(6)->get();
 
-        $comments = Comment::all();
+        $commentsChunked = Comment::all()->chunk(4);
 
         // $announcements = Announcement::orderByDesc('created_at')->take(6)->get();
 
-        return view('index', compact('announcements' , 'comments'));
+        return view('index', compact('announcements', 'commentsChunked'));
     }
 
     public function categoryShow(Category $category)
     {
         $announcements = $category->announcements()->where('is_accepted', true)->latest()->get();
 
-        return view('categoryShow', compact('category','announcements'));
+        return view('categoryShow', compact('category', 'announcements'));
     }
 
 
@@ -39,9 +39,9 @@ class FrontController extends Controller
     }
 
     public function setLanguage($lang)
-{
-    
-session()->put('locale', $lang);
-return redirect()->back();
-}
+    {
+
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }
