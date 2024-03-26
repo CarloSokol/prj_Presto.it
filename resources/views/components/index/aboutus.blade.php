@@ -1,5 +1,5 @@
 <section class="section">
-    <div class="container">
+    {{-- <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="text-center">
@@ -100,7 +100,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+
+
+
+    @foreach ($comments as $comment)
+        <p>{{$comment->body}}</p>
+        <p>{{$comment->announcement->title}}</p>
+    @endforeach
 </section>
 
 <!-- Aggiungi il link alla libreria JavaScript di Swiper -->

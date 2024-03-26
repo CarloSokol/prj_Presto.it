@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Announcement;
+use App\Models\Comment;
 use App\Models\Category;
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -15,9 +16,11 @@ class FrontController extends Controller
 
         $announcements = Announcement::where('is_accepted', true)->latest()->take(6)->get();
 
+        $comments = Comment::all();
+
         // $announcements = Announcement::orderByDesc('created_at')->take(6)->get();
 
-        return view('index', compact('announcements'));
+        return view('index', compact('announcements' , 'comments'));
     }
 
     public function categoryShow(Category $category)

@@ -13,5 +13,9 @@ class Comment extends Model
         'user_id',
         'body',
     ];
+    public function announcement()
+    {
+        return $this->belongsTo(Announcement::class);
+    }
     // Altri attributi del modello e metodi
 }

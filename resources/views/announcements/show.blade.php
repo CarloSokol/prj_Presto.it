@@ -48,7 +48,7 @@
                         <form action="{{ route('comments.store') }}" method="POST">
                             @csrf
                             <input type="hidden" name="announcement_id" value="{{ $announcement->id }}">
-                            <textarea name="comment" rows="3" class="form-control my-2" placeholder="Enter your comment"></textarea>
+                            <textarea name="comment" rows="3" class="form-control my-" placeholder="Enter your comment"></textarea>
                             <button type="submit" class="btn bg-light shadow my-2">Add Comment</button>
                         </form>
                     </div>
