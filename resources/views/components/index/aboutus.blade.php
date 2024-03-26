@@ -105,8 +105,11 @@
 
 
     @foreach ($comments as $comment)
-        <p>{{$comment->body}}</p>
-        <p>{{$comment->announcement->title}}</p>
+        <blockquote class="speech-bubble">
+            <h3>{{$comment->announcement->title}}</h3>
+            <p>{{$comment->body}}</p>
+            <cite>{{$comment->user->name}}</cite>
+          </blockquote>
     @endforeach
 </section>
 

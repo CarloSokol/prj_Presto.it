@@ -17,5 +17,9 @@ class Comment extends Model
     {
         return $this->belongsTo(Announcement::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     // Altri attributi del modello e metodi
 }

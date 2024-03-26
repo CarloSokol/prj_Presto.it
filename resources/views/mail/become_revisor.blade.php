@@ -13,6 +13,8 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #f9f9f9; /* Aggiunto sfondo chiaro */
+            justify-content: center;
+            text-align: center;
         }
 
         /* Stili per il logo */
@@ -45,18 +47,20 @@
         /* Stili per l'elenco */
         ul {
             padding-left: 20px; /* Aggiunto un rientro per l'elenco */
+            list-style-type: none;
         }
 
         /* Stili per gli elementi dell'elenco */
         li {
             margin-bottom: 5px; /* Aggiunto spazio tra gli elementi dell'elenco */
+            
         }
     </style>
 </head>
 <body>
     <div class="email-container">
         <div class="logo">
-            <img src="/img/prestoit_logo.png" alt="Logo Presto.it" width="150">
+            <img src="{{asset('img/prestoit_logo.png')}}" alt="Logo Presto.it" width="150">
         </div>
         <div class="content">
             <p><strong>Richiesta di collaborazione</strong></p>
