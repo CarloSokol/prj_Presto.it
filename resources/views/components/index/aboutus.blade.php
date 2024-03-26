@@ -3,9 +3,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="text-center">
-                    <h3 class="mb-3">What Customers Say About Us</h3>
-                    <p class="text-muted fs-15">A customer is a person or business that buys goods or services from
-                        another business. Customers are crucial because they generate revenue.</p>
+                    <h3 class="mb-3">{{ __('ui.abautusTitle') }}</h3>
+                    <p class="text-muted fs-15">{{ __('ui.abautusDescr') }}</p>
                 </div>
             </div>
             <!--end col-->

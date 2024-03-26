@@ -41,8 +41,8 @@ return [
 
     'MostraCarosello' => 'Mostra Carosello',
     'ChiudiCarosello' => 'Chiudi Carosello',
-    
 
+    'RiportaRevisione' => 'Riporta in revisione',
 
     // revisione
 
@@ -62,6 +62,11 @@ return [
 // top-banner
 
 
+// abautus
+'abautusTitle' => "Cosa Dicono i Nostri Clienti su di Noi",
+'abautusDescr' => "Un cliente è una persona o un'azienda che acquista beni o servizi da
+un'altra azienda. I clienti sono cruciali perché generano ricavi.",
+// abautus
 
 
 
@@ -75,6 +80,14 @@ return [
 'Shopping' => 'Acquista ora',
 'Subscribe' => 'Iscriviti',
 // banner
+
+
+// card
+'dipiù' => 'Per saperne di più',
+
+// card
+
+
 
     // categorie
     'Categorie' => 'Categorie',

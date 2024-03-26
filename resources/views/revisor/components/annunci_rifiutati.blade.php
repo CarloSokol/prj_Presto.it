@@ -27,8 +27,7 @@
             <!-- Pulsante per mostrare/nascondere il carousel -->
             <div class="text-center d-flex justify-content-center align-items-center mb-3">
                 <button type="button" class="btn btn-cta toggle-carousel w-auto p-2"
-                    data-carousel-id="carousel{{ $rejected_announcement->id }}">Mostra
-                    Carosello</button>
+                    data-carousel-id="carousel{{ $rejected_announcement->id }}">{{ __('ui.MostraCarosello') }}</button>
             </div>
         </div>
 
@@ -45,7 +44,7 @@
                 method="POST">
                 @csrf
                 @method('PATCH')
-                <button type="submit" class="btn btn-warning">Riporta in revisione</button>
+                <button type="submit" class="btn btn-warning">{{ __('ui.RiportaRevisione') }}</button>
             </form>
         </div>
     </div>

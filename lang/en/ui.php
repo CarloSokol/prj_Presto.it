@@ -31,6 +31,9 @@ return [
 
     'MostraCarosello' => 'Show Carousel',
 'ChiudiCarosello' => 'Close Carousel',
+
+
+'RiportaRevisione' => 'Report for Review',
     // revision
 
 
@@ -53,6 +56,13 @@ return [
 
 
 
+// About Us
+'abautusTitle' => "What Customers Say About Us",
+'abautusDescr' => "A customer is a person or business that buys goods or services from
+another business. Customers are crucial because they generate revenue.",
+// About Us
+
+
 // banner
 'bannerB' => 'Get 50% off your order',
 'bannerTitle' => 'Offer of the week',
@@ -62,6 +72,11 @@ return [
 'Shopping' => 'Shop Now',
 'Subscribe' => 'Subscribe',
 // banner
+
+// card
+'dipiù' => 'Learn More',
+
+// card
 
     // categories
     'Categorie' => 'Categories',

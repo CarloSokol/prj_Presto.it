@@ -34,7 +34,10 @@ return [
 
     'MostraCarosello' => 'Mostrar Carrusel',
 'ChiudiCarosello' => 'Cerrar Carrusel',
+
+'RiportaRevisione' => 'Informe para Revisión',
     // revisión
+
 
     // fondatori
 'Sviluppatori' => 'Desarrolladores',
@@ -56,6 +59,12 @@ return [
 // top-banner
 
 
+// About Us
+'abautusTitle' => "Lo Que Dicen Nuestros Clientes Sobre Nosotros",
+'abautusDescr' => "Un cliente es una persona o negocio que compra bienes o servicios de
+otro negocio. Los clientes son cruciales porque generan ingresos.",
+// About Us
+
 
 // banner
 'bannerB' => 'Obtén un 50% de descuento en tu pedido',
@@ -66,6 +75,13 @@ return [
 'Shopping' => 'Comprar ahora',
 'Subscribe' => 'Suscribirse',
 // banner
+
+// card
+'dipiù' => 'Más información',
+
+// card
+
+
 
     // categorías
     'Categorie' => 'Categorías',

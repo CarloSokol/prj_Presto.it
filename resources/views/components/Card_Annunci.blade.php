@@ -37,9 +37,7 @@
                     border-bottom-left-radius: 32px;
                     border-bottom-right-radius: 32px;
                     ">
-                <a href="{{ route('announcements.show', $annuncio) }}" class="btn btn-cta p-2  m-1 mx-auto">Per saperne
-                    di
-                    più</a>
+                <a href="{{ route('announcements.show', $annuncio) }}" class="btn btn-cta p-2  m-1 mx-auto">{{ __('ui.dipiù') }}</a>
             </div>
         </div>
     </div>
