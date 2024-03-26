@@ -22,6 +22,6 @@ class IsRevisor
             return $next($request);
         }
 
-    return redirect('/')->with('access.denied', 'Attenzione! \n Solo i revisori hanno accesso a questa page, Puoi lavorare con noi inviando la tua candidatura!');
+    return redirect('/')->with('access.denied', 'Attenzione! Solo i revisori hanno accesso a questa page, Puoi lavorare con noi inviando la tua candidatura!');
     }
 }
