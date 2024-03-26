@@ -24,7 +24,7 @@
                                     @foreach ($comments as $comment)
                                         <blockquote class="speech-bubble ml-3 d-inline-block rounded-5 card-m">
                                             <h3>{{ $comment->announcement->title }}</h3>
-                                            <p class="p-bubble">{{ $comment->body }}</p>
+                                            <p class="p-bubble text-break ">{{ $comment->body }}</p>
                                             <cite><b>{{ $comment->user->name }}</b></cite>
                                         </blockquote>
                                     @endforeach

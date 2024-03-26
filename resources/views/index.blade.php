@@ -26,7 +26,7 @@
 
     </section>
 
-    <section>
+    <section class="">
 
         @include('components.index.aboutus')
 

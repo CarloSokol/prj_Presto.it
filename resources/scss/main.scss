@@ -48,7 +48,7 @@ body {
         border: solid 1px #6a50af !important;
     }
 
-    .border-right{
+    .border-right {
         border-left: solid 1px #6a50af !important;
     }
 
@@ -96,58 +96,74 @@ body {
     }
 
     // This solution uses transforms and a caret mixin.
-// What will yours be? Fork this pen and share
-// your solution in this comments.
+    // What will yours be? Fork this pen and share
+    // your solution in this comments.
 
-// This pen's solution is on line 91.
-
-
-/// DEMO
-/// ==========================================================
-$bg:darken(#8CA8D8, 10%);
-html,body{height:100%;}body{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;background:$bg;}
+    // This pen's solution is on line 91.
 
 
-/// REQUIRED
-/// ==========================================================
+    /// DEMO
+    /// ==========================================================
+    $bg: darken(#8CA8D8, 10%);
 
-$gutter: 20px;
-$caret-unit: 25px;
-$bubble-bg: #17479a;
-$bubble-color: white;
-$cite-color: #000000;
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: $bg;
+    }
 
 
-/// Opposite Direction
-/// ==========================================================
-/// Returns the opposite direction of each direction in a list
-/// @author Hugo Giraudel
-/// @param {List} $directions - List of initial directions
-/// @return {List} - List of opposite directions
+    /// REQUIRED
+    /// ==========================================================
 
-@function opposite-direction($directions) {
-  $opposite-directions: ();
-  $direction-map: (
-    'top': 'bottom',
-    'right': 'left',
-    'bottom': 'top',
-    'left': 'right',
-    'center': 'center',
-    'ltr': 'rtl',
-    'rtl': 'ltr'
-  );
+    $gutter: 20px;
+    $caret-unit: 25px;
+    $bubble-bg: $primaryColor;
+    $bubble-color: white;
+    $cite-color: #000000;
 
-  @each $direction in $directions {
+
+    /// Opposite Direction
+    /// ==========================================================
+    /// Returns the opposite direction of each direction in a list
+    /// @author Hugo Giraudel
+    /// @param {List} $directions - List of initial directions
+    /// @return {List} - List of opposite directions
+
+    @function opposite-direction($directions) {
+        $opposite-directions: (
+        );
+    $direction-map: (
+        'top': 'bottom',
+        'right': 'left',
+        'bottom': 'top',
+        'left': 'right',
+        'center': 'center',
+        'ltr': 'rtl',
+        'rtl': 'ltr'
+    );
+
+@each $direction in $directions {
     $direction: to-lower-case($direction);
 
     @if map-has-key($direction-map, $direction) {
-      $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
-    } @else {
-      @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+        $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
     }
-  }
 
-  @return $opposite-directions;
+    @else {
+        @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+    }
+}
+
+@return $opposite-directions;
 }
 
 
@@ -161,12 +177,12 @@ $cite-color: #000000;
 /// ==========================================================
 
 @mixin caret($point, $border-width, $color) {
-  $opposite: opposite-direction($point);
-  border: $border-width solid transparent;
-  border-#{$opposite}: $border-width solid $color;
-  border-#{$point}: 0;
-  height: 0;
-  width: 0;
+    $opposite: opposite-direction($point);
+    border: $border-width solid transparent;
+    border-#{$opposite}: $border-width solid $color;
+    border-#{$point}: 0;
+    height: 0;
+    width: 0;
 }
 
 
@@ -174,44 +190,44 @@ $cite-color: #000000;
 /// ==========================================================
 
 .speech-bubble {
-  filter: drop-shadow(-1px -1px 2px rgba(black, .10)) drop-shadow(1px 2px 2px rgba(black, .15));
-  margin: 1rem;
-  margin-bottom: ($gutter * 2);
-  padding: 1.5rem 2rem;
-  position: relative;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  background: $bubble-bg;
-  color: $bubble-color;
-  width: 15%;
+    filter: drop-shadow(-1px -1px 2px rgba(black, .10)) drop-shadow(1px 2px 2px rgba(black, .15));
+    margin: 1rem;
+    margin-bottom: ($gutter * 2);
+    padding: 1.5rem 2rem;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: $bubble-bg;
+    color: $bubble-color;
+    width: 15%;
 
-  &::before {
-    @include caret(bottom, ($caret-unit / 2), $bubble-bg);
-    border-top-width: $caret-unit;
-    content: '';
-    display: block;
-    position: absolute;
-    left: 3rem;
-    bottom: -$caret-unit;
-    transform-origin: center;
-    transform: rotate(90deg) skew(-(strip-unit($caret-unit))+deg) translateY($caret-unit / 1.5);
-  }
+    &::before {
+        @include caret(bottom, ($caret-unit / 2), $bubble-bg);
+        border-top-width: $caret-unit;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 3rem;
+        bottom: -$caret-unit;
+        transform-origin: center;
+        transform: rotate(90deg) skew(-(strip-unit($caret-unit))+deg) translateY($caret-unit / 1.5);
+    }
 }
 
 
 .speech-bubble cite {
-  position: absolute;
-  bottom: -2rem;
-  left: 4.5rem;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  color: $cite-color;
+    position: absolute;
+    bottom: -2rem;
+    left: 4.5rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: $cite-color;
 }
 
-.p-bubble{
+.p-bubble {
     font-size: small;
 }
 
