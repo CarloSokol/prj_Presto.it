@@ -1,62 +1,59 @@
 <x-layout>
-    <div class="container-fluid bg-gradient bg-primary shadow mb-2">
-        <div class="row">
-            <div class="col-12 text-light p-2">
-                <h1 class="text-center "> Title: {{ $announcement->title }}</h1>
+    <div class="container-fluid bg-gradient bg-primary shadow  py-1">
+        <div class="row justify-content-center">
+            <div class="col-10 text-center">
+                <h1 class="text-light fw-bold">{{ $announcement->title }}</h1>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row ">
-            <div class="col-12 ">
-                <div id="showCarousel" class="carousel slide ms-auto me-auto  " data-bs-ride="carousel" style="max-width: 60%">
-                    <div class="carousel-inner" >
+    <div class="container mt-4 mb-5 ">
+        <div class="row align-items-center justify-content-center  ">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="card shadow rounded-4">
+                    <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            @forelse ($announcement->images as $image)
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <img src="{{ $image->getUrl(400, 300) }}" class="d-block w-100 rounded-4 " alt="Announcement Image">
+                                </div>
+                            @empty
+                                <div class="carousel-item active">
+                                    <img src="https://picsum.photos/1400/550" class="d-block w-100" alt="Placeholder Image">
+                                </div>
+                            @endforelse
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#showCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
 
+                    <div class="card-body">
+                        <h4 class="card-title fst-italic fw-medium">{{ $announcement->title }}</h4>
+                        <p class="card-text fst-italic fw-medium">{{ $announcement->body }}</p>
+                        <p class="card-text fw-bold">Price: {{ $announcement->price }} €</p>
+                        <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn bg-light shadow mb-3">Category: {{ $announcement->category->name }}</a>
 
-                        @forelse ($announcement->images as $image)
-                            <div class="carousel-item {{ $loop->iteration === 1 ? 'active' : '' }}" >
-                                <img src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200' }}" class="row card-img-top rounded-top " alt="..." >
-                            </div>
-                        @empty
-                            <div class="carousel-item active">
-                                <img src="https://picsum.photos/1400/550" 
-                                    class="w-100 d-block object-fit-cover" alt="...">
-                            </div>
-                        @endforelse
+                        <p class="mb-0 text-muted">Published on: {{ $announcement->created_at->format('d/m/Y') }} - Author: {{ $announcement->user->name ?? '' }}</p>
 
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#showCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
 
-                <p class="card-text fst-italic fw-medium text-break ">Description: {{ $announcement->body }}</p>
-                <p class="card-text fw-bolder">Price: {{ $announcement->price }} €</p>
-                <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                    class="my-2 border-top pt-2 border-dark card-link shadow btn btn-primary">Categoria:
-                    {{ $announcement->category->name }}</a>
-                <p class="card-footer fw-lighter">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }} -
-                    Autore:
-                    {{ $announcement->user->name ?? '' }}</p>
 
-                    {{-- <div class="card-footer text-center border-0">
+                    <div class="card-footer text-center border-2 text-muted">
                         <form action="{{ route('comments.store') }}" method="POST">
                             @csrf
-                            <input type="hidden" name="announcement_id" value="{{ $annuncio->id }}">
-                            <textarea name="comment" rows="3" class="form-control mb-2" placeholder="Inserisci il tuo commento"></textarea>
-                            <button type="submit" class="btn btn-primary">Aggiungi commento</button>
+                            <input type="hidden" name="announcement_id" value="{{ $announcement->id }}">
+                            <textarea name="comment" rows="3" class="form-control my-2" placeholder="Enter your comment"></textarea>
+                            <button type="submit" class="btn bg-light shadow my-2">Add Comment</button>
                         </form>
-                    </div> --}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </x-layout>
