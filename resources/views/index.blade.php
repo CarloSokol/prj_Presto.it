@@ -26,17 +26,16 @@
 
     </section>
 
-    <section id="founders">
-
-        @include('components.index.founders')
-
-    </section>
-
     <section>
 
         @include('components.index.aboutus')
 
     </section>
 
+    <section id="founders">
+
+        @include('components.index.founders')
+
+    </section>
 
 </x-layout>
