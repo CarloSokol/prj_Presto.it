@@ -102,6 +102,9 @@ otro negocio. Los clientes son cruciales porque generan ingresos.",
 'TitoloAnnuncio' => 'Título del Anuncio',
 'ScegliCategoria' => 'Elige la categoría',
 'Prezzo' => 'Precio',
+'cancella' => 'Eliminar',
+'crea' => 'Crear',
+'Anteprima' => 'Vista previa de la foto',
 // crea annuncio 
 
 

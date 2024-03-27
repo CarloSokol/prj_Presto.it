@@ -100,6 +100,9 @@ another business. Customers are crucial because they generate revenue.",
 'TitoloAnnuncio' => 'Ad Title',
 'ScegliCategoria' => 'Choose Category',
 'Prezzo' => 'Price',
+'cancella' => 'Delete',
+'crea' => 'Create',
+'Anteprima' => 'Photo Preview',
 // crea annuncio 
 
 
