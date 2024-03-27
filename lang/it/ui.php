@@ -108,6 +108,9 @@ un'altra azienda. I clienti sono cruciali perché generano ricavi.",
 'TitoloAnnuncio' => 'Titolo Annuncio',
 'ScegliCategoria' => 'Scegli la categoria',
 'Prezzo' => 'Prezzo',
+'cancella' => 'Cancella',
+'crea' => 'Crea',
+'Anteprima' => 'Anteprima della foto',
 // crea annuncio 
 
 

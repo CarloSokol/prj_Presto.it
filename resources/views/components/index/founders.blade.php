@@ -41,7 +41,7 @@
 
       <div class="col-md-3 col-6 position-relative">
           <div class="overlay-container d-flex justify-content-center align-items-center">
-              <img src="./img/Andrea.jpg" class="rounded-circle img-fluid" alt="Immagine 1" width="150" height="150">
+              <img src="./img/Andrea.png" class="rounded-circle img-fluid" alt="Immagine 1" width="150" height="150">
               <div class="overlay">
                   <div class="text">
                       <h5 class="mt-3">Andrea</h5>
@@ -54,7 +54,7 @@
 
       <div class="col-md-3 col-6 position-relative">
         <div class="overlay-container d-flex justify-content-center align-items-center">
-            <img src="./img/Marco.jpg" class="rounded-circle img-fluid" alt="Immagine 1" width="150" height="150">
+            <img src="./img/Marco.png" class="rounded-circle img-fluid" alt="Immagine 1" width="150" height="150">
             <div class="overlay">
                 <div class="text">
                   <h5 class="mt-3">Marco</h5>
@@ -67,7 +67,7 @@
 
     <div class="col-md-3 col-6 position-relative">
       <div class="overlay-container d-flex justify-content-center align-items-center">
-          <img src="./img/Carlo.jpg" class="rounded-circle img-fluid" alt="Immagine 1" width="150" height="150">
+          <img src="./img/Carlo.png" class="rounded-circle img-fluid" alt="Immagine 1" width="150" height="150">
           <div class="overlay">
               <div class="text">
                 <h5 class="mt-3">Carlo</h5>
@@ -80,7 +80,7 @@
 
   <div class="col-md-3 col-6 position-relative">
     <div class="overlay-container d-flex justify-content-center align-items-center">
-        <img src="./img/Luigi.jpg" class="rounded-circle img-fluid" alt="Immagine 1" width="150" height="150">
+        <img src="./img/Luigi.png" class="rounded-circle img-fluid " alt="Immagine 1" width="150" height="150">
         <div class="overlay">
             <div class="text">
               <h5 class="mt-3">Luigi</h5>
