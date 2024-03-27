@@ -60,7 +60,7 @@ return [
 
 
 // About Us
-'abautusTitle' => "Lo Que Dicen Nuestros Clientes Sobre Nosotros",
+'abautusTitle' => "Lo que piensan los clientes sobre nosotros",
 'abautusDescr' => "Un cliente es una persona o negocio que compra bienes o servicios de
 otro negocio. Los clientes son cruciales porque generan ingresos.",
 // About Us

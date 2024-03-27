@@ -63,7 +63,7 @@ return [
 
 
 // abautus
-'abautusTitle' => "Cosa Dicono i Nostri Clienti su di Noi",
+'abautusTitle' => "Cosa pensano i clienti di noi",
 'abautusDescr' => "Un cliente è una persona o un'azienda che acquista beni o servizi da
 un'altra azienda. I clienti sono cruciali perché generano ricavi.",
 // abautus
