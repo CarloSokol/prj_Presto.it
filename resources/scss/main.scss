@@ -213,6 +213,9 @@ body {
         transform-origin: center;
         transform: rotate(90deg) skew(-(strip-unit($caret-unit))+deg) translateY($caret-unit / 1.5);
     }
+    @media screen and (max-width:912px) {
+        width: 56%;
+    }
 }
 
 
@@ -233,8 +236,4 @@ body {
 
 
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} 
+

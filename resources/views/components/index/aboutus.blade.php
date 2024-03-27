@@ -19,14 +19,15 @@
                         @foreach ($commentsChunked as $comments)
                             <!-- Inizio della slide -->
                             <div class="swiper-slide mt-5">
-                                <div class="w-100 d-flex justify-content-center align-items-center gap-5">
+                                <div class="w-100 d-flex justify-content-center  flex-column align-items-center gap-5">
                                     <!-- Primo commento -->
                                     @foreach ($comments as $comment)
                                         <blockquote class="speech-bubble ml-3 d-inline-block rounded-5 card-m">
                                             <h3>{{ $comment->announcement->title }}</h3>
-                                            <p class="p-bubble text-break ">{{ $comment->body }}</p>
-                                            <cite><b>{{ $comment->user->name }}</b></cite>
+                                            <p class="p-bubble text-break text-body ">{{ $comment->body }}</p>
                                         </blockquote>
+                                        <cite class="c"><b>{{ $comment->user->name }}</b></cite>
+
                                     @endforeach
                                 </div>
                             </div>
