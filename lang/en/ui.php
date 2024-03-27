@@ -57,7 +57,7 @@ return [
 
 
 // About Us
-'abautusTitle' => "What Customers Say About Us",
+'abautusTitle' => "What customers think about us",
 'abautusDescr' => "A customer is a person or business that buys goods or services from
 another business. Customers are crucial because they generate revenue.",
 // About Us
