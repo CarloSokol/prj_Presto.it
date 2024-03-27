@@ -15,14 +15,19 @@ class CommentsController extends Controller
             'comment' => 'required|string|max:255',
         ]);
 
-        // Creazione di un nuovo commento
         $comment = new Comment();
         $comment->announcement_id = $request->announcement_id;
         $comment->user_id = auth()->id(); // Assumendo che ci sia un sistema di autenticazione degli utenti
         $comment->body = $request->comment;
+
+        // commento
+        $comment->status = 'pending'; // Imposta lo stato del commento come "in attesa di revisione"
+    // commento
+
         $comment->save();
 
         // Ritorna alla pagina dell'annuncio dopo aver aggiunto il commento
-        return redirect()->back()->with('success', 'Commento aggiunto con successo!');
+        return redirect()->back()->with('success', 'Il tuo commento è stato inviato per la revisione.');
     }
 }
+

@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Comment;
 use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
-use App\Models\User;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
 
 class RevisorController extends Controller
@@ -18,10 +19,15 @@ class RevisorController extends Controller
     {
         $announcements_to_check = Announcement::where('is_accepted', null)->paginate(3);
         $rejected_announcements = Announcement::where('is_accepted', false)->paginate(3);
-        // impaginazione annunci rifiutati
-        
-        return view('revisor.index', compact('announcements_to_check', 'rejected_announcements'));
+
+        // commento
+        $comments_to_check = Comment::where('status', null)->paginate(5); 
+
+
+        return view('revisor.index', compact('announcements_to_check', 'rejected_announcements', 'comments_to_check'));
+        // commento
     }
+
 
     public function acceptAnnouncement(Announcement $announcement)
     {

@@ -52,6 +52,35 @@
             
         </div>
 
+<!-- Sezione per i commenti in attesa di revisione -->
+<div class="container">
+    <h2>Commenti da revisionare</h2>
+    @if($comments_to_check->isEmpty())
+        <p>Non ci sono commenti in attesa di revisione al momento.</p>
+    @else
+        <ul>
+            @foreach($comments_to_check as $comment)
+                <li>
+                    <strong>Utente:</strong> {{ $comment->user->name }} <br>
+                    <strong>Annuncio:</strong> {{ $comment->announcement->title }} <br>
+                    <strong>Contenuto:</strong> {{ $comment->body }} <br>
+                    <form action="{{ route('revisor.acceptComment', $comment->id) }}" method="POST">
+                        @csrf
+                        <button type="submit">Accetta commento</button>
+                    </form>
+                    <form action="{{ route('revisor.rejectComment', $comment->id) }}" method="POST">
+                        @csrf
+                        <button type="submit">Rifiuta commento</button>
+                    </form>
+                    <form action="{{ route('revisor.recheckComment', $comment->id) }}" method="POST">
+                        @csrf
+                        <button type="submit">Riporta in revisione</button>
+                    </form>
+                </li>
+            @endforeach
+        </ul>
+    @endif
+</div>
 
 
 

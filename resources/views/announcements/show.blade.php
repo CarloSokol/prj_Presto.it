@@ -6,6 +6,8 @@
             </div>
         </div>
     </div>
+    
+@include('components.success')
 
     <div class="container mt-4 mb-5 ">
         <div class="row align-items-center justify-content-center  ">
@@ -42,7 +44,7 @@
                         <p class="mb-0 text-muted">{{ __('ui.Published') }} {{ $announcement->created_at->format('d/m/Y') }} - {{ __('ui.Author') }} {{ $announcement->user->name ?? '' }}</p>
 
                     </div>
-
+                    
 
                     <div class="card-footer text-center border-2 text-muted">
                         <form action="{{ route('comments.store') }}" method="POST">
