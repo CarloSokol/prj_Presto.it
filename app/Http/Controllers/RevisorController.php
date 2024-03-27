@@ -44,6 +44,9 @@ class RevisorController extends Controller
     public function removeAnnouncement(Announcement $announcement)
     {
         $announcement->setAccepted(null);
+        foreach($announcement->comments as $comment ){
+            $comment->delete();
+        }
         return redirect()->back()->with('message', 'Hai rimosso l\'annuncio');
     }
 

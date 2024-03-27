@@ -26,6 +26,11 @@ return [
     'Revisione' => 'Review',
     'RevTitleNo' => 'There are no announcements to review',
     'RevTitleSi' => 'Here is the announcement to review',
+
+    'RevAnnuncieliminatiSi' => "Here is the list of Rejected announcements",
+    'RevAnnuncieliminatiNo' => "No rejected announcements at the moment.",
+
+
     'Accetta' => 'Accept',
     'Rifiuta' => 'Reject',
 
@@ -34,6 +39,11 @@ return [
 
 
 'RiportaRevisione' => 'Report for Review',
+
+'Descr' => 'Description',
+'Prezzo' => 'Price',
+
+
     // revision
 
 
@@ -77,13 +87,21 @@ another business. Customers are crucial because they generate revenue.",
 'dipiù' => 'Learn More',
 
 
-'Category' => 'Categoria:',
+'Category' => 'Category:',
 'Price' => 'Prezzo:',
 'Published' => 'Pubblicato il:',
 'Author' => 'Autore:',
 'AddComment' => 'Aggiungi Commento',
 'Entercomment' => 'Inserisci il tuo commento',
 // card
+
+
+// crea annuncio 
+'TitoloAnnuncio' => 'Ad Title',
+'ScegliCategoria' => 'Choose Category',
+'Prezzo' => 'Price',
+// crea annuncio 
+
 
     // categories
     'Categorie' => 'Categories',

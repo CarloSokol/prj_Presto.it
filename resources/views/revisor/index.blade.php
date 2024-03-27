@@ -22,7 +22,7 @@
             <div class="row justify-content-center gap-3 my-5">
                 <div class="container-fluid bg-gradient shadow py-0">
                     <h2 class=" text-center text-pr-color-h1">
-                        {{ $rejected_announcements->count() ? __('Annunci Rifiutati') : __('Nessun annuncio rifiutato al momento.') }}
+                        {{ $rejected_announcements->count() ? __('ui.RevAnnuncieliminatiSi') : __('ui.RevAnnuncieliminatiNo') }}
                     </h1>
                 </div>
                 <h2></h2>
@@ -53,7 +53,7 @@
         </div>
 
 <!-- Sezione per i commenti in attesa di revisione -->
-<div class="container">
+{{-- <div class="container">
     <h2>Commenti da revisionare</h2>
     @if($comments_to_check->isEmpty())
         <p>Non ci sono commenti in attesa di revisione al momento.</p>
@@ -80,9 +80,7 @@
             @endforeach
         </ul>
     @endif
-</div>
-
-
+</div> --}}
 
     </section>
 

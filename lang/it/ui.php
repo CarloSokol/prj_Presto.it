@@ -35,6 +35,10 @@ return [
     'Revisione' => 'Revisione',
     'RevTitleNo' => 'Non ci sono annunci da revisionare',
     'RevTitleSi' => "Ecco l'annuncio da revisionare",
+
+    'RevAnnuncieliminatiSi' => "Ecco l'elenco degli annunci Rifiutati",
+    'RevAnnuncieliminatiNo' => "Nessun annuncio rifiutato al momento.",
+
     'Accetta' => 'Accetta',
     'Rifiuta' => 'Rifiuta',
 
@@ -43,6 +47,12 @@ return [
     'ChiudiCarosello' => 'Chiudi Carosello',
 
     'RiportaRevisione' => 'Riporta in revisione',
+
+
+    'Descr' => 'Descrizione',
+    'Prezzo' => 'Prezzo',
+
+
 
     // revisione
 
@@ -91,11 +101,14 @@ un'altra azienda. I clienti sono cruciali perché generano ricavi.",
 'Author' => 'Autore:',
 'AddComment' => 'Aggiungi Commento',
 'Entercomment' => 'Inserisci il tuo commento',
-
-
-
 // card
 
+
+// crea annuncio 
+'TitoloAnnuncio' => 'Titolo Annuncio',
+'ScegliCategoria' => 'Scegli la categoria',
+'Prezzo' => 'Prezzo',
+// crea annuncio 
 
 
     // categorie

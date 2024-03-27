@@ -48,8 +48,9 @@
                 <strong>Data: {{ $announcement->created_at->format('d/m/Y') }}</strong>
             </p>
             <p class="mb-2"><strong>{{ $announcement->title }}</strong></p>
-            <p class="mb-2 text-break"><strong>Descrizione</strong>: {{ $announcement->body }}</p>
-            <p class="mb-2 text-break"><strong>Prezzo</strong>: {{ $announcement->price }}</p>
+            <p class="mb-2 text-break"><strong>{{ __('ui.Descr') }}</strong> {{ $announcement->body }}</p>
+            <p class="mb-2 text-break"><strong>{{ __('ui.Category') }}</strong> {{ $announcement->category->name }}</p>
+            <p class="mb-2 text-break"><strong>{{ __('ui.Prezzo') }}</strong> {{ $announcement->price }}</p>
             <div class="d-inline-block">
                 <form
                     action="{{ route('revisor.accept_announcement', ['announcement' => $announcement]) }}"

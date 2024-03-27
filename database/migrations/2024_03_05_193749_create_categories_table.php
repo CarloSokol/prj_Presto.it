@@ -19,7 +19,7 @@ return new class extends Migration
         });
 
         
-        $categories = ['Informatica', 'Telefoni', 'Auto','Arredamento', 'Lavoro', 'Immobili', 'Elettrodomestici', 'Musica', 'Accessori', 'Giochi', 'Sport', 'Manga'];
+        $categories = ['Informatica', 'Telefoni', 'Motori','Arredamento', 'Lavoro', 'Immobili', 'Elettrodomestici', 'Musica', 'Accessori', 'Giochi', 'Sport', 'Manga'];
 
 
         foreach ($categories as $category) {

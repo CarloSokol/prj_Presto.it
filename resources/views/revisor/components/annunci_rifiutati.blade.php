@@ -37,8 +37,9 @@
                 <strong>Data: {{ $rejected_announcement->created_at->format('d/m/Y') }}</strong>
             </p>
             <p class="mb-2"><strong>{{ $rejected_announcement->title }}</strong></p>
-            <p class="mb-2"><strong>Descrizione:</strong> {{ $rejected_announcement->body }}</p>
-            <p class="mb-2"><strong>Prezzo:</strong> {{ $rejected_announcement->price }}</p>
+            <p class="mb-2"><strong>{{ __('ui.Descr') }}</strong> {{ $rejected_announcement->body }}</p>
+            <p class="mb-2"><strong>{{ __('ui.Category') }}</strong> {{ $rejected_announcement->category->name }}</p>
+            <p class="mb-2"><strong>{{ __('ui.Prezzo') }}</strong> {{ $rejected_announcement->price }}</p>
             <form
                 action="{{ route('revisor.recheck_announcement', ['announcement' => $rejected_announcement]) }}"
                 method="POST">

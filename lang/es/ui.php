@@ -29,6 +29,10 @@ return [
     'Revisione' => 'Revisión',
     'RevTitleNo' => 'No hay anuncios para revisar',
     'RevTitleSi' => 'Aquí está el anuncio para revisar',
+
+    'RevAnnuncieliminatiSi' => "Aquí está la lista de anuncios rechazados",
+'RevAnnuncieliminatiNo' => "No hay anuncios rechazados en este momento.",
+
     'Accetta' => 'Aceptar',
     'Rifiuta' => 'Rechazar',
 
@@ -36,6 +40,11 @@ return [
 'ChiudiCarosello' => 'Cerrar Carrusel',
 
 'RiportaRevisione' => 'Informe para Revisión',
+
+'Descr' => 'Descripción',
+'Prezzo' => 'Precio',
+
+
     // revisión
 
 
@@ -87,6 +96,13 @@ otro negocio. Los clientes son cruciales porque generan ingresos.",
 'Entercomment' => 'Ingresa tu comentario',
 
 // card
+
+
+// crea annuncio 
+'TitoloAnnuncio' => 'Título del Anuncio',
+'ScegliCategoria' => 'Elige la categoría',
+'Prezzo' => 'Precio',
+// crea annuncio 
 
 
 
