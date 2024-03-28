@@ -2,7 +2,7 @@ import './bootstrap';
 import 'bootstrap';
 
 // countdown
-var deadline = new Date("March 27, 2024 23:59:59 GMT+0200").getTime();
+var deadline = new Date("April 2, 2024 23:59:59 GMT+0200").getTime();
 
 var x = setInterval(function() {
     var now = new Date().getTime();
