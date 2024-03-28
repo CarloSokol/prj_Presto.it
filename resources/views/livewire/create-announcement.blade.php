@@ -25,7 +25,7 @@
             <div class="mb-3 mt-3 col-md-6">
                 <select wire:model="category" id="category"
                     class="form-control border border-color p-2 rounded-5 bg-colore-tranparet">
-                    <option value="">{{ __('ui.Scegliategoria') }}</option>
+                    <option value="">{{ __('ui.ScegliCategoria') }}</option>
                     @foreach ($categories as $cat)
                         <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                     @endforeach
